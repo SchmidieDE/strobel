@@ -7,7 +7,7 @@ const Cookie = () => {
 
     return (
         <>
-            Header
+            Cookie
         </>
     )
 }
