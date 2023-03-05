@@ -1,4 +1,4 @@
-
+import { Button } from "@mui/material"
 
 
 const Cookie = () => {
@@ -8,6 +8,9 @@ const Cookie = () => {
     return (
         <>
             Cookie
+            <Button onClick={() => console.log("HIER GELKICT")}>
+                Das ist ein BUTTON
+            </Button>
         </>
     )
 }

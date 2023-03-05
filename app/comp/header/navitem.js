@@ -13,7 +13,8 @@ const NavItem = ({href, name, icon}) => {
         display: "block",
         cursor: "pointer",
         paddingBottom: "1.5rem",
-        textDecoration: "none"
+        textDecoration: "none",
+        color: "black",
     },
     menuItem: {
         display: "flex",
@@ -30,10 +31,12 @@ const NavItem = ({href, name, icon}) => {
     
 
 
-
+    
 
     return (
-        <Link href={href} style={styleObj.link} ><a style={styleObj.menuItem}>{name}  {icon}</a></Link>
+    
+        <Link href={href} style={styleObj.link}>{name}  {icon}</Link>
+    
     )
 }
 

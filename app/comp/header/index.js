@@ -12,22 +12,19 @@ import { Button, IconButton } from "@mui/material";
 
 const Header = () => {
 
-    const [menuActive, setMenuActive] = useState(false)
+    const [menuActive, setMenuActive] = useState(true)
 
-    const handleMenu = () => {
-        setMenuActive(!menuActive)
-        console.log("TEST")
-    }
+
 
     const NavLinks = [{href: "/", name: "Home", icon: <HomeIcon/>},{href: "/photovoltaik", name: "Photovoltaik", icon: <PrecisionManufacturingIcon/>},{href: "/forstwirtschaft", name: "Forstwirtschaft", icon: <ForestIcon/>}, {href: "/kontakt", name: "Kontakt", icon: <CallIcon/>}, {href: "/ueberuns", name: "Über uns", icon: <GroupIcon/>} ]
 
     return (
         <>
-            <Button onClick={()=> handleMenu()}>
+            <Button onClick={() => console.log("HIER GELKICT")}>
                 Das ist ein BUTTON
             </Button>
             <div style={{backgroundColor: "white", height: "3rem"}}>
-            <IconButton size="large" onClick={() => handleMenu()}>
+            <IconButton size="large" >
                 <MenuIcon fontSize="inherit" style={{}}/>
             </IconButton>
             </div> 
@@ -46,6 +43,9 @@ const Header = () => {
             </nav>
             </div>
             }
+            <Button onClick={() => console.log("HIER GELKICT")}>
+                Das ist ein BUTTON
+            </Button>
         </>
     )
 }
