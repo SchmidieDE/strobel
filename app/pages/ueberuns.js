@@ -6,7 +6,7 @@ const Ueberuns = () => {
 
     return (
         <>
-            
+            ueber uns
         </>
     )
 }

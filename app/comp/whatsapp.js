@@ -9,7 +9,7 @@ const Whatsapp = () => {
     
     return(
         <>
-        <Link href={`https://api.whatsapp.com/send?phone=${process.env.WHATSAPPNUMMER}&text=${LinkState}&source=&data=`}><a>
+        <Link href={`https://api.whatsapp.com/send?phone=${process.env.WHATSAPPNUMMER}&text=${LinkState}&source=&data=`}>
             <div style={{position: "fixed", bottom: "10px", right: "10px", zIndex: 1000, backgroundColor: "white", borderRadius: "1rem", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}>
                 <Grid container spacing={2}>    
                 <Grid item xs={4}>
@@ -28,7 +28,7 @@ const Whatsapp = () => {
                 
                 </Grid>
             </div>
-        </a></Link>
+        </Link>
         </>
     )
 }

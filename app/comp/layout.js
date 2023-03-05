@@ -11,7 +11,9 @@ const Layout = ({children}) => {
         <>
             <Header/>
             <Cookie/>
+            
             <Whatsapp/>
+            
             <main>
                 {children}
             </main>
