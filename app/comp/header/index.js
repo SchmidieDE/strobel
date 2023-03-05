@@ -20,11 +20,8 @@ const Header = () => {
 
     return (
         <>
-            <Button onClick={() => console.log("HIER GELKICT")}>
-                Das ist ein BUTTON
-            </Button>
             <div style={{backgroundColor: "white", height: "3rem"}}>
-            <IconButton size="large" >
+            <IconButton size="large" onClick={()=> setMenuActive(!menuActive)} >
                 <MenuIcon fontSize="inherit" style={{}}/>
             </IconButton>
             </div> 
@@ -43,9 +40,6 @@ const Header = () => {
             </nav>
             </div>
             }
-            <Button onClick={() => console.log("HIER GELKICT")}>
-                Das ist ein BUTTON
-            </Button>
         </>
     )
 }
