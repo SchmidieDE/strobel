@@ -28,7 +28,7 @@ const Cookie = () => {
                     <div style={{display: "flex", padding: "1rem 1rem 0 1rem" }}>
                         <div style={{display: "block", alignItems: "center", height: "100px"}}>
                             <div style={{display: "block"}}>
-                                <Image src={"cookie.svg"} alt={"fehlerchen"} width={800} height={800} responsive style={{objectFit: "contain", height: "100px", width: "auto"}} />
+                                <Image src={"Cookiebanner.svg"} alt={"fehlerchen"} width={1000} height={1000} responsive style={{objectFit: "contain", height: "100px", width: "auto"}} />
                             </div>
                         </div>
                         <div>
