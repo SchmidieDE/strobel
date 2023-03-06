@@ -21,7 +21,7 @@ const Header = () => {
     return (
         <>
             <div style={{backgroundColor: "white", height: "3rem"}}>
-            <IconButton size="large" onClick={()=> setMenuActive(!menuActive)} >
+            <IconButton size="large" onClick={() => setMenuActive(!menuActive)} >
                 <MenuIcon fontSize="inherit" style={{}}/>
             </IconButton>
             </div> 
