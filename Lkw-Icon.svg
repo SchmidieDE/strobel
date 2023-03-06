@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#010202;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#FFFFFF;stroke:#000000;stroke-width:24.9649;stroke-miterlimit:10;}
+	.st3{stroke:#000000;stroke-width:29.9578;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-width:29.9578;stroke-miterlimit:10;}
+	.st5{stroke:#000000;stroke-width:9.9859;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#000000;stroke-width:19.9719;stroke-miterlimit:10;}
+</style>
+<g>
+	<rect x="752.19" y="469.87" class="st0" width="247.81" height="280.72"/>
+	<rect x="891.99" y="493.54" class="st1" width="85.53" height="65.46"/>
+	<circle class="st2" cx="854.65" cy="750.83" r="59.51"/>
+	<rect x="143.78" y="610.22" class="st0" width="614.32" height="140.6"/>
+	<circle class="st2" cx="396" cy="750.58" r="59.51"/>
+	<circle class="st2" cx="245.7" cy="750.58" r="59.51"/>
+	<polyline points="79.47,610.22 143.78,610.22 143.78,750.83 79.47,641.71 	"/>
+	<polygon class="st3" points="524.58,610.22 524.58,548.74 572.29,548.74 620,548.74 620,610.22 	"/>
+	<polyline class="st4" points="572.29,542.08 572.29,349.02 442.58,164.83 311,164.83 224.43,285.03 224.43,318.87 	"/>
+	<g>
+		<g>
+			<circle class="st5" cx="60.13" cy="349" r="26.29"/>
+			<circle class="st5" cx="125.85" cy="349" r="26.29"/>
+			<circle class="st5" cx="191.57" cy="349" r="26.29"/>
+			<circle class="st5" cx="257.29" cy="349" r="26.29"/>
+			<circle class="st5" cx="323.01" cy="349" r="26.29"/>
+			<circle class="st5" cx="388.74" cy="349.76" r="26.29"/>
+		</g>
+		<polyline class="st6" points="13.98,372.55 13.98,317.76 434.89,317.76 434.89,373.48 		"/>
+	</g>
+</g>
+</svg>
