@@ -11,10 +11,9 @@ const Layout = ({children}) => {
         <>
             <Header/>
             <Cookie/>
-            
             <Whatsapp/>
             
-            <main>
+            <main style={{marginTop: `calc(3rem + 20px)`}}>
                 {children}
             </main>
             <Footer/>

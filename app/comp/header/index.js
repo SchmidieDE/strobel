@@ -6,40 +6,104 @@ import GroupIcon from '@mui/icons-material/Group';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import ForestIcon from '@mui/icons-material/Forest';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, IconButton } from "@mui/material";
+import { useTrail, animated } from "@react-spring/web";
+
+
+
+
+
+
+const stylecss = {
+    menuitems: {
+        zIndex: "1000"
+    }
+}
+
+
+
 
 
 const Header = () => {
 
-    const [menuActive, setMenuActive] = useState(true)
-
-
+    const [menuActive, setMenuActive] = useState(false)
 
     const NavLinks = [{href: "/", name: "Home", icon: <HomeIcon/>},{href: "/photovoltaik", name: "Photovoltaik", icon: <PrecisionManufacturingIcon/>},{href: "/forstwirtschaft", name: "Forstwirtschaft", icon: <ForestIcon/>}, {href: "/kontakt", name: "Kontakt", icon: <CallIcon/>}, {href: "/ueberuns", name: "Über uns", icon: <GroupIcon/>} ]
 
+    const config = {mass: 5, tension: 2000, friction: 200}
+
+    const trails = useTrail(
+        NavLinks.length,
+        {
+        config,
+        display: "block",
+        height: "100%",
+        width: "100%",
+        opacity: menuActive ? 1 : 0,
+        transform: menuActive ? "translateX(0px)" : "translateX(-100%)",
+        from: {
+            opacity: 0,
+            transform: "translateX(-100%)"
+        },
+        end: {
+            opacity: 0,
+            transform: "translateX(-100%)"
+        },
+        }
+    )
+
+    const handleMenu = () => {
+        setMenuActive(!menuActive)
+    }
+
+
+
+    useEffect(() => {
+        console.log(menuActive, "MENU")
+    }, [menuActive])
+
+
+
     return (
         <>
-            <div style={{backgroundColor: "white", height: "3rem"}}>
-            <IconButton size="large" onClick={() => setMenuActive(!menuActive)} >
+            <div style={{backgroundColor: "white", display: "block", position: "fixed", top: "0px", width: "100%", marginBottom: "30px", height: "4rem"}}>
+            <IconButton size="large" onClick={() => handleMenu()} >
                 <MenuIcon fontSize="inherit" style={{}}/>
             </IconButton>
-            </div> 
-            {
-            menuActive &&
-            <div style={{backgroundColor: "green"}}>
-            <nav style={{display: "block"}}>
-            {
-                NavLinks.map((e, index) => {
-                    const {href, name, icon} = e
-                    return (
-                        <NavItem href={href} name={name} key={index} icon={icon}/>
-                    )
-                })
-            }
-            </nav>
+            
+            { 
+            <div  className={stylecss.menuitems}>
+                <nav style={{ display: "flex", width: "100%", alignItems: "center", flexDirection: "column"}}>
+                {
+                    menuActive && trails.map((props, index) => {
+                        
+                        const {href, name, icon} = NavLinks[index]
+                        return (
+                            <animated.div style={{...props}}>
+                                <NavItem href={href} name={name} key={index} icon={icon} handleMenu={handleMenu}/> 
+                            </animated.div>
+                        )
+                    })
+
+                    /*
+                    NavLinks.map((e, index) => {
+
+                        const {href, name, icon} = e
+                        return (
+                            <NavItem href={href} name={name} key={index} icon={icon}/> 
+                        )
+                    })
+                    */
+                }
+                </nav>
             </div>
+            
+            
             }
+
+            </div> 
+            
         </>
     )
 }

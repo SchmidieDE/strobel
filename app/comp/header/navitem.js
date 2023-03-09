@@ -3,23 +3,26 @@ import { useState } from "react";
 
 
 
-const NavItem = ({href, name, icon}) => {
+const NavItem = ({href, name, icon, handleMenu}) => {
 
     const [active, setActive] = useState("/")
     
 
     const styleObj = {
     link: {
-        display: "block",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
         cursor: "pointer",
-        paddingBottom: "1.5rem",
         textDecoration: "none",
         color: "black",
+        backgroundColor: "green"
     },
     menuItem: {
-        display: "flex",
+        display: "block",
         color: "black",
-        paddingBottom: "1.5rem",
+        paddingTop: "0.75rem", 
+        paddingBottom: "0.75rem", 
         textAlign: "center",
         fontSize: "1.23rem",
         "&:hover": {
@@ -34,8 +37,10 @@ const NavItem = ({href, name, icon}) => {
     
 
     return (
-    
-        <Link href={href} style={styleObj.link}>{name}  {icon}</Link>
+        
+        <Link href={href} style={styleObj.link} onClick={() => handleMenu()}>
+            <span style={styleObj.menuItem}>{name}  {icon}</span>
+        </Link>
     
     )
 }

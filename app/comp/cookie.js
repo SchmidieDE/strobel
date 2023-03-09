@@ -1,6 +1,9 @@
 import { Button } from "@mui/material"
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react"
+import { useSpring, animated } from '@react-spring/web'
+import Titel from "../comp/design/title"
 
 const Cookie = () => {
 
@@ -12,41 +15,81 @@ const Cookie = () => {
             //padding: "25px 25px 30px 25px",
             bordeRradius: "3vmin",
             textAlign: "center",
-            height: "250px",
+            height: "300px",
             zIndex: 10000,
             bottom: 0,
-            border: "none"
+            border: "none",
+            boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
+            
         }
     }
+
+
+    const [cookie, setCookie] = useState(true)
+
+    const config = {mass: 5, tension: 2000, friction: 200}
+
+    const spring = useSpring(
+        {
+        position: "fixed",
+        width: "100%",
+        background: "#fff",
+        //padding: "25px 25px 30px 25px",
+        bordeRradius: "3vmin",
+        textAlign: "center",
+        height: "350px",
+        zIndex: 10000,
+        bottom: 0,
+        border: "none",
+        boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
+        config,
+        display:  "block",
+        opacity: cookie ? 1 : 0,
+        transform: "translateY(0px)",
+        from: {
+            opacity: 0,
+            transform: "translateY(+100%)"
+        }
+        }
+    )
+
+
     
+    const handleCookie = () => {
+        setCookie(!cookie)
+        console.log(cookie)
+    }
 
 
     return (
         <>
-            <div style={crccs.wrapper}>
+            {
+            cookie && <animated.div style={spring}>
                 <div style={{display: "block"}}>
-                    <div style={{display: "flex", padding: "1rem 1rem 0 1rem" }}>
-                        <div style={{display: "block", alignItems: "center", height: "100px"}}>
-                            <div style={{display: "block"}}>
-                                <Image src={"Cookiebanner.svg"} alt={"fehlerchen"} width={1000} height={1000} responsive style={{objectFit: "contain", height: "100px", width: "auto"}} />
-                            </div>
+                    <Titel text={"Diese Seite verwendet Cookies"} variant={"bigbold"}/>
+                    <div style={{display: "block", alignItems: "center", height: "90px"}}>
+                        <div style={{display: "block"}}>
+                            <Image src={"Cookiebanner.svg"} alt={"fehlerchen"} width={1000} height={1000} responsive="true" style={{objectFit: "contain", height: "100px", width: "auto"}} />
                         </div>
+                    </div>
+                    <div style={{display: "flex", padding: "0rem 1rem 0rem 1rem", alignItems: "center" }}>
                         <div>
-                            <p>
-                                Diese Seite verwendet Cookies Wir verwenden Cookies. Bei Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Diese werden zur Nutzung und Verbesserung der Nutzeroberflöche verwendet.
+                            <p style={{margin: "0px"}}>
+                                Wir verwenden Cookies. Bei Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Diese werden zur Nutzung und Verbesserung der Nutzeroberflöche verwendet.
                             </p>
                         </div>
                     </div>
                     <div style={{width: "80%", margin: "auto"}}>
-                        <Button variant="contained" style={{width: "100%", backgroundColor: "green", margin: "0.5rem 0rem 0.5rem 0rem"}}>Zustimmen und weiter</Button>
+                        <Button onClick={() => handleCookie()}variant="contained" style={{width: "100%", backgroundColor: "green", margin: "0.9rem 0rem 1rem 0rem"}}>Zustimmen und weiter</Button>
                         <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
-                            <Link href={"/"} style={{textDecoration: "none"}}>Ablehnen</Link>
-                            <Link href={"/"} style={{textDecoration: "none"}}>Impressum</Link>
-                            <Link href={"/"} style={{textDecoration: "none"}}>Datenschutz</Link>
+                            <Link href={"https://google.de"} style={{textDecoration: "none", color: "black"}}>Ablehnen</Link>
+                            <Link href={"/impressum"} style={{textDecoration: "none", color: "black"}}>Impressum</Link>
+                            <Link href={"/datenschutz"} style={{textDecoration: "none", color: "black"}}>Datenschutz</Link>
                         </div>
                     </div>
                 </div>
-            </div>
+            </animated.div> 
+            }
         </>
     )
 }
