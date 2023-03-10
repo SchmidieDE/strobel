@@ -20,7 +20,14 @@ import Image from "next/image";
 const stylecss = {
     menuitems: {
         zIndex: "1000",
-        marginTop: "-5px"
+        marginTop: "-5px",
+        boxShadow: "rgba(0, 0, 0, 0.16) -5px 3px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
+    },
+    icons: {
+        marginLeft: "0.4rem"
+    },
+    subicons: {
+        marginRight: "0.4rem"
     }
 }
 
@@ -32,7 +39,7 @@ const Header = () => {
 
     const [menuActive, setMenuActive] = useState(false)
 
-    const NavLinks = [{href: "/", name: "Home", icon: <HomeIcon/>},{href: "/photovoltaik", name: "Photovoltaik", icon: <WindowIcon/>},{href:"/photovoltaik/technik", name:"Technik", icon: <RadioButtonCheckedIcon sx={{ fontSize: 15 }}/>}, {href:"/photovoltaik/leistungen", name:"Leistungen", icon: <RadioButtonCheckedIcon sx={{ fontSize: 15 }}/>} ,{href: "/forstwirtschaft", name: "Forstwirtschaft", icon: <ForestIcon/>},{href:"/forstwirtschaft/fuhrpark", name:"Fuhrpark", icon: <RadioButtonCheckedIcon sx={{ fontSize: 15 }}/>}, {href: "/kontakt", name: "Kontakt", icon: <CallIcon/>}, {href: "/ueberuns", name: "Über uns", icon: <GroupIcon/>} ]
+    const NavLinks = [{href: "/", name: "Home", icon: <HomeIcon style={stylecss.icons}/>},{href: "/photovoltaik", name: "Photovoltaik", icon: <WindowIcon style={stylecss.icons}/>},{href:"/photovoltaik/technik", name:"Technik", icon: <RadioButtonCheckedIcon style={stylecss.subicons} sx={{ fontSize: 15 }}/>}, {href:"/photovoltaik/leistungen", name:"Leistungen", icon: <RadioButtonCheckedIcon style={stylecss.subicons} sx={{ fontSize: 15 }}/>} ,{href: "/forstwirtschaft", name: "Forstwirtschaft", icon: <ForestIcon style={stylecss.icons}/>},{href:"/forstwirtschaft/fuhrpark", name:"Fuhrpark", icon: <RadioButtonCheckedIcon style={stylecss.subicons} sx={{ fontSize: 15 }}/>}, {href: "/kontakt", name: "Kontakt", icon: <CallIcon style={stylecss.icons}/>}, {href: "/ueberuns", name: "Über uns", icon: <GroupIcon style={stylecss.icons}/>} ]
 
     const config = {mass: 5, tension: 2000, friction: 200}
 

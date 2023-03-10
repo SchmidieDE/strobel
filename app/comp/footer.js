@@ -39,29 +39,29 @@ const Footer = () => {
     return (
         <>
         <footer>
-            <div style={{backgroundColor: "#C1DBB6", paddingTop: "1rem", paddingBottom: "1rem", width: "100%"}}>
+            <div style={{backgroundColor: "#C1DBB6", paddingTop: "1rem", paddingBottom: "1rem", width: "100%", marginTop: "6rem"}}>
                 <div style={{width: "90%", margin: "auto"}}>
                     <div style={{backgroundColor: "#4E9940", borderRadius: "3vmin", padding: "1rem"}}>
                         <h2 style={{padding: "0px", textAlign: "center", margin:"0px", fontWeight: "800", color: "white", marginBottom: "1rem"}}>
                             Kontakt
                         </h2>
                         <div>
-                            <Link href={"tel:491708083239"}style={{textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
+                            <Link href={"tel:491708083239"}style={{textDecorationThickness: "1px",textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
                                 <PhoneIcon sx={{color: "white", marginRight: "0.3rem"}}/>+49 170 8083239
                             </Link>
                         </div>
                         <div>
-                            <Link href={"https://api.whatsapp.com/send?phone=491708083239&text=&source=&data="} style={{textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
+                            <Link href={"https://api.whatsapp.com/send?phone=491708083239&text=&source=&data="} style={{textDecorationThickness: "1px",textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
                                 <WhatsAppIcon sx={{color: "white", marginRight: "0.3rem"}}/>+49 170 8083239
                             </Link>
                         </div>
                         <div>
-                            <Link href={"mailto:hannes-strobel@gmx.com"} style={{textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
+                            <Link href={"mailto:hannes-strobel@gmx.com"} style={{textDecorationThickness: "1px",textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
                                 <AlternateEmailIcon sx={{color: "white", marginRight: "0.3rem"}}/>hannes-strobel@gmx.com
                             </Link>
                         </div>
                         <div>
-                            <Link href={"https://goo.gl/maps/YdvZUUDbqwaGnCZ88"} style={{textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
+                            <Link href={"https://goo.gl/maps/YdvZUUDbqwaGnCZ88"} style={{textDecorationThickness: "1px",textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
                                 <LocationOnIcon sx={{color: "white", marginRight: "0.3rem"}}/>Peter & Hannes Strobel GBR<br/>Im Wiesengrund 3<br/>88361 Eichstegen<br/>
                             </Link>
                         </div>
@@ -72,7 +72,7 @@ const Footer = () => {
                             const {sublinks, title} = e
                             return (
                                 <div key={index}>
-                                <h3 style={{margin: "0px", fontWeight: "800", color: "black", marginTop: "1.5rem", paddingLeft: "0.5rem"}}>{title}</h3>
+                                <h3 style={{fontSize: "1.2rem",margin: "0px", fontWeight: "800", color: "black", marginTop: "1.5rem", paddingLeft: "0.5rem"}}>{title}</h3>
                                 <hr style={{border:"none",  borderTop: "3px solid #4E9940", marginTop: "0.2rem", marginBottom: "0.5rem", width: "100%", margin: "auto"}}/>
                                 <ul style={{margin: "0px"}}>
                                 {   
@@ -81,7 +81,7 @@ const Footer = () => {
                                         const {href, name} = e
                                         return (
                                         <li>   
-                                            <Link style={{display: "block", paddingLeft: "0", marginTop: "0.2rem", marginBottom: "0.2rem", textDecoration: "none", color: "#04245C", fontWeight: "800", fontSize: "1rem"}} href={href}>{name}</Link>
+                                            <Link style={{display: "block", paddingLeft: "0", marginTop: "0.2rem", marginBottom: "0.2rem", textDecoration: "none", color: "#04245C", fontWeight: "800", fontSize: "1.1rem"}} href={href}>{name}</Link>
                                         </li>
                                         )
                                     })

@@ -39,12 +39,13 @@ const NavItem = ({href, name, icon, handleMenu}) => {
         backgroundColor: backgroundColor
     },
     menuItem: {
-        display: "block",
+        display: "flex",
         color: textColor,
         paddingTop: "0.75rem", 
         paddingBottom: "0.75rem", 
         textAlign: "center",
         fontSize: "1.23rem",
+        fontWeight: "700",
         "&:hover": {
           color: "#78ba00"
         },
@@ -61,11 +62,11 @@ const NavItem = ({href, name, icon, handleMenu}) => {
         
         subcategory ?
         <Link href={href} style={styleObj.link} onClick={() => handleMenu()}>
-            <span style={styleObj.menuItem}>{icon}  {name}</span>
+            <span style={styleObj.menuItem}><div style={{display: "inline-block"}}>{icon}</div>  {name}</span>
         </Link>
         :
         <Link href={href} style={styleObj.link} onClick={() => handleMenu()}>
-            <span style={styleObj.menuItem}>{name}  {icon}</span>
+            <div style={styleObj.menuItem}>{name}  {icon}</div>
         </Link>
         
         
