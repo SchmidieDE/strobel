@@ -42,27 +42,27 @@ const Footer = () => {
             <div style={{backgroundColor: "#C1DBB6", paddingTop: "1rem", paddingBottom: "1rem", width: "100%"}}>
                 <div style={{width: "90%", margin: "auto"}}>
                     <div style={{backgroundColor: "#4E9940", borderRadius: "3vmin", padding: "1rem"}}>
-                        <h2 style={{padding: "0px", textAlign: "center", margin:"0px", fontWeight: "800", color: "white"}}>
+                        <h2 style={{padding: "0px", textAlign: "center", margin:"0px", fontWeight: "800", color: "white", marginBottom: "1rem"}}>
                             Kontakt
                         </h2>
                         <div>
                             <Link href={"tel:491708083239"}style={{textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
-                                <PhoneIcon sx={{color: "white"}}/>+49 170 8083239
+                                <PhoneIcon sx={{color: "white", marginRight: "0.3rem"}}/>+49 170 8083239
                             </Link>
                         </div>
                         <div>
                             <Link href={"https://api.whatsapp.com/send?phone=491708083239&text=&source=&data="} style={{textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
-                                <WhatsAppIcon sx={{color: "white"}}/>+49 170 8083239
+                                <WhatsAppIcon sx={{color: "white", marginRight: "0.3rem"}}/>+49 170 8083239
                             </Link>
                         </div>
                         <div>
-                            <Link href={""} style={{textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
-                                <AlternateEmailIcon sx={{color: "white"}}/>hannes-strobel@gmx.com
+                            <Link href={"mailto:hannes-strobel@gmx.com"} style={{textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
+                                <AlternateEmailIcon sx={{color: "white", marginRight: "0.3rem"}}/>hannes-strobel@gmx.com
                             </Link>
                         </div>
                         <div>
-                            <Link href={""} style={{textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
-                                <LocationOnIcon sx={{color: "white"}}/>sas
+                            <Link href={"https://goo.gl/maps/YdvZUUDbqwaGnCZ88"} style={{textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.3rem"}}>
+                                <LocationOnIcon sx={{color: "white", marginRight: "0.3rem"}}/>Peter & Hannes Strobel GBR<br/>Im Wiesengrund 3<br/>88361 Eichstegen<br/>
                             </Link>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ const Footer = () => {
                     }
                 </div>
             </div>
-            <div style={{backgroundColor: "#4E9940", display: "flex", justifyContent: "space-between", width: "100%", padding: "1rem"}}>
+            <div style={{backgroundColor: "#4E9940", display: "flex", justifyContent: "space-between", width: "100%", padding: "1rem", paddingTop: "1.2rem", paddingBottom: "1.2rem"}}>
                 <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em"}} href={"/"}>© {new Date().getFullYear()} PHStrobel.de</Link>
                 <Link style={{textDecoration: "none", color: "white", fontWeight: "500", fontSize: "0.9em"}} href={"/impressum"}>Impressum</Link>
                 <Link style={{textDecoration: "none", color: "white", fontWeight: "500", fontSize: "0.9em"}} href={"/datenschutz"}>Datenschutz</Link>
