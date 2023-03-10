@@ -6,6 +6,12 @@ import { useState } from "react";
 const NavItem = ({href, name, icon, handleMenu}) => {
 
     const [active, setActive] = useState("/")
+
+    let subcategory = false
+    if (href.split("/").length >= 3) {
+        subcategory = true
+    } 
+
     
     let backgroundColor = "#4E9940"
     let textColor = "white"
@@ -52,10 +58,17 @@ const NavItem = ({href, name, icon, handleMenu}) => {
 
     return (
         
+        
+        subcategory ?
+        <Link href={href} style={styleObj.link} onClick={() => handleMenu()}>
+            <span style={styleObj.menuItem}>{icon}  {name}</span>
+        </Link>
+        :
         <Link href={href} style={styleObj.link} onClick={() => handleMenu()}>
             <span style={styleObj.menuItem}>{name}  {icon}</span>
         </Link>
-    
+        
+        
     )
 }
 

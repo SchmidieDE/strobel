@@ -75,7 +75,7 @@ const Cookie = () => {
                     <div style={{display: "flex", padding: "0rem 1rem 0rem 1rem", alignItems: "center" }}>
                         <div>
                             <p style={{margin: "0px"}}>
-                                Wir verwenden Cookies. Bei Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Diese werden zur Nutzung und Verbesserung der Nutzeroberflöche verwendet.
+                                Wir verwenden Cookies. Bei Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Diese werden zur Nutzung und Verbesserung der Nutzeroberfläche verwendet.
                             </p>
                         </div>
                     </div>

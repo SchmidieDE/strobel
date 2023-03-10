@@ -6,6 +6,8 @@ import GroupIcon from '@mui/icons-material/Group';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import ForestIcon from '@mui/icons-material/Forest';
 import MenuIcon from '@mui/icons-material/Menu';
+import WindowIcon from '@mui/icons-material/Window';
+import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import { useEffect, useState } from "react";
 import { Button, IconButton } from "@mui/material";
 import { useTrail, animated } from "@react-spring/web";
@@ -30,7 +32,7 @@ const Header = () => {
 
     const [menuActive, setMenuActive] = useState(false)
 
-    const NavLinks = [{href: "/", name: "Home", icon: <HomeIcon/>},{href: "/photovoltaik", name: "Photovoltaik", icon: <PrecisionManufacturingIcon/>},{href: "/forstwirtschaft", name: "Forstwirtschaft", icon: <ForestIcon/>}, {href: "/kontakt", name: "Kontakt", icon: <CallIcon/>}, {href: "/ueberuns", name: "Über uns", icon: <GroupIcon/>} ]
+    const NavLinks = [{href: "/", name: "Home", icon: <HomeIcon/>},{href: "/photovoltaik", name: "Photovoltaik", icon: <WindowIcon/>},{href:"/photovoltaik/technik", name:"Technik", icon: <RadioButtonCheckedIcon sx={{ fontSize: 15 }}/>}, {href:"/photovoltaik/leistungen", name:"Leistungen", icon: <RadioButtonCheckedIcon sx={{ fontSize: 15 }}/>} ,{href: "/forstwirtschaft", name: "Forstwirtschaft", icon: <ForestIcon/>},{href:"/forstwirtschaft/fuhrpark", name:"Fuhrpark", icon: <RadioButtonCheckedIcon sx={{ fontSize: 15 }}/>}, {href: "/kontakt", name: "Kontakt", icon: <CallIcon/>}, {href: "/ueberuns", name: "Über uns", icon: <GroupIcon/>} ]
 
     const config = {mass: 5, tension: 2000, friction: 200}
 
