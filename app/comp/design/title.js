@@ -12,7 +12,7 @@ const Titel = (props) => {
             fontWeight: "800",
             margin: "0.8rem 0rem 0.8rem 0rem",
             fontSize: "1.4rem",
-            textDecoration: "underline green 0.2rem",
+            textDecoration: "underline #4E9940 0.2rem",
         },
         bigcenter: {
             padding: "0px",
@@ -21,7 +21,7 @@ const Titel = (props) => {
             paddingTop: "0px",
             margin: "0.8rem 0rem 0.8rem 0rem",
             fontSize: "2rem",
-            textDecoration: "underline green 0.2rem",
+            textDecoration: "underline #4E9940 0.2rem",
             textAlign: "center"
         }
     }

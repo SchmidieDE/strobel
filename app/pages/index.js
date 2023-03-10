@@ -4,26 +4,34 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Dropdown from "../comp/design/dropdown"
 import Subtitel from "../comp/design/subtitle"
-//import { Inter } from 'next/font/google'
-
-//const inter = Inter({ subsets: ['latin'] })
+import Background from '../comp/design/background' 
 
 export default function Home() {
   return (
     <>
       <Subtitel text={"Albanien ist schön"} variant={"left"}/>
-      <Subtext text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
-      <Subtitel text={"Albanien ist schön, fast so schön wie die Türkei"} variant={"right"}/>
-      <Subtext text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
-      <Subtitel text={"Albanien ist schön"} variant={"right"}/>
-      <Subtext text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
+      <Subtext variant={"white"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
+      <Subtitel  text={"Albanien ist schön, fast so schön wie die Türkei"} variant={"right"}/>
+      <Subtext variant={"white"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
+      <Subtitel  text={"Albanien ist schön"} variant={"right"}/>
+      <Subtext variant={"white"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
+      <Background variant={"green"}>
+        <Subtitel background={"green"} text={"Albanien ist schön"} variant={"right"}/>
+        <Subtext variant={"green"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
+        <Subtitel background={"green"} text={"Türkei ist das beste und schönste Land"} variant={"right"}/>
+        <Subtext variant={"green"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>      
+        <Subtitel background={"green"} text={"Deutschland ist das aller beste und schönste Land"} variant={"right"}/>
+        <Subtext variant={"green"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>      
+      </Background>
+      <Subtitel  text={"Albanien ist schön"} variant={"right"}/>
+      <Subtext variant={"white"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
+   
       {
       //<Dropdown text="as" title="asas"/>
       }
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-      <p>Das ist ganz viel Text hambdullah</p>
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>

@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useEffect, useState } from "react";
 import { Button, IconButton } from "@mui/material";
 import { useTrail, animated } from "@react-spring/web";
-
+import Image from "next/image";
 
 
 
@@ -17,7 +17,8 @@ import { useTrail, animated } from "@react-spring/web";
 
 const stylecss = {
     menuitems: {
-        zIndex: "1000"
+        zIndex: "1000",
+        marginTop: "-5px"
     }
 }
 
@@ -68,12 +69,18 @@ const Header = () => {
     return (
         <>
             <div style={{backgroundColor: "white", display: "block", position: "fixed", top: "0px", width: "100%", marginBottom: "30px", height: "4rem"}}>
-            <IconButton size="large" onClick={() => handleMenu()} >
-                <MenuIcon fontSize="inherit" style={{}}/>
-            </IconButton>
-            
+            <div style={{display: "flex"}}> 
+                <IconButton size="large" onClick={() => handleMenu()} >
+                    <MenuIcon fontSize="inherit" style={{}}/>
+                </IconButton>
+                <Link href={"/"} style={{display: "block", margin: "auto", verticalAlign: "center", marginTop: "0.5rem", paddingRight: "3rem"}}>
+                    <div >
+                        <Image src={"/StrobelLogoEditiertGreenBlue.svg"} width={175.57} height={55.16} />
+                    </div>
+                </Link>
+            </div>
             { 
-            <div  className={stylecss.menuitems}>
+            <div  style={stylecss.menuitems}>
                 <nav style={{ display: "flex", width: "100%", alignItems: "center", flexDirection: "column"}}>
                 {
                     menuActive && trails.map((props, index) => {

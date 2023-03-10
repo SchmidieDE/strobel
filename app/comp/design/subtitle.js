@@ -2,16 +2,31 @@
 const Subtitel = (props) => {
     
     const {text, variant} = props
+    let backgroundcolor = props.background || "#4E9940" 
+    let titlecolor = "white"
+
+    if (backgroundcolor === "green") {
+        backgroundcolor = "white"
+        titlecolor = "#4E9940"
+    }
+    if (backgroundcolor === "whiteblue") {
+        backgroundcolor = "#0F265C"
+        titlecolor = "white"
+    }
+    if (backgroundcolor === "blue") {
+        backgroundcolor = "white",
+        titlecolor = "#0F265C"
+    }
 
     const css = {
         left: {
-            backgroundColor: "green",
+            backgroundColor: backgroundcolor,
             width: "90%",
             borderTopRightRadius: "2vmin", 
             borderBottomRightRadius: "2vmin"
         },
         right: {
-            backgroundColor: "green",
+            backgroundColor: backgroundcolor,
             width: "90%",
             float: "right",
             borderTopLeftRadius: "2vmin", 
@@ -19,14 +34,14 @@ const Subtitel = (props) => {
         }, 
         leftText: {
             textAlign: "center",
-            color: "white",
+            color: titlecolor,
             fontWeight: "600",
             padding: "0.5rem 0 0.5rem 0",
             margin: "0px"
         },
         rightText: {
             textAlign: "center",
-            color: "white",
+            color: titlecolor,
             fontWeight: "600",
             padding: "0.5rem 0 0.5rem 0",
             margin: "0px"

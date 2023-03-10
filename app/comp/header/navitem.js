@@ -7,6 +7,20 @@ const NavItem = ({href, name, icon, handleMenu}) => {
 
     const [active, setActive] = useState("/")
     
+    let backgroundColor = "#4E9940"
+    let textColor = "white"
+
+    switch (href) {
+        case "/photovoltaik":
+            backgroundColor = "#BCE4FA",
+            textColor = "black"
+            break;
+        case "/forstwirtschaft":
+            backgroundColor = "#4E9940"
+            break;
+        default:
+            
+    }
 
     const styleObj = {
     link: {
@@ -15,12 +29,12 @@ const NavItem = ({href, name, icon, handleMenu}) => {
         alignItems: "center",
         cursor: "pointer",
         textDecoration: "none",
-        color: "black",
-        backgroundColor: "green"
+        color: textColor,
+        backgroundColor: backgroundColor
     },
     menuItem: {
         display: "block",
-        color: "black",
+        color: textColor,
         paddingTop: "0.75rem", 
         paddingBottom: "0.75rem", 
         textAlign: "center",
