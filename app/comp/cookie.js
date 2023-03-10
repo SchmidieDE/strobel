@@ -69,7 +69,7 @@ const Cookie = () => {
                     <Titel text={"Diese Seite verwendet Cookies"} variant={"bigbold"}/>
                     <div style={{display: "block", alignItems: "center", height: "90px"}}>
                         <div style={{display: "block"}}>
-                            <Image src={"cookiebanner.svg"} alt={"fehlerchen"} width={1000} height={1000} responsive="true" style={{objectFit: "contain", height: "100px", width: "auto"}} />
+                            <Image src={"/Cookiebanner.svg"} alt={"fehlerchen"} width={1000} height={1000} responsive="true" style={{objectFit: "contain", height: "100px", width: "auto"}} />
                         </div>
                     </div>
                     <div style={{display: "flex", padding: "0rem 1rem 0rem 1rem", alignItems: "center" }}>
