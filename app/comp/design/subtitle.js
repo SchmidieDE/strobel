@@ -37,14 +37,16 @@ const Subtitel = (props) => {
             color: titlecolor,
             fontWeight: "600",
             padding: "0.5rem 0 0.5rem 0",
-            margin: "0px"
+            margin: "0px",
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"
         },
         rightText: {
             textAlign: "center",
             color: titlecolor,
             fontWeight: "600",
             padding: "0.5rem 0 0.5rem 0",
-            margin: "0px"
+            margin: "0px",
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"
         },
     }
 

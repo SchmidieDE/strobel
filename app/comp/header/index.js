@@ -77,10 +77,10 @@ const Header = () => {
 
     return (
         <>
-            <div style={{backgroundColor: "white", display: "block", position: "fixed", top: "0px", width: "100%", marginBottom: "30px", height: "4rem"}}>
+            <div style={{backgroundColor: "white", display: "block", position: "fixed", top: "0px", width: "100%", marginBottom: "30px", height: "4rem", zIndex: "100"}}>
             <div style={{display: "flex"}}> 
-                <IconButton size="large" onClick={() => handleMenu()} >
-                    <MenuIcon fontSize="inherit" style={{}}/>
+                <IconButton size="large" onClick={() => handleMenu()} style={{padding: "0.8rem"}}>
+                    <MenuIcon fontSize="inherit" />
                 </IconButton>
                 <Link href={"/"} style={{display: "block", margin: "auto", verticalAlign: "center", marginTop: "0.5rem", paddingRight: "3rem"}}>
                     <div >

@@ -9,6 +9,9 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useState } from 'react';
 
 
+const css = {
+  
+}
 
 
 
@@ -25,17 +28,20 @@ const Dropdown = (props) => {
 
 
     return(
-    <div style={{width: "90%", margin: "auto", marginBottom: "1rem"}} onClick={() => handleOpen()}>
-      <Accordion style={{boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"}}>
+    <div style={{width: "90%", margin: "auto", marginBottom: "1rem", marginTop: "1rem"}} >
+      <Accordion onClick={() => handleOpen()} style={{ zIndex: "0", borderRadius: "3vmin", boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"}}>
         <AccordionSummary style={{}}> 
-          <h3 style={{margin: "0px", padding: "0px", fontWeight: "600"}}>{title}</h3>
-          <span >
+          <h3 style={{display: "inline-block", margin: "0px", padding: "0px", fontWeight: "600", width: "100%"}}>{title}</h3>
+          <span style={{display: "flex", justifyContent: "flex-end"}}>
             {
-            open ?   <KeyboardArrowUpIcon/> : <KeyboardArrowRightIcon/> 
+            open ?   <KeyboardArrowUpIcon/> : <KeyboardArrowRightIcon style={{}}/> 
             }
           </span>
         </AccordionSummary>
-        <AccordionDetails style={{}}>
+        <div style={{margin: "auto", width: "95%"}}>
+          <hr style={{border:"none",  borderTop: "3px solid #4E9940", marginTop: "0rem", marginBottom: "0rem"}}/>
+        </div>
+        <AccordionDetails style={{paddingTop: "0px"}}>
           <p style={{display: "block-inline"}}>
             {text}
           </p>

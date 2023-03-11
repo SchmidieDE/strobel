@@ -80,7 +80,7 @@ const Cookie = () => {
                         </div>
                     </div>
                     <div style={{width: "80%", margin: "auto"}}>
-                        <Button onClick={() => handleCookie()}variant="contained" style={{width: "100%", backgroundColor: "#4E9940", margin: "0.9rem 0rem 1rem 0rem"}}>Zustimmen und weiter</Button>
+                        <Button onClick={() => handleCookie()}variant="contained" style={{color: "white", fontWeight:"800", fontSize: "1.1rem", width: "100%", backgroundColor: "#4E9940", margin: "0.9rem 0rem 1rem 0rem"}}>Zustimmen und weiter</Button>
                         <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                             <Link href={"https://google.de"} style={{textDecoration: "none", color: "black"}}>Ablehnen</Link>
                             <Link href={"/impressum"} style={{textDecoration: "none", color: "black"}}>Impressum</Link>

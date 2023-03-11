@@ -36,7 +36,7 @@ const NavItem = ({href, name, icon, handleMenu}) => {
         cursor: "pointer",
         textDecoration: "none",
         color: textColor,
-        backgroundColor: backgroundColor
+        backgroundColor: backgroundColor,
     },
     menuItem: {
         display: "flex",

@@ -80,7 +80,7 @@ const Footer = () => {
                                     sublinks.map((e, index) => {
                                         const {href, name} = e
                                         return (
-                                        <li>   
+                                        <li key={index}>   
                                             <Link style={{display: "block", paddingLeft: "0", marginTop: "0.2rem", marginBottom: "0.2rem", textDecoration: "none", color: "#04245C", fontWeight: "800", fontSize: "1.1rem"}} href={href}>{name}</Link>
                                         </li>
                                         )

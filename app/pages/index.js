@@ -6,6 +6,7 @@ import Dropdown from "../comp/design/dropdown"
 import Subtitel from "../comp/design/subtitle"
 import Background from '../comp/design/background' 
 
+
 export default function Home() {
   return (
     <>
@@ -26,9 +27,11 @@ export default function Home() {
       <Subtitel  text={"Albanien ist schön"} variant={"right"}/>
       <Subtext variant={"white"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
    
-      {
-      //<Dropdown text="as" title="asas"/>
-      }
+      
+      <Dropdown title="S600 Maybach Brabus AMG 900PS" text="Albanien hat die schönsten Fraunen und die coolste Mafia der Welt. Die fahren alle dicke Brabus Maybach S600 Amg, ohne nur daran zu denken eine Abgasreinigunsreinrichtung einzubauen."/>
+      <Dropdown title="S600 Maybach Brabus AMG 900PS" text="Albanien hat die schönsten Fraunen und die coolste Mafia der Welt. Die fahren alle dicke Brabus Maybach S600 Amg, ohne nur daran zu denken eine Abgasreinigunsreinrichtung einzubauen."/>
+      <Dropdown title="S600 Maybach Brabus AMG 900PS" text="Albanien hat die schönsten Fraunen und die coolste Mafia der Welt. Die fahren alle dicke Brabus Maybach S600 Amg, ohne nur daran zu denken eine Abgasreinigunsreinrichtung einzubauen."/>
+      
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
