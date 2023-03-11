@@ -1,9 +1,15 @@
 import Link from 'next/link';
-import { useState } from "react";
+import { useRouter } from 'next/router';
+import { useEffect, useState } from "react";
+
 
 
 
 const NavItem = ({href, name, icon, handleMenu}) => {
+
+    const router = useRouter()
+
+    const [location, setLocation] = useState()
 
     const [active, setActive] = useState("/")
 
@@ -16,17 +22,7 @@ const NavItem = ({href, name, icon, handleMenu}) => {
     let backgroundColor = "#4E9940"
     let textColor = "white"
 
-    switch (href) {
-        case "/photovoltaik":
-            backgroundColor = "#BCE4FA",
-            textColor = "black"
-            break;
-        case "/forstwirtschaft":
-            backgroundColor = "#4E9940"
-            break;
-        default:
-            
-    }
+    
 
     const styleObj = {
     link: {
@@ -35,12 +31,12 @@ const NavItem = ({href, name, icon, handleMenu}) => {
         alignItems: "center",
         cursor: "pointer",
         textDecoration: "none",
-        color: textColor,
-        backgroundColor: backgroundColor,
+        color: (location === href.split("#")[0]) ? "black" : textColor,
+        backgroundColor: (location === href.split("#")[0]) ? "white" : backgroundColor  ,
     },
     menuItem: {
         display: "flex",
-        color: textColor,
+        color: (location === href.split("#")[0]) ? "black" : textColor,
         paddingTop: "0.75rem", 
         paddingBottom: "0.75rem", 
         textAlign: "center",
@@ -54,7 +50,10 @@ const NavItem = ({href, name, icon, handleMenu}) => {
     }
     
 
+    useEffect(() => {
 
+        setLocation(router.pathname)
+    }, [router.pathname])
     
 
     return (
@@ -62,7 +61,11 @@ const NavItem = ({href, name, icon, handleMenu}) => {
         
         subcategory ?
         <Link href={href} style={styleObj.link} onClick={() => handleMenu()}>
-            <span style={styleObj.menuItem}><div style={{display: "inline-block"}}>{icon}</div>  {name}</span>
+            <div style={{width: "100%"}}>
+                <div style={{width: "60%", float: "right"}}>
+                    <span style={styleObj.menuItem}><div style={{display: "inline-block"}}>{icon}</div>  {name}</span>
+                </div>
+            </div>
         </Link>
         :
         <Link href={href} style={styleObj.link} onClick={() => handleMenu()}>

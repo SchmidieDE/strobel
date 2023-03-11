@@ -20,7 +20,20 @@ const Dropdown = (props) => {
     
     const [open, setOpen] = useState(false)
 
-    const {title, text} = props
+    const {title, text, variant} = props
+
+
+    const css = {
+        blue: {
+          borderTop: "3px solid #0F265C"
+        },
+        green: {
+          borderTop: "3px solid #4E9940"
+        }
+    }
+
+
+
 
     const handleOpen = () => {
       setOpen(!open)
@@ -39,7 +52,7 @@ const Dropdown = (props) => {
           </span>
         </AccordionSummary>
         <div style={{margin: "auto", width: "95%"}}>
-          <hr style={{border:"none",  borderTop: "3px solid #4E9940", marginTop: "0rem", marginBottom: "0rem"}}/>
+          <hr style={{border:"none",  borderTop: css[variant].borderTop, marginTop: "0rem", marginBottom: "0rem"}}/>
         </div>
         <AccordionDetails style={{paddingTop: "0px"}}>
           <p style={{display: "block-inline"}}>

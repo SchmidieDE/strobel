@@ -7,15 +7,21 @@ const Subtext = (props) => {
 
     const css = {
         white: {
-            display: "inline-block"
+            display: "inline-block",
+            margin: "0px",
+            marginBottom: "1rem"
         },
         green: {
             display: "inline-block",
-            color: "white"
+            color: "white",
+            margin: "0px",
+            marginBottom: "1rem"
         },
         blue: {
             display: "inline-block",
-            color: "white"
+            color: "white",
+            margin: "0px",
+            marginBottom: "1rem"
         }
     }
 

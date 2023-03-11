@@ -69,7 +69,7 @@ const Cookie = () => {
                     <Titel text={"Diese Seite verwendet Cookies"} variant={"bigbold"}/>
                     <div style={{display: "block", alignItems: "center", height: "90px"}}>
                         <div style={{display: "block"}}>
-                            <Image src={"/Cookiebanner.svg"} alt={"fehlerchen"} width={1000} height={1000} responsive="true" style={{objectFit: "contain", height: "100px", width: "auto"}} />
+                            <Image src={"/Cookiebanner.svg"} alt={"Vollernter Cookiebanner"} width={1000} height={1000} responsive="true" style={{objectFit: "contain", height: "100px", width: "auto"}} />
                         </div>
                     </div>
                     <div style={{display: "flex", padding: "0rem 1rem 0rem 1rem", alignItems: "center" }}>
@@ -80,7 +80,7 @@ const Cookie = () => {
                         </div>
                     </div>
                     <div style={{width: "80%", margin: "auto"}}>
-                        <Button onClick={() => handleCookie()}variant="contained" style={{color: "white", fontWeight:"800", fontSize: "1.1rem", width: "100%", backgroundColor: "#4E9940", margin: "0.9rem 0rem 1rem 0rem"}}>Zustimmen und weiter</Button>
+                        <Button onClick={() => handleCookie()}variant="contained" style={{color: "white", fontWeight:"600", fontSize: "1.0rem", width: "100%", backgroundColor: "#4E9940", margin: "0.9rem 0rem 1rem 0rem"}}>Zustimmen und weiter</Button>
                         <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                             <Link href={"https://google.de"} style={{textDecoration: "none", color: "black"}}>Ablehnen</Link>
                             <Link href={"/impressum"} style={{textDecoration: "none", color: "black"}}>Impressum</Link>
