@@ -55,7 +55,7 @@ const Dropdown = (props) => {
           <hr style={{border:"none",  borderTop: css[variant].borderTop, marginTop: "0rem", marginBottom: "0rem"}}/>
         </div>
         <AccordionDetails style={{paddingTop: "0px"}}>
-          <p style={{display: "block-inline"}}>
+          <p style={{display: "block-inline", lineHeight: "1.4", fontSize: "1.1rem"}}>
             {text}
           </p>
         </AccordionDetails>

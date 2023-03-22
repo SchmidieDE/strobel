@@ -1,14 +1,18 @@
 import Link from "next/link"
-
+import Dropdown from "./design/dropdown";
 
 import PhoneIcon from '@mui/icons-material/Phone';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import Subtitel from "./design/subtitle";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 
 const Footer = () => {
 
+    const router = useRouter()
 
     const FooterLinks = [
         {
@@ -32,6 +36,7 @@ const Footer = () => {
         }
     ]
 
+
     //#A9D19A
     //#74A24C
     //#04245C
@@ -39,6 +44,21 @@ const Footer = () => {
     return (
         <>
         <footer>
+            {
+            (router.pathname.includes("forstwirtschaft")) ?
+            <div>
+                <Subtitel text={"Häufig gefragt"} variant={"left"}  />
+                <Dropdown variant={"green"} title="as" text="as"></Dropdown>
+            </div>
+            :
+            <div>
+                <Subtitel text={"Häufig gefragt"} variant={"left"} background={"whiteblue"} />
+                <Dropdown variant={"blue"} title="Wie teuer ist die Reinigung?" text="as"></Dropdown>
+                <Dropdown variant={"blue"} title="Werden Reinigungsmittel eingesetzt?" text="as"></Dropdown>
+                <Dropdown variant={"blue"} title="Kann ich das nicht selber machen?" text="Herkömmliche Haushaltsmittel und falsche Reiniger können die Oberfläche Ihrer Anlage beschädigen und den Garantieanspruch erlöschen lassen. Spezielle Reinigungsgeräte für den Privatgebrauch sind zudem meist nicht rentabel. Eine schonende Reinigung, um Kratzer und Beschädigungen zu vermeiden, erfordert spezialisierte Technik, passende Reinigungsmittel und Erfahrung."></Dropdown>
+                <Dropdown variant={"blue"} title="Wie oft muss eine PV-Anlage gereinigt werden?" text="as"></Dropdown>
+            </div>
+            }
             <div style={{backgroundColor: "#C1DBB6", paddingTop: "1rem", paddingBottom: "1rem", width: "100%", marginTop: "6rem"}}>
                 <div style={{width: "90%", margin: "auto"}}>
                     <div style={{backgroundColor: "#4E9940", borderRadius: "3vmin", padding: "1rem"}}>

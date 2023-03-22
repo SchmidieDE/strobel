@@ -9,19 +9,25 @@ const Subtext = (props) => {
         white: {
             display: "inline-block",
             margin: "0px",
-            marginBottom: "1rem"
+            marginBottom: "1rem",
+            fontSize: "1.2rem",
+            lineHeight: "1.4", 
         },
         green: {
             display: "inline-block",
             color: "white",
             margin: "0px",
-            marginBottom: "1rem"
+            marginBottom: "1rem",
+            fontSize: "1.2rem",
+            lineHeight: "1.4", 
         },
         blue: {
             display: "inline-block",
             color: "white",
             margin: "0px",
-            marginBottom: "1rem"
+            marginBottom: "1rem",
+            fontSize: "1.2rem",
+            lineHeight: "1.4", 
         }
     }
 
