@@ -25,8 +25,6 @@ const Photovoltaik = () => {
                 <Stichpunkte variant={"blue"} arr={["Steigerung Ihrer Erträge bis zu 30%", "Reinigungskosten sind auch für Privathaushalte von der Steuer absetzbar", "Hochwertige und sichere maschinelle Reinigung", "Kein Betreten der Modulflächen", "Spezialisiertes Reinigungsmittel für Module", "Erhöht die Nutzungsdauer der Anlage"]}/>
                 <Subtitel background={"blue"} text={"Was macht uns aus?"} variant={"right"}/>
                 <Subtext variant={"blue"} text={"Wir reinigen bereits seit 2012 professionell Photovoltaik- und Solaranlagen. Nach mehr als einem Jahrzehnt, haben wir nicht nur eine hohe Expertise rund um die Reinigung angehäuft, sondern auch es geschafft durch neuste Technik von spezialisierten Herstellern uns als Branchenvorreiter in der Region Oberschwaben herauszukristallisieren."}/>      
-                <Subtitel background={"blue"} text={"Deutschland ist das aller beste und schönste Land"} variant={"right"}/>
-                <Subtext variant={"blue"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>      
             </Background>
         </>
      );

@@ -6,55 +6,43 @@ import Dropdown from "../comp/design/dropdown"
 import Subtitel from "../comp/design/subtitle"
 import Background from '../comp/design/background' 
 import ImageContainer from '../comp/design/imagecontainer'
+import Titel from "../comp/design/title"
 
 
 export default function Home() {
   return (
     <>
-      <Subtitel text={"Hannes und Peter Strobel Gbr."} variant={"left"}/>
+      <Titel variant={"bigcenter"} text={"Wilkommen!"}/>
+      <Subtext variant={"white"} text={"Mit uns haben Sie einen erfahrenen und kompetenten Partner in der Photovoltaikreinigung und der Forstwirtschaft. Ihre Hannes und Peter Strobel Gbr.!"}/>
+      <Subtitel text={"Wer wir sind"} variant={"left"}/>
+      <Subtext variant={"white"} text={"Wir sind ein kleines traditionsreiches Familienunternehmen, welches von Hannes und Peter Strobel geführt wird und in den Bereichen Photovoltaikreinigung und der Forstwirtschaft tätig ist. "}/>
       {
       //<ImageContainer src={"./pictures/Holzhaufen.jpg"} alt={"Holzhaufen Kreis Ravensburg"} width={1000} height={1000}/>
       }
-      <Subtext variant={"white"} text={""}/>
+
       {
       //<ImageContainer src={"/pictures/rueckewagenseitlich.jpg"} alt={"John Deere Rückewagen von der Seite"}/>
       }
-      <Subtitel text={"Albanien ist schön"} variant={"left"}/>
-      <Subtext variant={"white"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
-      <Subtext variant={"white"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
-      <Subtitel  text={"Albanien ist schön, fast so schön wie die Türkei"} variant={"right"}/>
       {
       //ImageContainer src={"/pictures/rueckewagenzange.jpg"} alt={"John Deere Rückewagen Greifarm mit Holz"}/>
-      }
-      <Subtext variant={"white"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
-      <Subtitel  text={"Albanien ist schön"} variant={"right"}/>
-      <Subtext variant={"white"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
-      {
+      }{
       //ImageContainer src={"/pictures/rueckewagenzangenah.jpg"} alt={"John Deere Rückewagen Greifarm mit Holz in der Nahaufnahme"}/>
       }
-      <Subtitel  text={"Albanien ist schön"} variant={"right"}/>
+
       {
       //ImageContainer src={"/pictures/rueckewagenzangenah.jpg"} alt={"John Deere Rückewagen Greifarm mit Holz in der Nahaufnahme"}/>
       }
       <Background variant={"green"}>
-        <Subtitel background={"green"} text={"Albanien ist schön"} variant={"right"}/>
-        <Subtext variant={"green"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
-        <Subtitel background={"green"} text={"Türkei ist das beste und schönste Land"} variant={"right"}/>
-        <Subtext variant={"green"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>      
-        <Subtitel background={"green"} text={"Deutschland ist das aller beste und schönste Land"} variant={"right"}/>
-        <Subtext variant={"green"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>      
-      </Background>
-      <Subtitel  text={"Albanien ist schön"} variant={"right"}/>
+        <Subtitel background={"green"} text={"Forstwirtschaft"} variant={"right"}/>
+        <Subtext variant={"green"} text={<>asa<br/><br/>asas</>}/>
+        <Subtitel background={"green"} text={"Photovoltaikreinigung"} variant={"left"}/>
+        <Subtext variant={"green"} text={<>asa<br/><br/>asas</>}/>
+        </Background>
+      <Subtitel  text={"Historie"} variant={"right"}/>
       <Subtext variant={"white"} text={"Das ist ein langer Beispieltext. Ich schriebe sehr sehr langeu nd schön und schnell nun Siehst du diesen Text. Ich liebe Albanien, bestes Land"}/>
       {
        //<ImageContainer src={"/pictures/rueckewagenzange.jpg"} alt={"John Deere Rückewagen Greifarm mit Holz"}/>
       }
-
-      
-      <Dropdown variant={"blue"} title="S600 Maybach Brabus AMG 900PS" text="Albanien hat die schönsten Fraunen und die coolste Mafia der Welt. Die fahren alle dicke Brabus Maybach S600 Amg, ohne nur daran zu denken eine Abgasreinigunsreinrichtung einzubauen."/>
-      <Dropdown variant={"green"} title="S600 Maybach Brabus AMG 900PS" text="Albanien hat die schönsten Fraunen und die coolste Mafia der Welt. Die fahren alle dicke Brabus Maybach S600 Amg, ohne nur daran zu denken eine Abgasreinigunsreinrichtung einzubauen."/>
-      <Dropdown variant={"blue"} title="S600 Maybach Brabus AMG 900PS" text="Albanien hat die schönsten Fraunen und die coolste Mafia der Welt. Die fahren alle dicke Brabus Maybach S600 Amg, ohne nur daran zu denken eine Abgasreinigunsreinrichtung einzubauen."/>
-
 
     </>
   )
