@@ -1,9 +1,9 @@
 
-
+import Titel from "@/comp/design/title";
 
 const Technik = () => {
     return ( <>
-        Technik
+        <Titel variant={"bigcenter"} text={"Technik"}/>
     </> );
 }
  
