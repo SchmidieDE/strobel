@@ -9,10 +9,8 @@ const Forstwirtschaft = () => {
     
     return ( <>
         <Titel variant={"bigcenter"} text={"Forstwirtschaft"}/>
-        {
-            //<ImageContainer src={"/pictures/rueckewagenfront.jpg"} alt={"John Deere 1110 D Rueckewagen"}/>
-
-        }
+        <ImageContainer src={"/pictures/Holzhaufen.jpg"} width={4032} height={2268} alt={"John Deere 810E Rückewagen im Wald im Einsatz"} />
+        
         
     </> );
 }

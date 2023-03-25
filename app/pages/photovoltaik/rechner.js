@@ -19,8 +19,8 @@ const Rechner = () => {
 
     const [form, setForm] = useState({
         nennleistung: 40,
-        einspeis: 0.47,
-        versch: 30,
+        einspeis: 0.43,
+        versch: 20,
         zeit: 7,
     })
 
@@ -49,7 +49,7 @@ const Rechner = () => {
     return ( <>
         <Titel variant={"bigcenter"} text={"Kostenrechner"}/>
         <Subtitel  text={"Lohnt sich eine Reinigung?"} variant={"left"} background={"whiteblue"}/>
-        <Subtext variant={"white"} text={"Es gibt viele Gründe, weshalb Sie Ihre Anlage reinigen lassen sollten. Erhöhung der Lebensdauer der Module, Reduzierung von Störungen, welcher oftmals durch Ablagerungen ausgelöst wird, sind einige davon, letztlich entscheidend ist allerdings der ökonomische Aspekt."}/>
+        <Subtext variant={"white"} text={"Es gibt viele Gründe, weshalb Sie Ihre Anlage reinigen lassen sollten. Erhöhung der Lebensdauer der Module, Reduzierung von Störungen, welche oftmals durch Ablagerungen ausgelöst wird, sind einige davon, letztlich entscheidend ist allerdings der ökonomische Aspekt."}/>
         <Subtext variant={"white"} text={`Aus diesem Grund haben wir einen kleinen Rechner entwickelt mit dem Sie feststellen können, wie viel Geld Ihnen eine vermutzte Anlage über die Zeit kostet.`}/>
         <Subtitel  text={"Reinigungsrechner"} variant={"right"} background={"whiteblue"}/>
         <div style={{width: "80%", margin: "auto", marginBottom: "2rem"}}>
@@ -126,29 +126,15 @@ const Rechner = () => {
                         <Grid item xs={12}>
                             <div>
                                 <span style={{display: "inline-block", lineHeight: "1.1", marginBottom: "0.5rem", fontSize: "1.1rem", fontWeight: "800"}}>Einspeisverluste durch Verschmutzung:</span>   
-                                <span style={{display: "inline-block", backgroundColor: "#0F265C", color: "white", fontWeight: "800", fontSize: "1.7rem", padding: "0.4rem" }}>- {solution}€*</span>
+                                <span style={{textAlign: "center", display: "inline-block", backgroundColor: "#0F265C", color: "white", fontWeight: "800", fontSize: "1.7rem", padding: "0.4rem" }}>- {solution}€</span>
                                 <span style={{display: "inline-block", lineHeight: "1.0", fontSize: "0.7rem", color: "gray", marginTop: "0.5rem"}}>Dies ist eine Beispielrechnung und die tatsächlichen Werte können aufgrund von unterschiedlichen Wirkungsgradverlusten, Besonnung und Verschmutzung von Anlage zu Anlage variieren.</span>
                             </div>
                         </Grid>
             </Grid>
         </div>
         <Subtitel  text={"Steuern"} variant={"left"} background={"whiteblue"}/>
-        <Subtext variant={"white"} text={``}/>
-        
-        
-
-
-
-
-
-        <Stichpunkte arr={["Vogelkot","Pollen und Blüten", "Laub und Baumnadeln", "Staub und Rückstände durch Viehaltung oder Verkehr", "Rückstände von Regen und Schnee"]}  variant={"white"}/>
-        <Subtext variant={"white"} text={`Bei einem optimalen Neigungswinkel von 30 bis 35 Grad bleibt in der Regel weder Laub noch Schnee auf der PV-Anlage liegen. Allerdings können Umweltverschmutzung und Vogelkot dazu führen, dass die Anlage gereinigt werden muss. Insbesondere der Bereich zwischen Glas und Rahmen ist anfällig für Schmutzansammlungen und das Wachstum von Moos. Vernachlässigt man die regelmäßige Reinigung der Solaranlage, führt dies zu einer Verringerung des Wirkungsgrades, da weniger Sonnenlicht durch die Schmutzschicht gelangen kann. Zusätzlich beugt die Reiningung der Anlage Störungen der Anlage vor (Kurzschluss etc.)`}/>
-        <Background variant={"blue"}>
-            <Subtitel background={"blue"} text={"Ihre Vorteile"} variant={"left"}/>
-            <Stichpunkte variant={"blue"} arr={["Steigerung Ihrer Erträge bis zu 30%", "Reinigungskosten sind auch für Privathaushalte von der Steuer absetzbar", "Hochwertige und sichere maschinelle Reinigung", "Kein Betreten der Modulflächen", "Spezialisiertes Reinigungsmittel für Module", "Erhöht die Nutzungsdauer der Anlage"]}/>
-            <Subtitel background={"blue"} text={"Was macht uns aus?"} variant={"right"}/>
-            <Subtext variant={"blue"} text={"Wir reinigen bereits seit 2012 professionell Photovoltaik- und Solaranlagen. Nach mehr als einem Jahrzehnt, haben wir nicht nur eine hohe Expertise rund um die Reinigung angehäuft, sondern auch es geschafft durch neuste Technik von spezialisierten Herstellern uns als Branchenvorreiter in der Region Oberschwaben herauszukristallisieren."}/>      
-        </Background>
+        <Subtext variant={"white"} text={<>Zudem fließt der steuerliche Aspekt noch zusätzlich in die Rechnung mit rein. Privathaushalte können nämlich die Kosten der Reinigung einer Photovoltaikanlage von der Steuer absetzen, da eine solche Anlage als Gewerbe eingestuft wird und unsere Dienstleistung somit als betrieblicher Aufwand abzusetzen ist. Ebenso kann die Umsatzsteuer vom Finanzamt zurückerstattet werden.<br/><br/>Nicht zu Vergessen ist die Nutzung des selbsterzeugten Stroms, welcher ebenfalls in die Rentabilitätsberechnung einbezogen werden sollte.</>}/>
+        <Stichpunkte arr={["Reinigung von der Steuer absetzbar","Umsatzsteuer ausweisbar", "Mehr Eigenstrom nutzen und Steuern sparen"]}  variant={"white"}/>
     </> );
 }
  
