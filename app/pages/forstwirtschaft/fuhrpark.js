@@ -18,7 +18,7 @@ const Fuhrpark = () => {
         <Stichpunkte arr={["212kW (290 PS)", "Gewicht: 22.000 kg", "Nutzlast: 12.000 kg", "Ladekapazität: 14.5 m³"]} variant={"white"}/>
         <Background variant={"green"}>
             <Subtitel text={"John Deere 1110D"} variant={"right"} background={"green"}/>
-            <ImageContainer src={"/pictures/rueckewagenseitlich.jpg"} width={4032} height={2268} alt={"John Deere 810E Rückewagen im Wald im Einsatz"} />    
+            <ImageContainer src={"/pictures/rueckewagenfront.jpg"} width={4032} height={2268} alt={"John Deere 810E Rückewagen im Wald im Einsatz"} />    
             <Subtext variant={"green"} text={"Der John Deere 1110D ist ein leistungsstarker Forstschlepper mit einem 6-Zylinder-Motor und einer Ladekapazität von 12.2 m³. Im Gegensatz zum John Deere 810 E verfügt der 1110D über eine Bereifung anstelle von Ketten, was eine höhere Geschwindigkeit auf befestigten Straßen ermöglicht. Mit einem hydraulisch betriebenen Kran und Greifer kann der Schlepper leicht Holz aus dem Wald transportieren."}/>
             <Stichpunkte arr={["200kW (268 PS)", "Gewicht: 18.000 kg", "Ladekapazität: 12,2 m³", "Fünffachausleger-Kran mit 10 Meter Reichweite", "Bereifung: 710/45-26,5"]} variant={"green"}/>
         </Background>
