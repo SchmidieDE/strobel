@@ -71,7 +71,7 @@ const Header = () => {
 
 
     useEffect(() => {
-        console.log(menuActive, "MENU")
+        //console.log(menuActive, "MENU")
     }, [menuActive])
 
 
@@ -99,7 +99,7 @@ const Header = () => {
                 </IconButton>
                 <Link href={"/"} style={{display: "block", margin: "auto", verticalAlign: "center", marginTop: "0.5rem", paddingRight: "3rem"}}>
                     <div >
-                        <Image src={"/StrobelLogoEditiertGreenBlue.svg"} width={175.57} height={55.16} />
+                        <Image src={"/StrobelLogoEditiertGreenBlue.svg"} alt={"Strobel Logo"} width={175.57} height={55.16} />
                     </div>
                 </Link>
             </div>
