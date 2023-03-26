@@ -78,8 +78,9 @@ const Header = () => {
 
     return (
         <>
+        
         <Script
-        src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+        src="https://www.googletagmanager.com/gtag/js?id=G-LQ8YNDGR9N"
         strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -88,9 +89,11 @@ const Header = () => {
             function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'GA_MEASUREMENT_ID');
+            gtag('config', 'G-LQ8YNDGR9N');
             `}
         </Script>
+        
+        
 
             <div style={{backgroundColor: "white", display: "block", position: "fixed", top: "0px", width: "100%", marginBottom: "30px", height: "4rem", zIndex: "100"}}>
             <div style={{display: "flex"}}> 
