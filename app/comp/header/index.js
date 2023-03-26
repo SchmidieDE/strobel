@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { Button, IconButton } from "@mui/material";
 import { useTrail, animated } from "@react-spring/web";
 import Image from "next/image";
+import Script from 'next/script'
 
 
 
@@ -77,6 +78,20 @@ const Header = () => {
 
     return (
         <>
+        <Script
+        src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+        strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+            {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'GA_MEASUREMENT_ID');
+            `}
+        </Script>
+
             <div style={{backgroundColor: "white", display: "block", position: "fixed", top: "0px", width: "100%", marginBottom: "30px", height: "4rem", zIndex: "100"}}>
             <div style={{display: "flex"}}> 
                 <IconButton size="large" onClick={() => handleMenu()} style={{padding: "0.8rem"}}>

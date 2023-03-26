@@ -18,8 +18,8 @@ const Rechner = () => {
 
 
     const [form, setForm] = useState({
-        nennleistung: 40,
-        einspeis: 0.43,
+        nennleistung: 30,
+        einspeis: 0.20,
         versch: 20,
         zeit: 7,
     })

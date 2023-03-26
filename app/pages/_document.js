@@ -6,16 +6,7 @@ export default function Document() {
     <Html lang="de">
       <Head/>
       <body style={{margin: "0px", padding: "0px"}}>
-        <NextScript async src="https://www.googletagmanager.com/gtag/js?id=G-LQ8YNDGR9N" id="GoogleScript"/>
-        <NextScript  id="CookieScript">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-          
-            gtag('config', 'G-LQ8YNDGR9N');
-          `}
-        </NextScript>
+        <NextScript/>
         <Main />    
       </body>
     </Html>

@@ -42,8 +42,8 @@ const Dropdown = (props) => {
 
     return(
     <div style={{width: "90%", margin: "auto", marginBottom: "1rem", marginTop: "1rem"}} >
-      <Accordion onClick={() => handleOpen()} style={{ zIndex: "0", borderRadius: "3vmin", boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"}}>
-        <AccordionSummary style={{}}> 
+      <Accordion  style={{ zIndex: "0", borderRadius: "3vmin", boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"}}>
+        <AccordionSummary style={{}} onClick={() => handleOpen()}> 
           <h3 style={{display: "inline-block", margin: "0px", padding: "0px", fontWeight: "600", width: "100%"}}>{title}</h3>
           <span style={{display: "flex", justifyContent: "flex-end"}}>
             {

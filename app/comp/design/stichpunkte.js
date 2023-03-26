@@ -45,7 +45,7 @@ const Stichpunkte = (props) => {
         {
         arr.map((e, index) => {
             return (
-            <li style={css[variant]}>
+            <li style={css[variant]} key={index}>
                 <RadioButtonCheckedIcon fontSize="small" style={css[variant+"radio"]} /><span style={{display: "block", marginTop: "auto", marginBottom: "auto", marginLeft: "0.5rem", fontWeight: "600"}}>{e}</span>
             </li>
             )
