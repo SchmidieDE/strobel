@@ -25,7 +25,7 @@ export default function Home() {
         <Subtext variant={"green"} text={<>Weitere Informationen darüber finden Sie auf der Unterseite <Link href={"forstwirtschaft/leistungen"} style={{ color: "white", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Leistungen</Link>.</>}/>
         <Subtitel background={"green"} text={"Photovoltaikreinigung"} variant={"left"}/>
         <Subtext variant={"green"} text={"...und das machen wir alles rund um Photovoltaik/Solaranlagen:"}/>
-        <Stichpunkte  arr={["Holzvermarktung", "Holzschlagen"]}  variant={"green"}/>
+        <Stichpunkte  arr={["Modulreinigung mit entmineralisiertem Wasser"]}  variant={"green"}/>
         <Subtext variant={"green"} text={<>Weitere Informationen darüber finden Sie auch hier auf der entsprechenden Unterseite <Link href={"photovoltaik/leistungen"} style={{ color: "white", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Leistungen</Link>.</>}/>
         </Background>
       <Subtitel  text={"Historie"} variant={"right"}/>
