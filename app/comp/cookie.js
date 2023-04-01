@@ -4,8 +4,13 @@ import Link from "next/link"
 import { useState } from "react"
 import { useSpring, animated } from '@react-spring/web'
 import Titel from "../comp/design/title"
+import { useMediaQuery } from "@mui/material"
+
 
 const Cookie = () => {
+
+    const matchesBig = useMediaQuery('(min-width:600px)');
+    
 
     let crccs = {
         wrapper: {
@@ -30,6 +35,30 @@ const Cookie = () => {
     const config = {mass: 5, tension: 2000, friction: 200}
 
     const spring = useSpring(
+        matchesBig?
+        {
+            position: "fixed",
+            width: "400px",
+            background: "#fff",
+            //padding: "25px 25px 30px 25px",
+            bordeRradius: "3vmin",
+            textAlign: "center",
+            height: "340px",
+            zIndex: 10000,
+            bottom: 20,
+            left: 20,
+            border: "none",
+            boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
+            config,
+            display:  "block",
+            opacity: cookie ? 1 : 0,
+            transform: "translateY(0px)",
+            from: {
+                opacity: 0,
+                transform: "translateY(+100%)"
+            }
+        }
+        :
         {
         position: "fixed",
         width: "100%",

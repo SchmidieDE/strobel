@@ -43,7 +43,7 @@ const stylecss = {
 const Header = () => {
 
     const matches = useMediaQuery('(min-width:600px)');
-    const matchesBig = useMediaQuery('(min-width:1100px)');
+    const matchesBig = useMediaQuery('(min-width:1030px)');
 
     const [menuActive, setMenuActive] = useState(false)
 

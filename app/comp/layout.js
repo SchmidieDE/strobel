@@ -8,7 +8,7 @@ import { useMediaQuery } from "@mui/material"
 const Layout = ({children}) => {
 
     const matches = useMediaQuery('(min-width:600px)');
-    const matchesBig = useMediaQuery('(min-width:1100px)');
+    const matchesBig = useMediaQuery('(min-width:1030px)');
     
 
     return (
