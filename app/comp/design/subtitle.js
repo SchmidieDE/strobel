@@ -40,11 +40,15 @@ const Subtitel = (props) => {
             textAlign: "center",
             color: titlecolor,
             fontWeight: "600",
+            borderTopRightRadius: "2vmin", 
+            borderBottomRightRadius: "2vmin",
             padding: "0.5rem 0 0.5rem 0",
             margin: "0px",
             boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"
         },
         rightText: {
+            borderTopLeftRadius: "2vmin", 
+            borderBottomLeftRadius: "2vmin",
             textAlign: "center",
             color: titlecolor,
             fontWeight: "600",
