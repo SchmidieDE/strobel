@@ -38,7 +38,7 @@ const Videocontainer = ({linkhref, color}) => {
                     }
                 </IconButton>
     
-                <video ref={videoref} muted controls style={{display: "block", marginBottom: "1rem", borderRadius: "3vmin", height: "200px",  overflow: "hidden", boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"}}>
+                <video ref={videoref} muted controls loop autoplay style={{display: "block", marginBottom: "1rem", borderRadius: "3vmin", height: "200px",  overflow: "hidden", boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"}}>
                     
                     <source src={`${linkhref}`} type="video/mp4" />
                 </video>
