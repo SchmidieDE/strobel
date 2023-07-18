@@ -11,7 +11,7 @@ const Technik = () => {
     return ( <>
         <Titel variant={"bigcenter"} text={"Technik"}/>
         <Subtitel  text={"MKG Langarmkran 401"} variant={"left"} background={"whiteblue"}/>
-        <ImageContainer src={"/pictures/rueckewagenseitlich.jpg"} width={4032} height={2268} alt={"John Deere 810E Rückewagen im Wald im Einsatz"} />
+        <ImageContainer src={"/pictures/solardachreinigungstrobel.jpeg"} width={4032} height={2268} alt={"Solardachreinigung Aufnahme mit einer Drohne während dem Prozess"} />
         <Subtext variant={"white"} text={"Seit 2023 setzen wir den MAN MKG 401 Langarmkram mit einer spezalisierten Solarwaschbürste bei unserer Reinigung ein. Dieser zeichnet sich durch eine hohe Arbeitsbreite der Bürste, große Reichweite und Wendigkeit des Krans, als auch der schnellen Einsatzbereitschaft aus."}/>
         <Stichpunkte variant={"white"} arr={["Kran ist 360° drehbar", "Kran hat eine Höhe von bis zu 20 Meter", "Arbeitsbreite der Bürste von 5 Meter", "Kein Betreten des Dachs oder Module", "Schnelle und sichere Reinigung (BG konform)"]}/>
         <Background variant={"blue"}>
@@ -22,4 +22,4 @@ const Technik = () => {
     </> );
 }
  
-export default Technik;
+export default Technik
