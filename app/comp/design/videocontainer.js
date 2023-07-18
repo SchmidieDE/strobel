@@ -33,13 +33,13 @@ const Videocontainer = ({linkhref, color, variant}) => {
         switch(variant) {
             case "Hochkant":
                 return (
-                    <video ref={videoref} muted controls loop={!muted} autoplay style={{display: "block", marginBottom: "1rem", marginLeft: "auto", marginRight: "auto", borderRadius: "3vmin", height: "400px",  overflow: "hidden", boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"}}> 
+                    <video ref={videoref} muted  loop={!muted} autoplay style={{display: "block", marginBottom: "1rem", marginLeft: "auto", marginRight: "auto", borderRadius: "3vmin", height: "400px",  overflow: "hidden", boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"}}> 
                         <source src={`${linkhref}`} type="video/mp4" />
                     </video>
                 );
             default: 
                 return (
-                    <video ref={videoref} muted controls loop={!muted} autoplay style={{display: "block", marginBottom: "1rem", marginLeft: "auto", marginRight: "auto", borderRadius: "3vmin", height: "200px",  overflow: "hidden", boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"}}> 
+                    <video ref={videoref} muted  loop={!muted} autoplay style={{display: "block", marginBottom: "1rem", marginLeft: "auto", marginRight: "auto", borderRadius: "3vmin", height: "200px",  overflow: "hidden", boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"}}> 
                         <source src={`${linkhref}`} type="video/mp4" />
                     </video>    
                 );
