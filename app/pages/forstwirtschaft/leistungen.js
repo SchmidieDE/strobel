@@ -11,7 +11,7 @@ const Leistungen = () => {
         <Titel variant={"bigcenter"} text={"Leistungen"}/>
         <ImageContainer src={"/pictures/rueckewagenzange.jpg"}  alt={"Rückewagen im Wald. Zu sehen ist die Zange des John Deere 1110 der Baumstämme hochhebt"} />
         
-        <Videocontainer linkhref={"https://statischerbucket.s3.eu-central-1.amazonaws.com/VideovomHolzruecken.mp4"} color={"#0F265C"} variant="Hochkant"/>
+        <Videocontainer linkhref={"https://statischerbucket.s3.eu-central-1.amazonaws.com/VideovomHolzruecken.mp4"} color={"#4E9940"} variant="Hochkant"/>
     </> );
 }
  
