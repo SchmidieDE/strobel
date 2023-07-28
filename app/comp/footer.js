@@ -16,24 +16,30 @@ const Footer = () => {
 
     const FooterLinks = [
         {
-            title: "Über uns",
-            sublinks: [{href: "/", name:"Über uns"}]
-        },
-        {
             title: "Forstwirtschaft",
             sublinks: [
+                {href: "/forstwirtschaft", name:"Forstwirtschaft"},
                 {href: "/forstwirtschaft/fuhrpark", name:"Fuhrpark"},
-                {href: "/forstwirtschaft/fuhrpark#JohnDeere", name:"John Deere"},
+                {href: "/forstwirtschaft/leistungen", name:"Leistungen"},
             ]
         },
         {
             title: "Photovoltaik",
             sublinks: [
-                {href: "/photovoltaik/index", name:"Photovoltaik"},
+                {href: "/photovoltaik", name:"Photovoltaik"},
                 {href: "/photovoltaik/technik", name:"Reinigungstechnik"},
-                {href: "/photovoltaik/leistungen#JohnDeere", name:"Leistungen"},
+                {href: "/photovoltaik/leistungen", name:"Leistungen"},
+                {href: "/photovoltaik/rechner", name:"Rechner"},
             ]
-        }
+        },
+        {
+            title: "Kontakt",
+            sublinks: [{href: "/kontakt", name:"Kontakt"}]
+        },
+        {
+            title: "Über uns",
+            sublinks: [{href: "/", name:"Über uns"}]
+        },
     ]
 
 
