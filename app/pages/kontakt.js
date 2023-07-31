@@ -12,10 +12,10 @@ const Kontakt = () => {
             <Subtitel text={"In Kontakt treten"} variant={"left"}/>
             <Subtext variant={"white"} text={<>Wenn Sie uns kontaktieren möchten, können Sie dies entweder per <Link href={"tel:491708083239"} style={{ color: "black", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Telefon</Link>, <Link href={"mailto:hannes-strobel@gmx.com"} style={{ color: "black", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Email</Link> oder <Link href={"https://api.whatsapp.com/send?phone=491708083239&text=&source=&data="} style={{ color: "black", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Whatsapp</Link> tun. Wir bemühen uns Ihre Anfrage schnellstmöglich zu beantworten.</>}/>
             <Subtitel text={"Öffnugungszeiten"} variant={"right"}/>
-            <Subtext variant={"white"} text={"Wir sind von Montag bis Freitag von 8-19 Uhr, und Samstags von 8-15 Uhr erreichbar"}/>
+            <Subtext variant={"white"} text={"Wir sind von Montag bis Freitag von 8-19 Uhr, und Samstags von 8-15 Uhr erreichbar."}/>
             <Subtitel text={"Anfahrt"} variant={"left"}/>
             <Subtext variant={"white"} text={"Unser Unternehmen ist im schönen Eichstegen, ansäßig, nicht weit weg von Altshausen."}/>
-            <Subtext variant={"white"} text={"Wir freuen uns auf Ihre Anfragen und werden uns umgehend mit Ihnen in Verbindung setzen."}/>
+            <Subtext variant={"white"} text={"Wir freuen uns auf Ihre Anfrage und werden uns umgehend mit Ihnen in Verbindung setzen."}/>
             
     </> );
 }

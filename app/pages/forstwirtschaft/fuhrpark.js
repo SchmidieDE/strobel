@@ -12,25 +12,25 @@ const Fuhrpark = () => {
     return ( 
         <>
         <Titel variant={"bigcenter"} text={"Fuhrpark"}/>
-        <Subtitel text={"John Deere 810E"} variant={"left"}/>
+        <Subtitel text={"John Deere 810E Forwarder"} variant={"left"}/>
         <ImageContainer src={"/pictures/rueckewagenseitlich.jpg"} width={4032} height={2268} alt={"John Deere 810E Rückewagen im Wald im Einsatz"} />
-        <Subtext variant={"white"} text={"Der John Deere 810 E Forstschlepper ist ein leistungsstarker Rückewagen, der speziell für den professionellen Einsatz im Wald entwickelt wurde. Der 6-Zylinder-Motor mit 290PS sorgt für ausreichend Leistung auch bei schwierigem Gelände mit schwerer Ladung. Dank seiner robusten Waldketten und großen Bodenfreiheit bietet der Schlepper eine hervorragende Traktion und Stabilität auf unebenem Gelände."} />
-        <Stichpunkte arr={["212kW (290 PS)", "Gewicht: 22.000 kg", "Nutzlast: 12.000 kg", "Ladekapazität: 14.5 m³"]} variant={"white"}/>
+        <Subtext variant={"white"} text={"Der John Deere 810E Forwarder ist ein leichter Rückezug, der speziell für den Einsatz im Wald entwickelt wurde. Der 4-Zylinder-Motor mit 136 PS und 4,5 Liter Hubraum bietet ausreichend Leistung, auch bei schwierigem Gelände. Dank der Moorbänder kann die Holzernte auch auf schlammigen, nassen Böden durchgeführt werden."} />
+        <Stichpunkte arr={["Leistung: 136 PS)", "Gewicht: 14.000 kg", "Ladekapazität: 11 Fm","Bereifung: 710/40-22.5", "Kran mit Ausleger von 10 Meter"]} variant={"white"}/>
         <Background variant={"green"}>
-            <Subtitel text={"John Deere 1110D"} variant={"right"} background={"green"}/>
+            <Subtitel text={"John Deere 1110D Forwarder"} variant={"right"} background={"green"}/>
             <ImageContainer src={"/pictures/rueckewagenfront.jpg"} width={4032} height={2268} alt={"John Deere 810E Rückewagen im Wald im Einsatz"} />    
-            <Subtext variant={"green"} text={"Der John Deere 1110D ist ein leistungsstarker Forstschlepper mit einem 6-Zylinder-Motor und einer Ladekapazität von 12.2 m³. Im Gegensatz zum John Deere 810 E verfügt der 1110D über eine Bereifung anstelle von Ketten, was eine höhere Geschwindigkeit auf befestigten Straßen ermöglicht. Mit einem hydraulisch betriebenen Kran und Greifer kann der Schlepper leicht Holz aus dem Wald transportieren."}/>
-            <Stichpunkte arr={["200kW (268 PS)", "Gewicht: 18.000 kg", "Ladekapazität: 12,2 m³", "Fünffachausleger-Kran mit 10 Meter Reichweite", "Bereifung: 710/45-26,5"]} variant={"green"}/>
+            <Subtext variant={"green"} text={"Der John Deere 1110D Forwarder ist ein leistungsstarker Rückewagen mit einem 6-Zylinder-Motor und einer Ladekapazität von bis zu 15 Fm. Im Gegensatz zum John Deere 810E Forwarder verfügt der 1110D über eine breitere Bereifung und einen leistungsstärkeren Motor. Mit einem hydraulisch betriebenen Kran und Greifer kann der Schlepper leicht Holz aus dem Wald transportieren."}/>
+            <Stichpunkte arr={["Leistung: 180 PS", "Gewicht: 16.000 kg", "Ladekapazität: 15 Fm", "Bereifung: 710/45-26.5", "Kran mit Ausleger von 8.5 Meter"]} variant={"green"}/>
         </Background>
-        <Subtitel text={"Scania Forstmaschinen"} variant={"left"}/>
-        <ImageContainer src={"/pictures/rueckewagenzangenah.jpg"} width={1600} height={1205} alt={"John Deere 810E Rückewagen im Wald im Einsatz"} />
-        <Subtext text={"asa"} />
-        <Stichpunkte arr={["Punkt1", "300PS", "Ketten"]} variant={"white"}/>
-        <Subtitel text={"Hitachi 55 U Kompaktbagger"} variant={"right"}/>
-        <Subtext variant={"white"} text={"Der Hitachi 55 U Kompaktbagger ist ein vielseitiger Bagger, der sich für verschiedene Einsatzbereiche eignet. Mit einem Betriebsgewicht von 5,6 Tonnen und einer Motorleistung von 29,1 kW bietet er eine starke Leistung und Effizienz in kleineren Baustellen oder engen Räumen."} />
-        <Stichpunkte arr={["29,1kW (39 PS)", "5,6 Tonnen", "Grabtiefe: 3.6m", "Reichweite: 6m", "Breite/Höhe: 1.98 und 2.5 Meter"]} variant={"white"}/>
-        <Subtext variant={"white"} text={"Dank seiner kompakten Größe und seiner hohen Manövrierfähigkeit ist der Hitachi 55 U besonders für Tiefbauarbeiten wie den Aushub von Gräben, das Verlegen von Kabeln und Rohren, sowie für den Bau von Fundamenten oder Terrassen geeignet. Er kann auch für Abbrucharbeiten und kleinere Abrissarbeiten eingesetzt werden."} />
-        
+        <Subtitel text={"Hitachi Zaxis 55 U Kompaktbagger"} variant={"right"}/>
+        <ImageContainer src={"/pictures/Kompaktbagger-hitachi-ZX-55U.jpeg"} width={1000} height={450} alt={"Hitachi ZX-55U Kompaktbagger"} />
+        <Subtext variant={"white"} text={<><strong>Dieser Kompaktbagger kann gemietet werden!</strong><br/><br/>Der Hitachi Zaxis 55U  ist ein vielseitiger Kompaktbagger, der sich für verschiedene Einsatzbereiche eignet. Mit einem Betriebsgewicht von 5,6 Tonnen und einer Motorleistung von 29,1 kW bietet er genügend Leistung für kleinere Baustellen.</>} />
+        <Stichpunkte arr={["Leistung: 29,1kW (39 PS)", "Gewicht: 5,6 Tonnen", "Grabtiefe: 3.6m", "Breite/Höhe: 1.98 x 2.5 Meter"]} variant={"white"}/>
+        <Subtext variant={"white"} text={<>Dank seiner kompakten Größe und seiner hohen Manövrierfähigkeit ist der Hitachi 55 U besonders für Tiefbauarbeiten wie den Aushub von Gräben, das Verlegen von Kabeln und Rohren, sowie für den Bau von Fundamenten oder Terrassen geeignet.</>} />
+        <Subtitel text={"Scania R410 Forstmaschinentransporter"} variant={"left"}/>
+        <ImageContainer src={"/pictures/ScaniaForstmaschinentransporter.jpeg"} width={1599} height={899} alt={"Scania R410 Forstmaschinentransporter"} />
+        <Subtext variant={"white"} text={"Für den Transport unserer Forst- und Baumaschinen zum Einsatzort, nutzen wir den Scania R410 Transporter."} />
+        <Stichpunkte arr={["Leistung: 410 PS", "Bruttogewicht: 18.000 kg"]} variant={"white"}/>
     </> );
 }
  
