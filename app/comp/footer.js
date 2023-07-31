@@ -54,7 +54,8 @@ const Footer = () => {
             (router.pathname.includes("forstwirtschaft")) ?
             <div>
                 <Subtitel text={"Häufig gefragt"} variant={"left"}  />
-                <Dropdown variant={"green"} title="as" text="as"></Dropdown>
+                <Dropdown variant={"green"} title="Welche forstwirtschafliche Dienstleistungen bieten wir an?" text={<>Wir haben uns insbesonere auf die eigene Holzrückung spezialisiert.<br></br><br></br>Wenn Sie darüber hinaus Intersse an der Holzernte, Holzvermarktung etc. haben,  bieten wir Ihnen in enger Zusammenarbeit mit der <Link href={"http://www.energieholz-strobel.de/"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Simon Storbel GbR.</Link> noch weitere Dienstleistungen in diesem Bereich an. Weitere Informationen finden Sie unter <Link href={"forstwirtschaft/leistungen"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Leistungen</Link></>}></Dropdown>
+                <Dropdown variant={"green"} title="Welche forstwirtschafliche Dienstleistungen bieten wir an?" text={<>Wir haben uns insbesonere auf die eigene Holzrückung spezialisiert.<br></br><br></br>Wenn Sie darüber hinaus Intersse an der Holzernte, Holzvermarktung etc. haben,  bieten wir Ihnen in enger Zusammenarbeit mit der <Link href={"http://www.energieholz-strobel.de/"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Simon Storbel GbR.</Link> noch weitere Dienstleistungen in diesem Bereich an. Weitere Informationen finden Sie unter <Link href={"forstwirtschaft/leistungen"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Leistungen</Link></>}></Dropdown>
             </div>
             :
             <div>
