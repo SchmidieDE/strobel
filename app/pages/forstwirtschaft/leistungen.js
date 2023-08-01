@@ -16,7 +16,7 @@ const Leistungen = () => {
         <ImageContainer src={"/pictures/rueckewagenzange.jpg"}  alt={"Rückewagen im Wald. Zu sehen ist die Zange des John Deere 1110 der Baumstämme hochhebt"} />
         <Subtext variant={"white"} text={<>Wir haben uns insbesondere auf die Holzrückung spezialisiert. Wir rücken für Sie: </>} />
         <Stichpunkte arr={["Energieholz", "Kurzholz"]} variant={"white"}/>
-        <Subtext variant={"white"} text={<>Dank unseres <Link href={"/forstwirtschaft/fuhrpark"} style={{ color: "black", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Maschinenparks</Link> und unserer Ausrüstung können wir das Rückeverfahren optimal an die Wetterbedingungen und der Bodenbeschaffenheit anpassen. Je nach Bedarf setzen wir Moorbänder oder Gleitschutzketten ein, um besonders bodenschonend und effizient zu arbeiten, selbst in steilen Hanglagen.</>} />
+        <Subtext variant={"white"} text={<>Dank unseres <Link href={"/forstwirtschaft/fuhrpark"} style={{ color: "black", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Maschinenparks</Link> und unserer Ausrüstung können wir das Rückeverfahren optimal an die Wetterbedingungen und der Bodenbeschaffenheit anpassen. Je nach Bedarf setzen wir Moorbänder oder Gleitschutzketten ein, um besonders bodenschonend und effizient zu arbeiten, selbst in Hanglagen.</>} />
         <Videocontainer linkhref={"https://statischerbucket.s3.eu-central-1.amazonaws.com/VideovomHolzruecken.mp4"} color={"#4E9940"} variant="Hochkant"/>
         <Background variant={"green"}>
             <Subtitel variant={"right"} text="Weitere Dienstleistungen:"  background={"green"}/>

@@ -20,8 +20,8 @@ export default function Home() {
       <Subtext variant={"white"} text={"Wir sind ein kleines traditionsreiches Familienunternehmen, welches von Peter und Hannes Strobel geführt wird und in den Bereichen Photovoltaikreinigung und der Forstwirtschaft tätig ist. "}/>
       <Background variant={"green"}>
         <Subtitel background={"green"} text={"Forstwirtschaft"} variant={"right"}/>
-        <Subtext variant={"green"} text={"Wir bieten in der Forstwirtschaft folgende Dienstleistung an:"}/>
-        <Stichpunkte  arr={["Holzrückung"]} variant={"green"}  />
+        <Subtext variant={"green"} text={"Wir bieten in der Forstwirtschaft folgende Dienstleistungen an:"}/>
+        <Stichpunkte  arr={["Holzernte", "Holzrückung"]} variant={"green"}  />
         <Subtext variant={"green"} text={<>Weitere Informationen darüber finden Sie auf der Unterseite <Link href={"forstwirtschaft/leistungen"} style={{ color: "white", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Leistungen</Link>.</>}/>
         <Subtitel background={"green"} text={"Photovoltaikreinigung"} variant={"left"}/>
         <Subtext variant={"green"} text={"...und das machen wir alles rund um Photovoltaikanlagen:"}/>

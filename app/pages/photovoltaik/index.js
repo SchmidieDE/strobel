@@ -27,7 +27,7 @@ const Photovoltaik = () => {
                 <Subtitel background={"blue"} text={"Ihre Vorteile"} variant={"left"}/>
                 <Stichpunkte variant={"blue"} arr={["Steigerung Ihrer Erträge bis zu 30%", "Reinigungskosten sind auch für Privathaushalte von der Steuer absetzbar", "Hochwertige und sichere maschinelle Reinigung", "Betreten der Modulflächen nicht zwingend notwendig", "Spezialisiertes Reinigungsmittel für Module", "Erhöht die Nutzungsdauer der Anlage"]}/>
                 <Subtitel background={"blue"} text={"Was macht uns aus?"} variant={"right"}/>
-                <Subtext variant={"blue"} text={"Wir reinigen bereits seit 2012 professionell Photovoltaikanlagen. Nach Über einem Jahrzehnt haben wir eine hohe Expertise rund um die Reinigung erarbeitet und konnten uns mit modernster Technik als Branchenvorreiter in der Region Oberschwaben etablieren."}/>      
+                <Subtext variant={"blue"} text={"Wir reinigen bereits seit 2012 professionell Photovoltaikanlagen. Nach über einem Jahrzehnt haben wir eine hohe Expertise rund um die Reinigung erarbeitet und konnten uns mit modernster Technik als Branchenvorreiter in der Region Oberschwaben etablieren."}/>      
             </Background>
         </>
      );

@@ -134,6 +134,7 @@ const Rechner = () => {
                         </Grid>
             </Grid>
         </div>
+        <ImageContainer alt="VorherNacher Reinigung Solaranlage" src="/pictures/Photovoltaikreinigungvorhernacher.jpg"/>
         <Subtitel  text={"Steuern"} variant={"left"} background={"whiteblue"}/>
         <Subtext variant={"white"} text={<>Zudem fließt der steuerliche Aspekt noch zusätzlich in die Rechnung mit ein. Privathaushalte können die Kosten der Reinigung einer Photovoltaikanlage von der Steuer absetzen, da eine solche Anlage als Gewerbe eingestuft wird und unsere Dienstleistung somit als betrieblicher Aufwand steuerlich abzusetzen ist. Ebenso kann die Umsatzsteuer vom Finanzamt zurückerstattet werden.<br/><br/>Nicht zu Vergessen ist die Nutzung des selbsterzeugten Stroms, welcher ebenfalls in die Rentabilitätsberechnung einbezogen werden sollte.</>}/>
         <Stichpunkte arr={["Reinigung von der Steuer absetzbar","Umsatzsteuer ausweisbar", "Mehr Eigenstrom nutzen und Steuern sparen"]}  variant={"white"}/>
