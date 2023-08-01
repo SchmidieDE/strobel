@@ -28,7 +28,7 @@ const Ueberuns = () => {
             <Subtext variant={"white"} text={<>Das Jahr 2023 markiert einen weiteren Meilenstein mit der Anschaffung des MAN MKG 401 Langarmkrans.</>}/>
             <Background variant="green">
                 <Subtitel text={"Team:"} variant={"left"} background={"green"}/>
-                <ImageContainer src={"/pictures/rueckewagenfront.jpg"} width={4032} height={2268} alt={"John Deere 810E Rückewagen im Wald im Einsatz"} />    
+                <ImageContainer src={"/pictures/Team.jpeg"} width={4032} height={2268} alt={"John Deere 810E Rückewagen im Wald im Einsatz"} />    
                 <Subtext variant={"green"} text={<>Das Team, bestehend aus Simon Strobel, Peter Strobel und weiteren engagierten Mitarbeitern, steht stolz hinter der langen und erfolgreichen Geschichte des Unternehmens.</>}/>
             </Background>
         </>
