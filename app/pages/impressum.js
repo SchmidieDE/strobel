@@ -12,10 +12,9 @@ const Impressum = () => {
             Im Wiesengrund 3<br/>
             88361 Eichstegen<br/><br/>
 
-            USt.: DE334685644<br/><br/>
+            Steuer-Nr: 85094/04413<br/><br/>
+            USt-IdNr: DE275848798<br/><br/>
 
-            <strong style={{fontWeight: "800"}}>Handelsregister</strong><br/>
-            Amtsgericht Hamburg HRB 164995<br/><br/>
 
             <strong style={{fontWeight: "800"}}>Kontakt</strong><br/>
             E-Mail: Hannes-Strobel@gmx.com<br/><br/>

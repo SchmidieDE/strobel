@@ -50,12 +50,14 @@ const Footer = () => {
     return (
         <>
         <footer>
+            <div style={{maxWidth:"600px", margin: "auto"}}>
             {
             (router.pathname.includes("forstwirtschaft")) ?
             <div>
                 <Subtitel text={"Häufig gefragt"} variant={"left"}  />
-                <Dropdown variant={"green"} title="Welche forstwirtschafliche Dienstleistungen bieten wir an?" text={<>Wir haben uns insbesonere auf die eigene Holzrückung spezialisiert.<br></br><br></br>Wenn Sie darüber hinaus Intersse an der Holzernte, Holzvermarktung etc. haben,  bieten wir Ihnen in enger Zusammenarbeit mit der <Link href={"http://www.energieholz-strobel.de/"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Simon Storbel GbR.</Link> noch weitere Dienstleistungen in diesem Bereich an. Weitere Informationen finden Sie unter <Link href={"forstwirtschaft/leistungen"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Leistungen</Link></>}></Dropdown>
-                <Dropdown variant={"green"} title="Welche forstwirtschafliche Dienstleistungen bieten wir an?" text={<>Wir haben uns insbesonere auf die eigene Holzrückung spezialisiert.<br></br><br></br>Wenn Sie darüber hinaus Intersse an der Holzernte, Holzvermarktung etc. haben,  bieten wir Ihnen in enger Zusammenarbeit mit der <Link href={"http://www.energieholz-strobel.de/"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Simon Storbel GbR.</Link> noch weitere Dienstleistungen in diesem Bereich an. Weitere Informationen finden Sie unter <Link href={"forstwirtschaft/leistungen"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Leistungen</Link></>}></Dropdown>
+                <Dropdown variant={"green"} title="Welche forstwirtschafliche Dienstleistungen bieten wir an?" text={<>Wir haben uns insbesonere auf die Holzrückung spezialisiert.<br></br><br></br>Wenn Sie darüber hinaus Intersse an der Holzernte, Holzvermarktung etc. haben,  bieten wir Ihnen in enger Zusammenarbeit mit der <Link href={"http://www.energieholz-strobel.de/"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Simon Storbel GbR.</Link> noch weitere Dienstleistungen in diesem Bereich an. Weitere Informationen finden Sie unter <Link href={"forstwirtschaft/leistungen"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Leistungen</Link>.</>}></Dropdown>
+                <Dropdown variant={"green"} title="Welche Maschinen stehen zur Vermietung?" text={<>Wir vermieten unseren Kompaktbagger Hitachi Zaxis 55 U. Dieser eignet sich besonders für Tiefbauarbeiten wie den Aushub von Gräben, das Verlegen von Kabeln und Rohren, sowie für den Bau von Fundamenten oder Terrassen.<br></br><br></br>Weitere Informationen zum Bagger selbst erhalten Sie unter <Link href={"forstwirtschaft/fuhrpark"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Fuhrpark</Link> .</>}></Dropdown>
+                
             </div>
             :
             <div>
@@ -70,8 +72,9 @@ const Footer = () => {
                 }
             </div>
             }
+            </div>
             <div style={{backgroundColor: "#C1DBB6", paddingTop: "1rem", paddingBottom: "1rem", width: "100%", marginTop: "6rem"}}>
-                <div style={{width: "90%", margin: "auto"}}>
+                <div style={{width: "90%", margin: "auto", maxWidth: "600px"}}>
                     <div style={{backgroundColor: "#4E9940", borderRadius: "3vmin", padding: "1rem"}}>
                         <h2 style={{padding: "0px", textAlign: "center", margin:"0px", fontWeight: "800", color: "white", marginBottom: "1rem"}}>
                             Kontakt
@@ -124,10 +127,12 @@ const Footer = () => {
                     }
                 </div>
             </div>
-            <div style={{backgroundColor: "#4E9940", display: "flex", justifyContent: "space-between", width: "100%", padding: "1rem", paddingTop: "1.2rem", paddingBottom: "1.2rem"}}>
-                <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em"}} href={"/"}>© {new Date().getFullYear()} PHStrobel.de</Link>
-                <Link style={{textDecoration: "none", color: "white", fontWeight: "500", fontSize: "0.9em"}} href={"/impressum"}>Impressum</Link>
-                <Link style={{textDecoration: "none", color: "white", fontWeight: "500", fontSize: "0.9em"}} href={"/datenschutz"}>Datenschutz</Link>
+            <div style={{backgroundColor: "#4E9940", padding: "1rem", paddingTop: "1.2rem", paddingBottom: "3rem", width: "100%"}}>
+                <div style={{maxWidth: "600px", display: "flex", justifyContent: "space-between", margin: "auto"}}>
+                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em"}} href={"/"}>© {new Date().getFullYear()} PHStrobel.de</Link>
+                    <Link style={{textDecoration: "none", color: "white", fontWeight: "500", fontSize: "0.9em"}} href={"/impressum"}>Impressum</Link>
+                    <Link style={{textDecoration: "none", color: "white", fontWeight: "500", fontSize: "0.9em"}} href={"/datenschutz"}>Datenschutz</Link>
+                </div>
             </div>
         </footer>
         </>

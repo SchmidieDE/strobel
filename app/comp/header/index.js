@@ -42,7 +42,7 @@ const stylecss = {
 
 const Header = () => {
 
-    const matches = useMediaQuery('(min-width:600px)');
+    const matches = useMediaQuery('(min-width:1050px)');
     const matchesBig = useMediaQuery('(min-width:1030px)');
 
     const [menuActive, setMenuActive] = useState(false)
@@ -97,7 +97,7 @@ const Header = () => {
         }, [router.pathname])
 
         return <>
-            <NavItemDesktop href={hrefmain} name={namemain} icon={iconmain} handleHoverItem={handleHoverItem} linkgroup={linkgroup}/>
+            <NavItemDesktop  href={hrefmain} name={namemain} icon={iconmain} handleHoverItem={handleHoverItem} linkgroup={linkgroup}/>
             {
                 sublinks.map((e, index) => {
                     

@@ -52,7 +52,7 @@ const NavItemDesktop = ({href, name, icon, linkgroup, handleHoverItem}) => {
 
     return (
         
-        <Link href={href} style={styleObj.link} onMouseEnter={() => handleHoverItem()}>
+        <Link href={href} style={styleObj.link}  onMouseEnter={() => handleHoverItem()}>
             <div style={styleObj.menuItem}>{name}  {icon}</div>
         </Link>
         
