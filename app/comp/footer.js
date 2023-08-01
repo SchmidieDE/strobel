@@ -55,7 +55,7 @@ const Footer = () => {
             (router.pathname.includes("forstwirtschaft")) ?
             <div>
                 <Subtitel text={"Häufig gefragt"} variant={"left"}  />
-                <Dropdown variant={"green"} title="Welche forstwirtschafliche Dienstleistungen bieten wir an?" text={<>Wir haben uns insbesonere auf die Holzrückung spezialisiert.<br></br><br></br>Wenn Sie darüber hinaus Intersse an der Holzernte, Holzvermarktung etc. haben,  bieten wir Ihnen in enger Zusammenarbeit mit der <Link href={"http://www.energieholz-strobel.de/"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Simon Strobel</Link> noch weitere Dienstleistungen in diesem Bereich an. Weitere Informationen finden Sie unter <Link href={"forstwirtschaft/leistungen"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Leistungen</Link>.</>}></Dropdown>
+                <Dropdown variant={"green"} title="Welche forstwirtschafliche Dienstleistungen bieten wir an?" text={<>Wir haben uns insbesonere auf die Holzrückung spezialisiert.<br></br><br></br>Wenn Sie darüber hinaus Intersse an der Holzernte, Holzvermarktung etc. haben,  bieten wir Ihnen in enger Zusammenarbeit mit <Link href={"http://www.energieholz-strobel.de/"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Simon Strobel</Link> noch weitere Dienstleistungen in diesem Bereich an. Weitere Informationen finden Sie unter <Link href={"forstwirtschaft/leistungen"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Leistungen</Link>.</>}></Dropdown>
                 <Dropdown variant={"green"} title="Welche Maschinen stehen zur Vermietung?" text={<>Wir vermieten unseren Kompaktbagger Hitachi Zaxis 55 U. Dieser eignet sich besonders für Tiefbauarbeiten wie den Aushub von Gräben, das Verlegen von Kabeln und Rohren, sowie für den Bau von Fundamenten oder Terrassen.<br></br><br></br>Weitere Informationen zum Bagger selbst erhalten Sie unter <Link href={"forstwirtschaft/fuhrpark"} style={{ color: "rgb(78, 153, 64)", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Fuhrpark</Link> .</>}></Dropdown>
                
             </div>
@@ -96,7 +96,7 @@ const Footer = () => {
                         </div>
                         <div>
                             <Link href={"https://goo.gl/maps/YdvZUUDbqwaGnCZ88"} style={{textDecorationThickness: "1px",textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.2rem"}}>
-                                <LocationOnIcon sx={{color: "white", marginRight: "0.3rem"}}/>Peter & Hannes Strobel GbR.<br/>Im Wiesengrund 3<br/>88361 Eichstegen<br/>
+                                <LocationOnIcon sx={{color: "white", marginRight: "0.3rem"}}/>Peter & Hannes Strobel GbR<br/>Im Wiesengrund 3<br/>88361 Eichstegen<br/>
                             </Link>
                         </div>
                     </div>
