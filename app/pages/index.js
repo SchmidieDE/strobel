@@ -17,7 +17,7 @@ export default function Home() {
       <Titel variant={"bigcenter"} text={"Willkommen!"}/>
       <Subtext variant={"white"} text={"Mit uns haben Sie einen erfahrenen und kompetenten Partner in der Photovoltaikreinigung und der Forstwirtschaft."}/>
       <Subtitel text={"Wer wir sind"} variant={"left"}/>
-      <Subtext variant={"white"} text={"Wir sind ein kleines traditionsreiches Familienunternehmen, welches von Hannes und Peter Strobel geführt wird und in den Bereichen Photovoltaikreinigung und der Forstwirtschaft tätig ist. "}/>
+      <Subtext variant={"white"} text={"Wir sind ein kleines traditionsreiches Familienunternehmen, welches von Peter und Hannes Strobel geführt wird und in den Bereichen Photovoltaikreinigung und der Forstwirtschaft tätig ist. "}/>
       <Background variant={"green"}>
         <Subtitel background={"green"} text={"Forstwirtschaft"} variant={"right"}/>
         <Subtext variant={"green"} text={"Wir bieten in der Forstwirtschaft folgende Dienstleistung an:"}/>
