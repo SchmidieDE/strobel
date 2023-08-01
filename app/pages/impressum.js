@@ -8,7 +8,7 @@ const Impressum = () => {
         <Title text={"Impressum"} variant={"bigcenter"}/>
         <Subtitel text={"Angaben gemäß § 5 TMG"} variant={"left"}/>
         <Subtext variant="white" text={<>
-            <strong style={{fontWeight: "800"}}>Peter und Hannes Strobel GbR.</strong><br/>
+            <strong style={{fontWeight: "800"}}>Peter und Hannes Strobel GbR</strong><br/>
             Im Wiesengrund 3<br/>
             88361 Eichstegen<br/><br/>
 
@@ -20,7 +20,7 @@ const Impressum = () => {
             E-Mail: hannes-strobel@gmx.com<br/><br/>
 
             <strong style={{fontWeight: "800"}}>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</strong><br/>
-            Peter und Hannes Strobel GbR.<br/>
+            Peter und Hannes Strobel GbR<br/>
             Im Wiesengrund 3<br/>
             88361 Eichstegen<br/>
         </>} />

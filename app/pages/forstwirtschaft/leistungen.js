@@ -20,7 +20,7 @@ const Leistungen = () => {
         <Videocontainer linkhref={"https://statischerbucket.s3.eu-central-1.amazonaws.com/VideovomHolzruecken.mp4"} color={"#4E9940"} variant="Hochkant"/>
         <Background variant={"green"}>
             <Subtitel variant={"right"} text="Weitere Dienstleistungen:"  background={"green"}/>
-            <Subtext variant={"green"} text={<>Zusätzlich zum Holzrücken bieten wir in Kooperation mit der <Link href={"http://www.energieholz-strobel.de/"} style={{ color: "white", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Simon Strobel GbR.</Link> weitere forstbezogene Dienstleistungen an. Dazu zählen unter anderem:</>}/>
+            <Subtext variant={"green"} text={<>Zusätzlich zum Holzrücken bieten wir in Kooperation mit <Link href={"http://www.energieholz-strobel.de/"} style={{ color: "white", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Simon Strobel</Link> weitere forstbezogene Dienstleistungen an. Dazu zählen unter anderem:</>}/>
             <Stichpunkte arr={["Vollmechanisierte Jungbestandspflege", "Lichtraumprofilschnitt (bis 10 Meter Höhe)", "Obstplantagenrodung (mit Wurzelstockentsorgung)", "Ankauf und Vermarktung von Energieholz", "Durchforstungmaßnahmen mit Kleinharvester", "Auf Wunsch Holzvermarktung durch regionale Abnehmer"]} variant={"green"}/>
             <Subtext variant={"green"} text={<>Weitere Informationen darüber finden Sie unter <Link href={"http://www.energieholz-strobel.de/"} style={{ color: "white", fontWeight: "bold",  textUnderlineOffset: "5px"}}>Energieholz-strobel.de</Link> .</>}/>
         </Background>
