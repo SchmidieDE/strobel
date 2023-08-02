@@ -71,7 +71,7 @@ const Header = () => {
         }
         
     })
-    console.log(NavLinksDesktopObjekt, "OBJECT")
+    //console.log(NavLinksDesktopObjekt, "OBJECT")
     
     const DesktopNavItem = ({main, sublinks}) => {
 
@@ -98,6 +98,7 @@ const Header = () => {
 
         return <>
             <NavItemDesktop  href={hrefmain} name={namemain} icon={iconmain} handleHoverItem={handleHoverItem} linkgroup={linkgroup}/>
+            <div onMouseLeave={() => handleHoverItem(false)}>
             {
                 sublinks.map((e, index) => {
                     
@@ -107,6 +108,7 @@ const Header = () => {
                     return hover? <NavItemDesktopSub href={href} name={name} icon={icon} hover={hover} linkgroup={linkgroup}/> : <></>
                 })
             }  
+            </div>
         </>
 
 
