@@ -17,7 +17,7 @@ const Impressum = () => {
 
 
             <strong style={{fontWeight: "800"}}>Kontakt</strong><br/>
-            E-Mail: hannes-strobel@gmx.com<br/><br/>
+            E-Mail: hannes-strobel@gmx.de<br/><br/>
 
             <strong style={{fontWeight: "800"}}>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</strong><br/>
             Peter und Hannes Strobel GbR<br/>

@@ -90,8 +90,8 @@ const Footer = () => {
                             </Link>
                         </div>
                         <div>
-                            <Link href={"mailto:hannes-strobel@gmx.com"} style={{textDecorationThickness: "1px",textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.2rem"}}>
-                                <AlternateEmailIcon sx={{color: "white", marginRight: "0.3rem"}}/>hannes-strobel@gmx.com
+                            <Link href={"mailto:hannes-strobel@gmx.de"} style={{textDecorationThickness: "1px",textUnderlineOffset: "5px", color: "white", display: "flex", alignItems: "center", marginBottom: "1rem", fontSize: "1.2rem"}}>
+                                <AlternateEmailIcon sx={{color: "white", marginRight: "0.3rem"}}/>hannes-strobel@gmx.de
                             </Link>
                         </div>
                         <div>
