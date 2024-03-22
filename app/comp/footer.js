@@ -133,15 +133,16 @@ const Footer = () => {
                     <Link style={{textDecoration: "none", color: "white", fontWeight: "500", fontSize: "0.9em"}} href={"/impressum"}>Impressum</Link>
                     <Link style={{textDecoration: "none", color: "white", fontWeight: "500", fontSize: "0.9em"}} href={"/datenschutz"}>Datenschutz</Link>
                 </div>
-                <div style={{maxWidth: "600px", display: "flex", justifyContent: "space-between", margin: "auto"}}>
-                Partner Sites: 
-                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em"}} href="https://homestagingki.com" className="">Homestagingki.com</Link>
-                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em"}} href="https://anleitungbitcoinkaufen.com" className="">Anleitungbitcoinkaufen.com</Link>
-                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em"}} href="https://photovoltaikreinigung-oberschwaben.de" className="">Phstrobel.de</Link>
-                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em"}} href="https://ferienhaus-steinenberg.de" className="">Ferienhaus-Steinenberg.de</Link>
-                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em"}} href="https://podviral.com" className="">Podviral.com</Link>
+                <div style={{maxWidth: "600px", display: "flex", flexDirection: "column", alignItems: "center", margin: "auto"}}>
+                    <div style={{color: "white", fontWeight: "800", fontSize: "0.9em", marginBottom: "10px"}}>Partner Sites:</div>
+                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em", margin: "5px 0"}} href="https://homestagingki.com">Homestagingki.com</Link>
+                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em", margin: "5px 0"}} href="https://anleitungbitcoinkaufen.com">Anleitungbitcoinkaufen.com</Link>
+                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em", margin: "5px 0"}} href="https://photovoltaikreinigung-oberschwaben.de">Phstrobel.de</Link>
+                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em", margin: "5px 0"}} href="https://ferienhaus-steinenberg.de">Ferienhaus-Steinenberg.de</Link>
+                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em", margin: "5px 0"}} href="https://podviral.com">Podviral.com</Link>
                 </div>
             </div>
+
         </footer>
         </>
     )
