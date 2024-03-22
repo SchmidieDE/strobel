@@ -133,6 +133,14 @@ const Footer = () => {
                     <Link style={{textDecoration: "none", color: "white", fontWeight: "500", fontSize: "0.9em"}} href={"/impressum"}>Impressum</Link>
                     <Link style={{textDecoration: "none", color: "white", fontWeight: "500", fontSize: "0.9em"}} href={"/datenschutz"}>Datenschutz</Link>
                 </div>
+                <div style={{maxWidth: "600px", display: "flex", justifyContent: "space-between", margin: "auto"}}>
+                Partner Sites: 
+                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em"}} href="https://homestagingki.com" className="">Homestagingki.com</Link>
+                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em"}} href="https://anleitungbitcoinkaufen.com" className="">Anleitungbitcoinkaufen.com</Link>
+                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em"}} href="https://photovoltaikreinigung-oberschwaben.de" className="">Phstrobel.de</Link>
+                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em"}} href="https://ferienhaus-steinenberg.de" className="">Ferienhaus-Steinenberg.de</Link>
+                    <Link style={{textDecoration: "none", color: "white", fontWeight: "800", fontSize: "0.9em"}} href="https://podviral.com" className="">Podviral.com</Link>
+                </div>
             </div>
         </footer>
         </>
