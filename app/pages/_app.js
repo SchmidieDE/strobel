@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }) {
   <> 
     <Head>
       <title>{"Hannes und Peter Strobel Gbr."}</title>
+      <link rel="canonical" href="http://photovoltaikreinigung-oberschwaben.de" />
     </Head>
     <Layout>
       <Component {...pageProps} />
