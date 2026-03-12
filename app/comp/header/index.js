@@ -47,7 +47,7 @@ const DesktopNavItem = ({main, sublinks}) => {
         <div
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
-            style={{position: "relative"}}
+            style={{position: "relative", cursor: "pointer"}}
         >
             <NavItemDesktop href={hrefmain} name={namemain} icon={iconmain} linkgroup={linkgroup} hover={hover} hasSublinks={sublinks.length > 0}/>
             {sublinks.length > 0 && (
@@ -66,6 +66,7 @@ const DesktopNavItem = ({main, sublinks}) => {
                     borderRadius: "0 0 12px 12px",
                     boxShadow: hover ? "0 8px 24px rgba(0,0,0,0.12)" : "none",
                     backgroundColor: "white",
+                    cursor: "pointer",
                 }}>
                     {sublinks.map((e, index) => {
                         const {href, icon, name} = e;

@@ -1,18 +1,17 @@
 import Image from "next/image";
 import { useMediaQuery } from "@mui/material"
-
-// Tiny 1x1 blurred placeholder
-const BLUR_DATA_URL = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAFBABAAAAAAAAAAAAAAAAAAAACf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAB//2Q=="
+import { useState } from "react"
 
 const ImageContainer = ({src, alt, priority = false}) => {
 
     const matches = useMediaQuery('(min-width:600px)');
     const matchesBig = useMediaQuery('(min-width:1050px)');
+    const [loaded, setLoaded] = useState(false)
 
     const height = matchesBig ? "460px" : matches ? "340px" : "240px";
 
     return (
-        <div className="img-hover-zoom" style={{
+        <div className={`img-hover-zoom ${!loaded ? "img-shimmer" : ""}`} style={{
             display: "block",
             width: "90%",
             margin: "auto",
@@ -22,16 +21,20 @@ const ImageContainer = ({src, alt, priority = false}) => {
             overflow: "hidden",
             position: "relative",
             boxShadow: "0 4px 24px rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.03)",
+            backgroundColor: "#e0e0e0",
         }}>
             <Image
                 src={src}
                 alt={alt}
                 fill
-                style={{objectFit: "cover"}}
+                style={{
+                    objectFit: "cover",
+                    transition: "opacity 0.5s ease",
+                    opacity: loaded ? 1 : 0,
+                }}
                 sizes="(max-width: 600px) 90vw, (max-width: 1050px) 540px, 810px"
                 priority={priority}
-                placeholder="blur"
-                blurDataURL={BLUR_DATA_URL}
+                onLoad={() => setLoaded(true)}
             />
         </div>
     );
