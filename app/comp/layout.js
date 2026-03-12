@@ -23,23 +23,36 @@ const Layout = ({children}) => {
                 <main key={router.pathname} className="fade-in-up" style={{
                     marginLeft: "auto",
                     marginRight: "auto",
-                    marginTop: "6rem",
+                    marginTop: "5.5rem",
                     width: "900px",
-                    maxWidth: "90%",
+                    maxWidth: "92%",
+                    backgroundColor: "white",
+                    borderRadius: "24px",
+                    padding: "2.5rem 0",
+                    boxShadow: "0 1px 3px rgba(0,0,0,0.04), 0 4px 24px rgba(0,0,0,0.06)",
+                    marginBottom: "2.5rem",
+                }}>
+                {children}
+                </main>
+                :
+                matches ?
+                <main key={router.pathname} className="fade-in-up" style={{
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                    marginTop: "5.5rem",
+                    width: "600px",
+                    maxWidth: "95%",
                     backgroundColor: "white",
                     borderRadius: "20px",
-                    padding: "2rem 0",
-                    boxShadow: "0 1px 8px rgba(0,0,0,0.04)",
+                    boxShadow: "0 1px 3px rgba(0,0,0,0.03), 0 2px 12px rgba(0,0,0,0.04)",
+                    paddingBottom: "1rem",
                     marginBottom: "2rem",
                 }}>
                 {children}
                 </main>
                 :
                 <main key={router.pathname} className="fade-in-up" style={{
-                    marginLeft: (matches) && "auto",
-                    marginRight: (matches) && "auto",
-                    marginTop: (!matches) ? `calc(3rem + 20px)`: "6rem",
-                    width: (matches) && "600px",
+                    marginTop: "calc(3rem + 20px)",
                     paddingBottom: "1rem",
                 }}>
                 {children}

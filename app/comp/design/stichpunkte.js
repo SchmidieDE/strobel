@@ -1,52 +1,46 @@
-import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
 const Stichpunkte = (props) => {
 
     const {arr, variant} = props
 
-
     const css = {
         white: {
-            display: "block",
-            margin: "0px",
-            marginBottom: "1rem",
             display: "flex",
-            verticalAlgin: "middle",
-            fontSize: "1.2rem",
+            alignItems: "flex-start",
+            marginBottom: "0.8rem",
+            fontSize: "clamp(1rem, 2vw, 1.1rem)",
+            color: "#333",
         },
         green: {
-            color: "white",
-            margin: "0px",
-            marginBottom: "1rem",
             display: "flex",
-            verticalAlgin: "middle",
-            fontSize: "1.2rem",
+            alignItems: "flex-start",
+            color: "rgba(255,255,255,0.92)",
+            marginBottom: "0.8rem",
+            fontSize: "clamp(1rem, 2vw, 1.1rem)",
         },
         blue: {
-            color: "white",
-            margin: "0px",
-            marginBottom: "1rem",
             display: "flex",
-            verticalAlgin: "middle",
-            fontSize: "1.2rem",
+            alignItems: "flex-start",
+            color: "rgba(255,255,255,0.92)",
+            marginBottom: "0.8rem",
+            fontSize: "clamp(1rem, 2vw, 1.1rem)",
         },
-        whiteradio: {
-            display: "inline",
-            verticalAlign: "center",
-        }
     }
 
+    const iconColor = variant === "white" ? "#4E9940" : "rgba(255,255,255,0.85)"
 
-    return ( 
+    return (
     <div style={{display: "block", width: "100%", marginBottom: "2rem" }}>
         <div style={{width: "90%", margin: "auto"}}>
-        
-        <ul style={{paddingLeft: "3vmin"}}>
+
+        <ul style={{paddingLeft: "3vmin", listStyle: "none"}}>
         {
         arr.map((e, index) => {
             return (
             <li style={css[variant]} key={index}>
-                <RadioButtonCheckedIcon fontSize="small" style={css[variant+"radio"]} /><span style={{display: "block", marginTop: "auto", marginBottom: "auto", marginLeft: "0.5rem", fontWeight: "600"}}>{e}</span>
+                <CheckCircleOutlineIcon sx={{ fontSize: 20, flexShrink: 0, marginTop: "3px" }} style={{ color: iconColor }} />
+                <span style={{display: "block", marginTop: "auto", marginBottom: "auto", marginLeft: "0.6rem", fontWeight: "500", lineHeight: "1.5"}}>{e}</span>
             </li>
             )
         })
@@ -56,5 +50,5 @@ const Stichpunkte = (props) => {
     </div>
     );
 }
- 
+
 export default Stichpunkte;

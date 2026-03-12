@@ -1,65 +1,61 @@
 const Subtitel = (props) => {
 
     const {text, variant} = props
-    let backgroundcolor = props.background || "#4E9940"
-    let titlecolor = "white"
+    let backgroundProp = props.background || "default"
 
-    if (backgroundcolor === "green") {
-        backgroundcolor = "white"
-        titlecolor = "#4E9940"
+    let borderColor = "#4E9940"
+    let titlecolor = "#4E9940"
+
+    if (backgroundProp === "default") {
+        borderColor = "#4E9940"
+        titlecolor = "#333"
     }
-    if (backgroundcolor === "whiteblue") {
-        backgroundcolor = "#0F265C"
+    if (backgroundProp === "green") {
+        borderColor = "rgba(255,255,255,0.6)"
         titlecolor = "white"
     }
-    if (backgroundcolor === "blue") {
-        backgroundcolor = "white",
-        titlecolor = "#0F265C"
+    if (backgroundProp === "whiteblue" || backgroundProp === "#0F265C") {
+        borderColor = "#0F265C"
+        titlecolor = "#333"
+    }
+    if (backgroundProp === "blue") {
+        borderColor = "rgba(255,255,255,0.6)"
+        titlecolor = "white"
     }
 
     const css = {
         left: {
-            background: backgroundcolor === "white"
-                ? backgroundcolor
-                : `linear-gradient(135deg, ${backgroundcolor} 0%, ${backgroundcolor}dd 100%)`,
-            width: "90%",
-            borderTopRightRadius: "12px",
-            borderBottomRightRadius: "12px",
+            borderLeft: `4px solid ${borderColor}`,
+            paddingLeft: "1rem",
             marginBottom: "1rem",
-            marginTop: "1.5rem"
+            marginTop: "1.8rem",
+            marginLeft: "5%",
         },
         right: {
-            background: backgroundcolor === "white"
-                ? backgroundcolor
-                : `linear-gradient(135deg, ${backgroundcolor}dd 0%, ${backgroundcolor} 100%)`,
-            width: "90%",
-            float: "right",
-            borderTopLeftRadius: "12px",
-            borderBottomLeftRadius: "12px",
+            borderRight: `4px solid ${borderColor}`,
+            paddingRight: "1rem",
+            textAlign: "right",
             marginBottom: "1rem",
-            marginTop: "1.5rem"
+            marginTop: "1.8rem",
+            marginRight: "5%",
+            marginLeft: "auto",
+            width: "fit-content",
         },
         leftText: {
-            textAlign: "center",
             color: titlecolor,
             fontWeight: "700",
-            borderTopRightRadius: "12px",
-            borderBottomRightRadius: "12px",
-            padding: "0.6rem 0",
+            padding: "0.3rem 0",
             margin: "0px",
-            fontSize: "1.15rem",
-            boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
+            fontSize: "clamp(1.1rem, 2vw, 1.25rem)",
+            letterSpacing: "-0.01em",
         },
         rightText: {
-            borderTopLeftRadius: "12px",
-            borderBottomLeftRadius: "12px",
-            textAlign: "center",
             color: titlecolor,
             fontWeight: "700",
-            padding: "0.6rem 0",
+            padding: "0.3rem 0",
             margin: "0px",
-            fontSize: "1.15rem",
-            boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
+            fontSize: "clamp(1.1rem, 2vw, 1.25rem)",
+            letterSpacing: "-0.01em",
         },
     }
 

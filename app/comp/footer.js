@@ -18,16 +18,16 @@ const Footer = () => {
     const FooterLinks = [
         {
             title: "Forstwirtschaft",
+            href: "/forstwirtschaft",
             sublinks: [
-                {href: "/forstwirtschaft", name:"Forstwirtschaft"},
                 {href: "/forstwirtschaft/fuhrpark", name:"Fuhrpark"},
                 {href: "/forstwirtschaft/leistungen", name:"Leistungen"},
             ]
         },
         {
             title: "Photovoltaik",
+            href: "/photovoltaik",
             sublinks: [
-                {href: "/photovoltaik", name:"Photovoltaik"},
                 {href: "/photovoltaik/technik", name:"Reinigungstechnik"},
                 {href: "/photovoltaik/leistungen", name:"Leistungen"},
                 {href: "/photovoltaik/rechner", name:"Rechner"},
@@ -35,11 +35,13 @@ const Footer = () => {
         },
         {
             title: "Kontakt",
-            sublinks: [{href: "/kontakt", name:"Kontakt"}]
+            href: "/kontakt",
+            sublinks: []
         },
         {
             title: "Über uns",
-            sublinks: [{href: "/ueberuns", name:"Über uns"}]
+            href: "/ueberuns",
+            sublinks: []
         },
     ]
 
@@ -98,11 +100,14 @@ const Footer = () => {
                     }}>
                     {
                         FooterLinks.map((e, index) => {
-                            const {sublinks, title} = e
+                            const {sublinks, title, href} = e
                             return (
                                 <div key={index}>
-                                    <h3 style={{fontSize: "1rem", margin: "0px", fontWeight: "800", color: "#333", marginBottom: "0.4rem"}}>{title}</h3>
+                                    <Link href={href} className="footer-link" style={{textDecoration: "none"}}>
+                                        <h3 style={{fontSize: "1rem", margin: "0px", fontWeight: "800", color: "#333", marginBottom: "0.4rem"}}>{title}</h3>
+                                    </Link>
                                     <hr style={{border:"none", borderTop: "2px solid #4E9940", marginBottom: "0.4rem", width: "100%"}}/>
+                                    {sublinks.length > 0 && (
                                     <ul style={{margin: "0px", listStyle: "none"}}>
                                     {
                                         sublinks.map((e, index) => {
@@ -115,6 +120,7 @@ const Footer = () => {
                                         })
                                     }
                                     </ul>
+                                    )}
                                 </div>
                             )
                         })

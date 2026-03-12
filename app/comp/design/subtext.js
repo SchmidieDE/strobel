@@ -1,38 +1,38 @@
-
-
 const Subtext = (props) => {
 
     const {text, variant} = props
-
 
     const css = {
         white: {
             display: "inline-block",
             margin: "0px",
-            marginBottom: "1rem",
-            fontSize: "1.2rem",
-            lineHeight: "1.4", 
+            marginBottom: "1.2rem",
+            fontSize: "clamp(1rem, 2vw, 1.15rem)",
+            lineHeight: "1.65",
+            color: "#333",
+            fontWeight: "400",
         },
         green: {
             display: "inline-block",
-            color: "white",
+            color: "rgba(255,255,255,0.92)",
             margin: "0px",
-            marginBottom: "1rem",
-            fontSize: "1.2rem",
-            lineHeight: "1.4", 
+            marginBottom: "1.2rem",
+            fontSize: "clamp(1rem, 2vw, 1.15rem)",
+            lineHeight: "1.65",
+            fontWeight: "400",
         },
         blue: {
             display: "inline-block",
-            color: "white",
+            color: "rgba(255,255,255,0.92)",
             margin: "0px",
-            marginBottom: "1rem",
-            fontSize: "1.2rem",
-            lineHeight: "1.4", 
+            marginBottom: "1.2rem",
+            fontSize: "clamp(1rem, 2vw, 1.15rem)",
+            lineHeight: "1.65",
+            fontWeight: "400",
         }
     }
 
-
-    return ( 
+    return (
     <div style={{display: "block", width: "100%"}}>
         <div style={{width: "90%", margin: "auto"}}>
         <p style={css[variant]}>
@@ -42,5 +42,5 @@ const Subtext = (props) => {
     </div>
     );
 }
- 
+
 export default Subtext;

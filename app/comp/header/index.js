@@ -10,7 +10,6 @@ import WindowIcon from '@mui/icons-material/Window';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import { useEffect, useMemo, useState } from "react";
 import { IconButton } from "@mui/material";
-import { useTrail, animated } from "@react-spring/web";
 import Image from "next/image";
 import Script from 'next/script'
 import { useMediaQuery } from "@mui/material"
@@ -50,7 +49,7 @@ const DesktopNavItem = ({main, sublinks}) => {
             onMouseLeave={() => setHover(false)}
             style={{position: "relative"}}
         >
-            <NavItemDesktop href={hrefmain} name={namemain} icon={iconmain} linkgroup={linkgroup} hover={hover}/>
+            <NavItemDesktop href={hrefmain} name={namemain} icon={iconmain} linkgroup={linkgroup} hover={hover} hasSublinks={sublinks.length > 0}/>
             {sublinks.length > 0 && (
                 <div style={{
                     position: "absolute",
@@ -116,25 +115,6 @@ const Header = () => {
     useEffect(() => {
         setMenuActive(false)
     }, [router.pathname])
-
-    const config = {mass: 1, tension: 280, friction: 26}
-
-    const trails = useTrail(
-        NavLinks.length,
-        {
-        config,
-        display: "block",
-        height: "100%",
-        width: "100%",
-        opacity: menuActive ? 1 : 0,
-        transform: menuActive ? "translateX(0px)" : "translateX(-100%)",
-        from: {
-            opacity: 0,
-            transform: "translateX(-100%)"
-        },
-        immediate: matches,
-        }
-    )
 
     const handleMenu = () => {
         setMenuActive(!menuActive)
@@ -231,12 +211,10 @@ const Header = () => {
                 }}>
                     <nav style={{ display: "flex", width: "100%", alignItems: "center", flexDirection: "column"}}>
                     {
-                        menuActive && trails.map((props, index) => {
-                            const {href, name, icon} = NavLinks[index]
+                        menuActive && NavLinks.map((navLink, index) => {
+                            const {href, name, icon} = navLink
                             return (
-                                <animated.div key={index} style={{...props, willChange: "transform, opacity", width: "100%"}}>
-                                    <NavItem href={href} name={name} icon={icon} handleMenu={handleMenu}/>
-                                </animated.div>
+                                <NavItem key={index} href={href} name={name} icon={icon} handleMenu={handleMenu}/>
                             )
                         })
                     }

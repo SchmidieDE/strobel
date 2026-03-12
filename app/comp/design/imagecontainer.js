@@ -9,7 +9,7 @@ const ImageContainer = ({src, alt, priority = false}) => {
     const matches = useMediaQuery('(min-width:600px)');
     const matchesBig = useMediaQuery('(min-width:1050px)');
 
-    const height = matchesBig ? "420px" : matches ? "320px" : "220px";
+    const height = matchesBig ? "460px" : matches ? "340px" : "240px";
 
     return (
         <div className="img-hover-zoom" style={{
@@ -21,7 +21,7 @@ const ImageContainer = ({src, alt, priority = false}) => {
             height,
             overflow: "hidden",
             position: "relative",
-            boxShadow: "0 2px 20px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04)",
+            boxShadow: "0 4px 24px rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.03)",
         }}>
             <Image
                 src={src}

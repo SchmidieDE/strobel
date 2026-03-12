@@ -3,19 +3,19 @@ const Background = ({children, variant}) => {
     const css={
         green: {
             backgroundColor: "#4E9940",
-            background: "linear-gradient(180deg, #4E9940 0%, #3d7a32 100%)",
-            paddingTop: "20px",
-            paddingBottom: "3rem",
-            borderRadius: "0 0 20px 20px",
-            marginBottom: "2rem"
+            background: "linear-gradient(170deg, #5aaa4a 0%, #3d7a32 60%, #2d5e25 100%)",
+            paddingTop: "1.5rem",
+            paddingBottom: "3.5rem",
+            borderRadius: "0 0 24px 24px",
+            marginBottom: "2.5rem"
         },
         blue: {
             backgroundColor: "#0F265C",
-            background: "linear-gradient(180deg, #0F265C 0%, #0a1c47 100%)",
-            paddingTop: "20px",
-            paddingBottom: "3rem",
-            borderRadius: "0 0 20px 20px",
-            marginBottom: "2rem"
+            background: "linear-gradient(170deg, #152f6b 0%, #0F265C 60%, #091a42 100%)",
+            paddingTop: "1.5rem",
+            paddingBottom: "3.5rem",
+            borderRadius: "0 0 24px 24px",
+            marginBottom: "2.5rem"
         }
     }
 

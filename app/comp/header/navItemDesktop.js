@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from "react";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 
-const NavItemDesktop = ({href, name, icon, linkgroup, hover}) => {
+const NavItemDesktop = ({href, name, icon, linkgroup, hover, hasSublinks}) => {
 
     const router = useRouter()
     const [location, setLocation] = useState()
@@ -23,11 +24,11 @@ const NavItemDesktop = ({href, name, icon, linkgroup, hover}) => {
             alignItems: "center",
             cursor: "pointer",
             textDecoration: "none",
-            color: isActive ? "#4E9940" : linkgroup ? "#4E9940" : "#333",
-            backgroundColor: hover ? "rgba(78,153,64,0.06)" : "transparent",
+            color: isActive ? "#4E9940" : linkgroup ? "#4E9940" : hover ? "#4E9940" : "#333",
+            backgroundColor: hover ? "rgba(78,153,64,0.08)" : "transparent",
             borderRadius: "8px",
             transition: "all 0.2s ease",
-            borderBottom: linkgroup ? "2px solid #4E9940" : "2px solid transparent",
+            borderBottom: linkgroup ? "2px solid #4E9940" : hover ? "2px solid rgba(78,153,64,0.4)" : "2px solid transparent",
             marginBottom: "-1px",
         }} className="desktop-nav-link">
             <div style={{
@@ -37,7 +38,21 @@ const NavItemDesktop = ({href, name, icon, linkgroup, hover}) => {
                 fontWeight: linkgroup ? "700" : "600",
                 textDecoration: "none",
                 whiteSpace: "nowrap",
-            }}>{name}{icon}</div>
+            }}>
+                {name}
+                {icon}
+                {hasSublinks && (
+                    <KeyboardArrowDownIcon
+                        sx={{
+                            fontSize: 18,
+                            marginLeft: "2px",
+                            transition: "transform 0.25s ease",
+                            transform: hover ? "rotate(180deg)" : "rotate(0deg)",
+                            opacity: 0.5,
+                        }}
+                    />
+                )}
+            </div>
         </Link>
     )
 }
