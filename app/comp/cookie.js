@@ -1,7 +1,7 @@
 import { Button } from "@mui/material"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useSpring, animated } from '@react-spring/web'
 import Titel from "../comp/design/title"
 import { useMediaQuery } from "@mui/material"
@@ -12,6 +12,11 @@ const Cookie = () => {
     const matchesBig = useMediaQuery('(min-width:600px)');
 
     const [cookie, setCookie] = useState(true)
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
 
     const config = {mass: 1, tension: 280, friction: 26}
 
@@ -68,7 +73,7 @@ const Cookie = () => {
     return (
         <>
             {
-            cookie && <animated.div style={spring}>
+            cookie && mounted && <animated.div style={spring}>
                 <div style={{display: "block", padding: "0.5rem"}}>
                     <Titel text={"Diese Seite verwendet Cookies"} variant={"bigbold"}/>
                     <div style={{display: "block", alignItems: "center", height: "90px"}}>
