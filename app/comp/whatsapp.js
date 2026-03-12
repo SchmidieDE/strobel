@@ -1,35 +1,27 @@
 import Link from "next/link"
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import { useState } from "react";
-import { Button } from "@mui/material";
-import { Grid } from "@mui/material";
 
 const Whatsapp = () => {
-    const [LinkState, setLinkState] = useState("")
-    
+
     return(
-        <>
-        <Link href={`https://api.whatsapp.com/send?phone=${process.env.WHATSAPPNUMMER}&text=${LinkState}&source=&data=`}>
-            <div style={{position: "fixed", bottom: "10px", right: "10px", zIndex: 1000, backgroundColor: "white", borderRadius: "1rem", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}>
-                <Grid container spacing={2}>    
-                <Grid item xs={4}>
-                    <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100%", padding: "10px"}}>
-                    <WhatsAppIcon
-                        color="success"
-                        sx={{ 
-                            fontSize: 60,
-                        }}
-                    />
-                    </div>
-                </Grid>
-                <Grid item xs={8}>
-                    <p style={{color: "black", verticalAlign: "middle"}}>Fragen?<br/>Jetzt chatten</p>
-                </Grid> 
-                
-                </Grid>
+        <Link href="https://api.whatsapp.com/send?phone=491708083239&text=&source=&data=">
+            <div className="whatsapp-btn" style={{
+                position: "fixed",
+                bottom: "16px",
+                right: "16px",
+                zIndex: 999,
+                backgroundColor: "white",
+                borderRadius: "50px",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
+                display: "flex",
+                alignItems: "center",
+                padding: "10px 16px 10px 12px",
+                gap: "8px",
+            }}>
+                <WhatsAppIcon sx={{ fontSize: 32, color: "#25D366" }} />
+                <span style={{color: "#333", fontWeight: "600", fontSize: "0.9rem", whiteSpace: "nowrap"}}>Jetzt chatten</span>
             </div>
         </Link>
-        </>
     )
 }
 

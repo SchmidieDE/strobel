@@ -3,76 +3,49 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from "react";
 
 
-
-
 const NavItem = ({href, name, icon, handleMenu}) => {
 
     const router = useRouter()
-
     const [location, setLocation] = useState()
-
-    const [active, setActive] = useState("/")
 
     let subcategory = false
     if (href.split("/").length >= 3) {
         subcategory = true
-    } 
-
-    
-    let backgroundColor = "#4E9940"
-    let textColor = "white"
-
-    
-
-    const styleObj = {
-    link: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        cursor: "pointer",
-        textDecoration: "none",
-        color: (location === href.split("#")[0]) ? "black" : textColor,
-        backgroundColor: (location === href.split("#")[0]) ? "white" : backgroundColor  ,
-    },
-    menuItem: {
-        display: "flex",
-        color: (location === href.split("#")[0]) ? "black" : textColor,
-        paddingTop: "0.75rem", 
-        paddingBottom: "0.75rem", 
-        textAlign: "center",
-        fontSize: "1.23rem",
-        fontWeight: "700",
-        "&:hover": {
-          color: "#78ba00"
-        },
-        textDecoration: "none"
     }
-    }
-    
+
+    const isActive = location === href?.split("#")[0]
 
     useEffect(() => {
-
         setLocation(router.pathname)
     }, [router.pathname])
-    
+
 
     return (
-        
-        
-        subcategory ?
-        <Link href={href} style={styleObj.link} onClick={() => handleMenu()}>
-            <div style={{width: "100%"}}>
-                <div style={{width: "60%", float: "right"}}>
-                    <span style={styleObj.menuItem}><div style={{display: "inline-block"}}>{icon}</div>  {name}</span>
-                </div>
+        <Link href={href} onClick={() => handleMenu()} style={{
+            display: "flex",
+            alignItems: "center",
+            width: "100%",
+            padding: subcategory ? "0.65rem 1.5rem 0.65rem 3rem" : "0.75rem 1.5rem",
+            cursor: "pointer",
+            textDecoration: "none",
+            color: isActive ? "#4E9940" : "#333",
+            backgroundColor: isActive ? "#f0f9f0" : "white",
+            borderLeft: isActive ? "3px solid #4E9940" : "3px solid transparent",
+            borderBottom: "1px solid #f0f0f0",
+            transition: "all 0.15s ease",
+        }}>
+            <div style={{
+                display: "flex",
+                alignItems: "center",
+                fontSize: subcategory ? "1.05rem" : "1.15rem",
+                fontWeight: isActive ? "700" : subcategory ? "500" : "600",
+                textDecoration: "none",
+            }}>
+                {subcategory && <span style={{marginRight: "0.3rem"}}>{icon}</span>}
+                {name}
+                {!subcategory && icon}
             </div>
         </Link>
-        :
-        <Link href={href} style={styleObj.link} onClick={() => handleMenu()}>
-            <div style={styleObj.menuItem}>{name}  {icon}</div>
-        </Link>
-        
-        
     )
 }
 

@@ -1,10 +1,15 @@
 import Subtitel from "../comp/design/subtitle";
 import Subtext from "../comp/design/subtext";
 import Title from "../comp/design/title"
+import Head from "next/head"
 
 
 const Impressum = () => {
     return ( <>
+        <Head>
+            <title key="title">Impressum | Strobel GbR</title>
+            <meta name="robots" content="noindex, follow" />
+        </Head>
         <Title text={"Impressum"} variant={"bigcenter"}/>
         <Subtitel text={"Angaben gemäß § 5 TMG"} variant={"left"}/>
         <Subtext variant="white" text={<>

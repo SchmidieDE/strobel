@@ -6,14 +6,26 @@ import Stichpunkte from "@/comp/design/stichpunkte";
 import ImageContainer from "@/comp/design/imagecontainer";
 
 
+import Head from 'next/head'
+
 const Fuhrpark = () => {
-    
-    
-    return ( 
+
+
+    return (
         <>
+        <Head>
+            <title key="title">Fuhrpark - John Deere Forwarder & Bagger | Strobel GbR</title>
+            <meta name="description" content="John Deere 810E & 1110D Forwarder, Hitachi ZX-55U Kompaktbagger zur Vermietung, Scania R410 Transporter. Unser Maschinenpark im Detail." key="description" />
+            <link rel="canonical" href="https://www.photovoltaikreinigung-oberschwaben.de/forstwirtschaft/fuhrpark" />
+            <meta property="og:title" content="Fuhrpark - John Deere Forwarder & Bagger | Strobel GbR" />
+            <meta property="og:description" content="John Deere 810E & 1110D Forwarder, Hitachi ZX-55U Kompaktbagger zur Vermietung." />
+            <meta property="og:url" content="https://www.photovoltaikreinigung-oberschwaben.de/forstwirtschaft/fuhrpark" />
+            <meta property="og:type" content="website" />
+            <meta property="og:locale" content="de_DE" />
+        </Head>
         <Titel variant={"bigcenter"} text={"Fuhrpark"}/>
         <Subtitel text={"John Deere 810E Forwarder"} variant={"left"}/>
-        <ImageContainer src={"/pictures/rueckewagenseitlich.jpg"} width={4032} height={2268} alt={"John Deere 810E Rückewagen im Wald im Einsatz"} />
+        <ImageContainer src={"/pictures/rueckewagenseitlich.jpg"} alt={"John Deere 810E Rückewagen im Wald im Einsatz"} priority={true} />
         <Subtext variant={"white"} text={"Der John Deere 810E Forwarder ist ein leichter Rückezug, der speziell für den Einsatz im Wald entwickelt wurde. Der 4-Zylinder-Motor mit 136 PS und 4,5 Liter Hubraum bietet ausreichend Leistung, auch bei schwierigem Gelände. Dank der Moorbänder kann die Holzernte auch auf schlammigen, nassen Böden durchgeführt werden."} />
         <Stichpunkte arr={["Leistung: 136 PS)", "Gewicht: 14.000 kg", "Ladekapazität: 11 Fm","Bereifung: 710/40-22.5", "Kran mit Ausleger von 10 Meter"]} variant={"white"}/>
         <Background variant={"green"}>

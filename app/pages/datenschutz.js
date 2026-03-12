@@ -2,12 +2,16 @@ import Link from "next/link"
 import Subtitel from "../comp/design/subtitle";
 import Subtext from "../comp/design/subtext";
 import Title from "../comp/design/title"
+import Head from "next/head"
 
 const Datenschutz = () => {
 
-
     return (
         <>
+        <Head>
+            <title key="title">Datenschutz | Strobel GbR</title>
+            <meta name="robots" content="noindex, follow" />
+        </Head>
         <Title text={"Datenschutz"} variant={"bigcenter"}/>
         <Subtitel text={"Datensicherheit"} variant={"left"}/>
         <Subtext variant="white" text={<>

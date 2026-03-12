@@ -1,8 +1,7 @@
-
 const Subtitel = (props) => {
-    
+
     const {text, variant} = props
-    let backgroundcolor = props.background || "#4E9940" 
+    let backgroundcolor = props.background || "#4E9940"
     let titlecolor = "white"
 
     if (backgroundcolor === "green") {
@@ -20,54 +19,59 @@ const Subtitel = (props) => {
 
     const css = {
         left: {
-            backgroundColor: backgroundcolor,
+            background: backgroundcolor === "white"
+                ? backgroundcolor
+                : `linear-gradient(135deg, ${backgroundcolor} 0%, ${backgroundcolor}dd 100%)`,
             width: "90%",
-            borderTopRightRadius: "2vmin", 
-            borderBottomRightRadius: "2vmin",
+            borderTopRightRadius: "12px",
+            borderBottomRightRadius: "12px",
             marginBottom: "1rem",
-            marginTop: "1rem"
+            marginTop: "1.5rem"
         },
         right: {
-            backgroundColor: backgroundcolor,
+            background: backgroundcolor === "white"
+                ? backgroundcolor
+                : `linear-gradient(135deg, ${backgroundcolor}dd 0%, ${backgroundcolor} 100%)`,
             width: "90%",
             float: "right",
-            borderTopLeftRadius: "2vmin", 
-            borderBottomLeftRadius: "2vmin",
+            borderTopLeftRadius: "12px",
+            borderBottomLeftRadius: "12px",
             marginBottom: "1rem",
-            marginTop: "1rem"
-        }, 
+            marginTop: "1.5rem"
+        },
         leftText: {
             textAlign: "center",
             color: titlecolor,
-            fontWeight: "600",
-            borderTopRightRadius: "2vmin", 
-            borderBottomRightRadius: "2vmin",
-            padding: "0.5rem 0 0.5rem 0",
+            fontWeight: "700",
+            borderTopRightRadius: "12px",
+            borderBottomRightRadius: "12px",
+            padding: "0.6rem 0",
             margin: "0px",
-            boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"
+            fontSize: "1.15rem",
+            boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
         },
         rightText: {
-            borderTopLeftRadius: "2vmin", 
-            borderBottomLeftRadius: "2vmin",
+            borderTopLeftRadius: "12px",
+            borderBottomLeftRadius: "12px",
             textAlign: "center",
             color: titlecolor,
-            fontWeight: "600",
-            padding: "0.5rem 0 0.5rem 0",
+            fontWeight: "700",
+            padding: "0.6rem 0",
             margin: "0px",
-            boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
+            fontSize: "1.15rem",
+            boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
         },
     }
 
-
-    return ( <>
+    return (
         <div style={{display: "block", width: "100%", height: "100%"}}>
-        <div style={css[variant]}>
-            <h2 style={css[variant+"Text"]}>
-                {text}
-            </h2>
+            <div style={css[variant]}>
+                <h2 style={css[variant+"Text"]}>
+                    {text}
+                </h2>
+            </div>
         </div>
-        </div>
-    </> );
+    );
 }
- 
+
 export default Subtitel;

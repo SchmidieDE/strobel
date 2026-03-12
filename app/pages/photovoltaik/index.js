@@ -6,14 +6,22 @@ import Background from "../../comp/design/background";
 import Dropdown from "../../comp/design/dropdown";
 import Stichpunkte from "../../comp/design/stichpunkte";
 
-const Photovoltaik = () => {
-    
-    // Saubere PV-Anlagen, hohe Renditen – wir wissen, wie man beides erreicht!
-    // Wir sind Ihre Lösung für eine saubere und rentable PV-Anlage!
-    // Saubere PV-Anlagen, hohe Renditen – lassen Sie uns Ihnen helfen, beides zu erreichen!
+import Head from 'next/head'
 
-    return ( 
+const Photovoltaik = () => {
+
+    return (
         <>
+            <Head>
+                <title key="title">Photovoltaikreinigung - Bis zu 30% mehr Ertrag | Strobel GbR</title>
+                <meta name="description" content="Professionelle Solarreinigung mit MKG Langarmkran in Oberschwaben. Bis zu 30% mehr Ertrag durch fachgerechte Modulreinigung. Seit 2012." key="description" />
+                <link rel="canonical" href="https://www.photovoltaikreinigung-oberschwaben.de/photovoltaik" />
+                <meta property="og:title" content="Photovoltaikreinigung - Bis zu 30% mehr Ertrag | Strobel GbR" />
+                <meta property="og:description" content="Professionelle Solarreinigung mit MKG Langarmkran in Oberschwaben." />
+                <meta property="og:url" content="https://www.photovoltaikreinigung-oberschwaben.de/photovoltaik" />
+                <meta property="og:type" content="website" />
+                <meta property="og:locale" content="de_DE" />
+            </Head>
             <Titel variant={"bigcenter"} text={"Wir bringen Ihre PV-Anlage auf Höchstleistung!"}/>
             <Subtitel  text={"Warum reinigen?"} variant={"left"} background={"whiteblue"}/>
             <Subtext variant={"white"} text={"Durch die Reinigung Ihrer Photovoltaikanlage können Sie nicht nur die Leistung um bis zu 30% erhöhen, sondern auch die Lebensdauer der Module verlängern."}/>

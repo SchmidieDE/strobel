@@ -3,58 +3,38 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from "react";
 
 
-
-
 const NavItemDesktopSub = ({href, name, icon, linkgroup}) => {
 
     const router = useRouter()
-
     const [location, setLocation] = useState()
 
-    const [active, setActive] = useState("/")
-    
-    let backgroundColor = linkgroup ? "#4E9940" : "#4E9940" 
-    let textColor = linkgroup ? "white" :"white"
-
-    const styleObj = {
-    link: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        cursor: "pointer",
-        textDecoration: "none",
-        color: (location === href) ? "black" : textColor,
-        backgroundColor: (location === href) ? "#C1DBB6" : backgroundColor  ,
-    },
-    menuItem: {
-        display: "flex",
-        color: (location === href) ? "black" : textColor,
-        paddingTop: "0.75rem", 
-        paddingBottom: "0.75rem", 
-        fontSize: "1.23rem",
-        float: "left",
-        fontWeight: "700",
-        "&:hover": {
-          color: "#78ba00"
-        },
-        textDecoration: "none"
-    }
-    }
-    
+    const isActive = location === href
 
     useEffect(() => {
-
         setLocation(router.pathname)
     }, [router.pathname])
-    
+
 
     return (
-        
-        <Link href={href} style={styleObj.link}>
-            <div style={styleObj.menuItem}>{icon}  {name}</div>
+        <Link href={href} className="desktop-nav-link" style={{
+            display: "flex",
+            alignItems: "center",
+            padding: "0.7rem 1.2rem",
+            cursor: "pointer",
+            textDecoration: "none",
+            color: isActive ? "#4E9940" : "#333",
+            backgroundColor: isActive ? "#f0f9f0" : "white",
+            borderLeft: isActive ? "3px solid #4E9940" : "3px solid transparent",
+            transition: "all 0.15s ease",
+        }}>
+            <div style={{
+                display: "flex",
+                alignItems: "center",
+                fontSize: "0.95rem",
+                fontWeight: isActive ? "700" : "500",
+                textDecoration: "none",
+            }}>{icon}{name}</div>
         </Link>
-        
-        
     )
 }
 

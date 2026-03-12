@@ -14,6 +14,16 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <>
+      <Head>
+        <title key="title">Strobel GbR - Photovoltaikreinigung & Forstwirtschaft Oberschwaben</title>
+        <meta name="description" content="Ihr Partner für professionelle Photovoltaikreinigung und bodenschonende Holzrückung in Oberschwaben. Familienunternehmen seit 1950." key="description" />
+        <link rel="canonical" href="https://www.photovoltaikreinigung-oberschwaben.de/" />
+        <meta property="og:title" content="Strobel GbR - Photovoltaikreinigung & Forstwirtschaft Oberschwaben" />
+        <meta property="og:description" content="Ihr Partner für professionelle Photovoltaikreinigung und bodenschonende Holzrückung in Oberschwaben." />
+        <meta property="og:url" content="https://www.photovoltaikreinigung-oberschwaben.de/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="de_DE" />
+      </Head>
       <Titel variant={"bigcenter"} text={"Willkommen!"}/>
       <Subtext variant={"white"} text={"Mit uns haben Sie einen erfahrenen und kompetenten Partner in der Photovoltaikreinigung und der Forstwirtschaft."}/>
       <Subtitel text={"Wer wir sind"} variant={"left"}/>

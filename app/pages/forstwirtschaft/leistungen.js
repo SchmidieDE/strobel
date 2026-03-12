@@ -7,10 +7,22 @@ import Videocontainer from "@/comp/design/videocontainer";
 import Stichpunkte from "@/comp/design/stichpunkte";
 import Link from "next/link";
 
+import Head from 'next/head'
+
 const Leistungen = () => {
-    
-    
+
+
     return ( <>
+        <Head>
+            <title key="title">Leistungen Forstwirtschaft | Strobel GbR</title>
+            <meta name="description" content="Holzrückung, Jungbestandspflege, Lichtraumprofilschnitt und Energieholz-Vermarktung. Alle forstwirtschaftlichen Dienstleistungen im Überblick." key="description" />
+            <link rel="canonical" href="https://www.photovoltaikreinigung-oberschwaben.de/forstwirtschaft/leistungen" />
+            <meta property="og:title" content="Leistungen Forstwirtschaft | Strobel GbR" />
+            <meta property="og:description" content="Holzrückung, Jungbestandspflege, Lichtraumprofilschnitt und Energieholz-Vermarktung." />
+            <meta property="og:url" content="https://www.photovoltaikreinigung-oberschwaben.de/forstwirtschaft/leistungen" />
+            <meta property="og:type" content="website" />
+            <meta property="og:locale" content="de_DE" />
+        </Head>
         <Titel variant={"bigcenter"} text={"Leistungen"}/>
         <Subtitel variant={"left"} text="Das bieten wir an:"/>
         <ImageContainer src={"/pictures/rueckewagenzange.jpg"}  alt={"Rückewagen im Wald. Zu sehen ist die Zange des John Deere 1110 der Baumstämme hochhebt"} />

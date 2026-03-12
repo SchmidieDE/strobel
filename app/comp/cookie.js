@@ -10,45 +10,25 @@ import { useMediaQuery } from "@mui/material"
 const Cookie = () => {
 
     const matchesBig = useMediaQuery('(min-width:600px)');
-    
-
-    let crccs = {
-        wrapper: {
-            position: "fixed",
-            width: "100%",
-            background: "#fff",
-            //padding: "25px 25px 30px 25px",
-            bordeRradius: "3vmin",
-            textAlign: "center",
-            height: "300px",
-            zIndex: 10000,
-            bottom: 0,
-            border: "none",
-            boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
-            
-        }
-    }
-
 
     const [cookie, setCookie] = useState(true)
 
-    const config = {mass: 5, tension: 2000, friction: 200}
+    const config = {mass: 1, tension: 280, friction: 26}
 
     const spring = useSpring(
         matchesBig?
         {
             position: "fixed",
-            width: "400px",
+            width: "380px",
             background: "#fff",
-            //padding: "25px 25px 30px 25px",
-            bordeRradius: "3vmin",
+            borderRadius: "20px",
             textAlign: "center",
             height: "340px",
             zIndex: 10000,
             bottom: 20,
             left: 20,
             border: "none",
-            boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
+            boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.04)",
             config,
             display:  "block",
             opacity: cookie ? 1 : 0,
@@ -63,14 +43,13 @@ const Cookie = () => {
         position: "fixed",
         width: "100%",
         background: "#fff",
-        //padding: "25px 25px 30px 25px",
-        bordeRradius: "3vmin",
+        borderRadius: "20px 20px 0 0",
         textAlign: "center",
         height: "350px",
         zIndex: 10000,
         bottom: 0,
         border: "none",
-        boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
+        boxShadow: "0 -4px 32px rgba(0,0,0,0.1)",
         config,
         display:  "block",
         opacity: cookie ? 1 : 0,
@@ -82,42 +61,46 @@ const Cookie = () => {
         }
     )
 
-
-    
     const handleCookie = () => {
         setCookie(!cookie)
-        console.log(cookie)
     }
-
 
     return (
         <>
             {
             cookie && <animated.div style={spring}>
-                <div style={{display: "block"}}>
+                <div style={{display: "block", padding: "0.5rem"}}>
                     <Titel text={"Diese Seite verwendet Cookies"} variant={"bigbold"}/>
                     <div style={{display: "block", alignItems: "center", height: "90px"}}>
                         <div style={{display: "block"}}>
-                            <Image src={"/Cookiebanner.svg"} alt={"Vollernter Cookiebanner"} width={1000} height={1000} responsive="true" style={{objectFit: "contain", height: "100px", width: "auto"}} />
+                            <Image src={"/Cookiebanner.svg"} alt={"Cookiebanner"} width={1000} height={1000} style={{objectFit: "contain", height: "100px", width: "auto"}} />
                         </div>
                     </div>
-                    <div style={{display: "flex", padding: "0rem 1rem 0rem 1rem", alignItems: "center" }}>
-                        <div>
-                            <p style={{margin: "0px"}}>
-                                Wir verwenden Cookies. Bei Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Diese werden zur Nutzung und Verbesserung der Nutzeroberfläche verwendet.
-                            </p>
-                        </div>
+                    <div style={{display: "flex", padding: "0rem 1.2rem", alignItems: "center" }}>
+                        <p style={{margin: "0px", fontSize: "0.9rem", lineHeight: "1.4", color: "#555"}}>
+                            Wir verwenden Cookies zur Nutzung und Verbesserung der Nutzeroberfläche.
+                        </p>
                     </div>
-                    <div style={{width: "80%", margin: "auto"}}>
-                        <Button onClick={() => handleCookie()}variant="contained" style={{color: "white", fontWeight:"600", fontSize: "1.0rem", width: "100%", backgroundColor: "#4E9940", margin: "0.9rem 0rem 1rem 0rem"}}>Zustimmen und weiter</Button>
-                        <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
-                            <Link href={"https://google.de"} style={{textDecoration: "none", color: "black"}}>Ablehnen</Link>
-                            <Link href={"/impressum"} style={{textDecoration: "none", color: "black"}}>Impressum</Link>
-                            <Link href={"/datenschutz"} style={{textDecoration: "none", color: "black"}}>Datenschutz</Link>
+                    <div style={{width: "80%", margin: "auto", marginTop: "0.8rem"}}>
+                        <Button onClick={() => handleCookie()} variant="contained" style={{
+                            color: "white",
+                            fontWeight:"600",
+                            fontSize: "0.95rem",
+                            width: "100%",
+                            background: "linear-gradient(135deg, #4E9940 0%, #3d7a32 100%)",
+                            borderRadius: "10px",
+                            textTransform: "none",
+                            padding: "0.6rem",
+                            boxShadow: "0 2px 8px rgba(78,153,64,0.3)",
+                        }}>Zustimmen und weiter</Button>
+                        <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "0.8rem"}}>
+                            <button onClick={() => handleCookie()} style={{background: "none", border: "none", cursor: "pointer", textDecoration: "underline", color: "#888", fontSize: "0.85rem", fontFamily: "inherit", padding: 0}}>Ablehnen</button>
+                            <Link href={"/impressum"} style={{textDecoration: "none", color: "#888", fontSize: "0.85rem"}}>Impressum</Link>
+                            <Link href={"/datenschutz"} style={{textDecoration: "none", color: "#888", fontSize: "0.85rem"}}>Datenschutz</Link>
                         </div>
                     </div>
                 </div>
-            </animated.div> 
+            </animated.div>
             }
         </>
     )

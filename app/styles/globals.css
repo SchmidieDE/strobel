@@ -1,16 +1,100 @@
 @import url("https://use.typekit.net/qom0mkd.css");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #fafafa;
 }
 * {
-  margin: "0px";
-  padding: "0px";
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: montserrat,sans-serif;
   font-weight: 500;
   font-style: normal;
+}
+
+/* Desktop nav items */
+.desktop-nav-link {
+  transition: all 0.2s ease;
+}
+.desktop-nav-link:hover {
+  filter: brightness(1.15);
+}
+
+/* Fade-in animation for page content */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Image hover zoom effect */
+.img-hover-zoom {
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.img-hover-zoom:hover {
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 4px 40px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px !important;
+}
+.img-hover-zoom img {
+  transition: transform 0.4s ease;
+}
+.img-hover-zoom:hover img {
+  transform: scale(1.03);
+}
+
+/* WhatsApp button hover */
+.whatsapp-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 20px !important;
+}
+
+/* Footer link hover */
+.footer-link {
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.footer-link:hover {
+  opacity: 0.85;
+  transform: translateX(3px);
+}
+
+/* Kontakt card link hover */
+.kontakt-link {
+  transition: opacity 0.15s ease;
+}
+.kontakt-link:hover {
+  opacity: 0.8;
+}
+
+/* Dropdown smooth open */
+.MuiAccordion-root {
+  transition: box-shadow 0.3s ease !important;
+}
+.MuiAccordion-root:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 40px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px !important;
+}
+
+/* Button hover lift */
+.MuiButton-contained:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(78, 153, 64, 0.3) !important;
 }

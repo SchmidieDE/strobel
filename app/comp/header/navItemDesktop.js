@@ -3,60 +3,42 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from "react";
 
 
-
-
-const NavItemDesktop = ({href, name, icon, linkgroup, handleHoverItem}) => {
+const NavItemDesktop = ({href, name, icon, linkgroup, hover}) => {
 
     const router = useRouter()
-
     const [location, setLocation] = useState()
 
-    const [active, setActive] = useState("/")
-    
-    let backgroundColor = linkgroup ? "#C1DBB6" : "#4E9940" 
-    let textColor = linkgroup ? "black" :"white"
-
-    const styleObj = {
-    link: {
-        paddingLeft: "2rem",
-        paddingRight: "2rem",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        cursor: "pointer",
-        textDecoration: "none",
-        color: (location === href) ? "black" : textColor,
-        backgroundColor: (location === href) ? "#C1DBB6" : backgroundColor  ,
-    },
-    menuItem: {
-        display: "flex",
-        color: (location === href) ? "black" : textColor,
-        paddingTop: "0.75rem", 
-        paddingBottom: "0.75rem", 
-        textAlign: "center",
-        fontSize: "1.23rem",
-        fontWeight: "700",
-        "&:hover": {
-          color: "#78ba00"
-        },
-        textDecoration: "none"
-    }
-    }
-    
+    const isActive = location === href
 
     useEffect(() => {
-
         setLocation(router.pathname)
     }, [router.pathname])
-    
+
 
     return (
-        
-        <Link href={href} style={styleObj.link}  onMouseEnter={() => handleHoverItem(true)}>
-            <div style={styleObj.menuItem}>{name}  {icon}</div>
+        <Link href={href} style={{
+            padding: "0.5rem 1.2rem",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            cursor: "pointer",
+            textDecoration: "none",
+            color: isActive ? "#4E9940" : linkgroup ? "#4E9940" : "#333",
+            backgroundColor: hover ? "rgba(78,153,64,0.06)" : "transparent",
+            borderRadius: "8px",
+            transition: "all 0.2s ease",
+            borderBottom: linkgroup ? "2px solid #4E9940" : "2px solid transparent",
+            marginBottom: "-1px",
+        }} className="desktop-nav-link">
+            <div style={{
+                display: "flex",
+                alignItems: "center",
+                fontSize: "1rem",
+                fontWeight: linkgroup ? "700" : "600",
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+            }}>{name}{icon}</div>
         </Link>
-        
-        
     )
 }
 
