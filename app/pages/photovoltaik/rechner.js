@@ -12,6 +12,9 @@ import SolarPowerIcon from '@mui/icons-material/SolarPower';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import ImageContainer from "@/comp/design/imagecontainer";
 
+import imgModuldreckig from "../../public/pictures/moduldreckig2.jpg";
+import imgVorherNachher from "../../public/pictures/Photovoltaikreinigungvorhernacher.jpg";
+
 import Head from 'next/head'
 
 const Rechner = () => {
@@ -62,7 +65,7 @@ const Rechner = () => {
         </Head>
         <Titel variant={"bigcenter"} text={"Kostenrechner"}/>
         <Subtitel  text={"Lohnt sich eine Reinigung?"} variant={"left"} background={"whiteblue"}/>
-        <ImageContainer src="/pictures/moduldreckig2.jpg" alt="Verschmutztes Modul mit Moos"/>
+        <ImageContainer src={imgModuldreckig} alt="Verschmutztes Modul mit Moos"/>
         <Subtext variant={"white"} text={"Es gibt viele Gründe, weshalb Sie Ihre Anlage reinigen lassen sollten. Erhöhung der Lebensdauer der Module, Reduzierung von Störungen, welche oftmals durch Ablagerungen ausgelöst wird, sind einige davon, letztlich entscheidend ist allerdings der ökonomische Aspekt."}/>
         <Subtext variant={"white"} text={`Aus diesem Grund haben wir einen kleinen Rechner entwickelt mit dem Sie feststellen können, wie viel Geld Ihnen eine vermutzte Anlage über die Zeit kostet.`}/>
         <Subtitel  text={"Reinigungsrechner"} variant={"right"} background={"whiteblue"}/>
@@ -146,7 +149,7 @@ const Rechner = () => {
                         </Grid>
             </Grid>
         </div>
-        <ImageContainer alt="VorherNacher Reinigung Solaranlage" src="/pictures/Photovoltaikreinigungvorhernacher.jpg"/>
+        <ImageContainer alt="VorherNacher Reinigung Solaranlage" src={imgVorherNachher}/>
         <Subtitel  text={"Steuern"} variant={"left"} background={"whiteblue"}/>
         <Subtext variant={"white"} text={<>Zudem fließt der steuerliche Aspekt noch zusätzlich in die Rechnung mit ein. Privathaushalte können die Kosten der Reinigung einer Photovoltaikanlage von der Steuer absetzen, da eine solche Anlage als Gewerbe eingestuft wird und unsere Dienstleistung somit als betrieblicher Aufwand steuerlich abzusetzen ist. Ebenso kann die Umsatzsteuer vom Finanzamt zurückerstattet werden.<br/><br/>Nicht zu Vergessen ist die Nutzung des selbsterzeugten Stroms, welcher ebenfalls in die Rentabilitätsberechnung einbezogen werden sollte.</>}/>
         <Stichpunkte arr={["Reinigung von der Steuer absetzbar","Umsatzsteuer ausweisbar", "Mehr Eigenstrom nutzen und Steuern sparen"]}  variant={"white"}/>

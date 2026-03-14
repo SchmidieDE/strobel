@@ -6,6 +6,8 @@ import Subtext from "@/comp/design/subtext";
 import Subtitel from "@/comp/design/subtitle";
 import Titel from "@/comp/design/title";
 
+import imgPVLKW from "../../public/pictures/PhotovoltaikreinigungLKW.jpg";
+
 import Head from 'next/head'
 
 const Technik = () => {
@@ -23,7 +25,7 @@ const Technik = () => {
         </Head>
         <Titel variant={"bigcenter"} text={"Technik"}/>
         <Subtitel  text={"MKG Langarmkran 401"} variant={"left"} background={"whiteblue"}/>
-        <ImageContainer src={"/pictures/PhotovoltaikreinigungLKW.jpg"} alt={"MKG 401 Langarmkran bei der Photovoltaikreinigung"} priority={true} />
+        <ImageContainer src={imgPVLKW} alt={"MKG 401 Langarmkran bei der Photovoltaikreinigung"} priority={true} />
         <Subtext variant={"white"} text={"Seit 2023 setzen wir den MAN MKG 401 Langarmkran mit einer SunBrush-Bürste bei unserer Reinigung ein. Dieser zeichnet sich durch eine hohe Arbeitsbreite der Bürste, große Reichweite und Wendigkeit des Krans, als auch der schnellen Einsatzbereitschaft aus."}/>
         <Stichpunkte variant={"white"} arr={["Kran ist 360° drehbar", "Kran hat einen Ausleger von bis zu 36,5 Meter", "Arbeitsbreite der Bürste von 5 Meter", "Betreten des Dachs oder Module nicht zwingend erforderlich", "Schnelle und sichere Reinigung (BG konform)"]}/>
         <Background variant={"blue"}>

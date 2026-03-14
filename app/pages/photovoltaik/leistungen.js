@@ -6,6 +6,7 @@ import Subtitel from "@/comp/design/subtitle";
 import Titel from "@/comp/design/title";
 import Videocontainer from "@/comp/design/videocontainer";
 
+import imgSolardach from "../../public/pictures/solardachreinigungstrobel.jpeg";
 
 import Head from 'next/head'
 
@@ -25,7 +26,7 @@ const Leistungen = () => {
             </Head>
             <Titel variant={"bigcenter"} text={"Leistungen"}/>
             <Subtitel  text={"Preisatlas"} variant={"left"} background={"whiteblue"}/>
-            <ImageContainer src={"/pictures/solardachreinigungstrobel.jpeg"} alt={"Solardachreinigung Aufnahme mit einer Drohne während dem Prozess"} priority={true} />
+            <ImageContainer src={imgSolardach} alt={"Solardachreinigung Aufnahme mit einer Drohne während dem Prozess"} priority={true} />
             <Subtext variant={"white"} text={<>Unser Pauschalpreis pro m²-Preis: 0.80€ - 3.50€<br/><br/>Inbegriffen ist Wasseraufbereitung, Reinigungsmittel und Anfahrt. Gegebenenfalls können weitere Kosten anfallen (Flechten, Umrüstzeiten etc.).</>}/>
             <Videocontainer linkhref={"https://statischerbucket.s3.eu-central-1.amazonaws.com/phstrobeldrohnenaufnahmederdachreinigung.mp4"} color={"#0F265C"}/>
     </> );
