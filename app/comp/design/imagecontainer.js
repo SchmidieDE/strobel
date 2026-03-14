@@ -1,18 +1,19 @@
 import Image from "next/image";
-import { useMediaQuery } from "@mui/material"
-import { useState } from "react"
+import { useMediaQuery } from "@mui/material";
+import { useState } from "react";
 
-const ImageContainer = ({src, alt, priority = false}) => {
-
+const ImageContainer = ({ src, alt, priority = false }) => {
     const matches = useMediaQuery('(min-width:600px)');
     const matchesBig = useMediaQuery('(min-width:1050px)');
-    const [loaded, setLoaded] = useState(false)
-
-    const height = matchesBig ? "460px" : matches ? "340px" : "240px";
     const isStaticImport = typeof src === "object";
 
+    const [loaded, setLoaded] = useState(false);
+    const showShimmer = !isStaticImport && !loaded;
+
+    const height = matchesBig ? "460px" : matches ? "340px" : "240px";
+
     return (
-        <div className={`img-hover-zoom ${!loaded ? "img-shimmer" : ""}`} style={{
+        <div className={`img-hover-zoom ${showShimmer ? "img-shimmer" : ""}`} style={{
             display: "block",
             width: "90%",
             margin: "auto",
@@ -28,19 +29,15 @@ const ImageContainer = ({src, alt, priority = false}) => {
                 src={src}
                 alt={alt}
                 fill
-                style={{
-                    objectFit: "cover",
-                    transition: "opacity 0.5s ease",
-                    opacity: loaded ? 1 : 0,
-                }}
+                style={{ objectFit: "cover" }}
                 sizes="(max-width: 600px) 90vw, (max-width: 1050px) 540px, 810px"
                 quality={80}
                 priority={priority}
                 {...(isStaticImport ? { placeholder: "blur" } : {})}
-                onLoad={() => setLoaded(true)}
+                {...(!isStaticImport ? { onLoad: () => setLoaded(true) } : {})}
             />
         </div>
     );
-}
+};
 
 export default ImageContainer;
