@@ -5,7 +5,7 @@ import Titel from "../../comp/design/title"
 import Link from "next/link";
 import Head from "next/head";
 
-import imgHolzhaufen from "../../public/pictures/Holzhaufen.jpg";
+import imgHolzhaufen from "../../public/pictures/Holzhaufen.webp";
 
 
 const Forstwirtschaft = () => {

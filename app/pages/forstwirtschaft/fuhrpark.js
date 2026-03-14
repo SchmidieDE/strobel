@@ -5,10 +5,10 @@ import Background from "@/comp/design/background";
 import Stichpunkte from "@/comp/design/stichpunkte";
 import ImageContainer from "@/comp/design/imagecontainer";
 
-import imgRueckewagen from "../../public/pictures/rueckewagenseitlich.jpg";
-import imgForwarder1110D from "../../public/pictures/JohnDeere1110D Forwarder.jpeg";
-import imgBagger from "../../public/pictures/Kompaktbagger-hitachi-ZX-55U.jpeg";
-import imgScania from "../../public/pictures/ScaniaForstmaschinentransporter.jpeg";
+import imgRueckewagen from "../../public/pictures/rueckewagenseitlich.webp";
+import imgForwarder1110D from "../../public/pictures/JohnDeere1110D Forwarder.webp";
+import imgBagger from "../../public/pictures/Kompaktbagger-hitachi-ZX-55U.webp";
+import imgScania from "../../public/pictures/ScaniaForstmaschinentransporter.webp";
 
 import Head from 'next/head'
 

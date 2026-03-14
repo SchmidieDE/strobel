@@ -6,7 +6,7 @@ import Subtext from "@/comp/design/subtext";
 import Subtitel from "@/comp/design/subtitle";
 import Titel from "@/comp/design/title";
 
-import imgPVLKW from "../../public/pictures/PhotovoltaikreinigungLKW.jpg";
+import imgPVLKW from "../../public/pictures/PhotovoltaikreinigungLKW.webp";
 
 import Head from 'next/head'
 

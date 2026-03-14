@@ -6,7 +6,7 @@ import Subtitel from "@/comp/design/subtitle";
 import Titel from "@/comp/design/title";
 import Videocontainer from "@/comp/design/videocontainer";
 
-import imgSolardach from "../../public/pictures/solardachreinigungstrobel.jpeg";
+import imgSolardach from "../../public/pictures/solardachreinigungstrobel.webp";
 
 import Head from 'next/head'
 

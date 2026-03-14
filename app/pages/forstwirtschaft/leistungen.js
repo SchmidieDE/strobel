@@ -7,7 +7,7 @@ import Videocontainer from "@/comp/design/videocontainer";
 import Stichpunkte from "@/comp/design/stichpunkte";
 import Link from "next/link";
 
-import imgRueckewagenzange from "../../public/pictures/rueckewagenzange.jpg";
+import imgRueckewagenzange from "../../public/pictures/rueckewagenzange.webp";
 
 import Head from 'next/head'
 

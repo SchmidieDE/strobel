@@ -20,13 +20,27 @@ body {
   font-style: normal;
 }
 
-/* Desktop nav items */
+/* Desktop nav items - cursor pointer on all nav links and children */
+.desktop-nav-link,
+.desktop-nav-link *,
+.desktop-nav-link:hover,
+.desktop-nav-link:hover * {
+  cursor: pointer !important;
+}
 .desktop-nav-link {
   transition: all 0.2s ease;
 }
 .desktop-nav-link:hover {
   background-color: rgba(78, 153, 64, 0.06);
   color: #4E9940;
+}
+
+/* Mobile nav items - cursor pointer */
+nav a,
+nav a *,
+nav a:hover,
+nav a:hover * {
+  cursor: pointer !important;
 }
 
 /* Fade-in animation for page content */

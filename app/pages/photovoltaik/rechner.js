@@ -12,8 +12,8 @@ import SolarPowerIcon from '@mui/icons-material/SolarPower';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import ImageContainer from "@/comp/design/imagecontainer";
 
-import imgModuldreckig from "../../public/pictures/moduldreckig2.jpg";
-import imgVorherNachher from "../../public/pictures/Photovoltaikreinigungvorhernacher.jpg";
+import imgModuldreckig from "../../public/pictures/moduldreckig2.webp";
+import imgVorherNachher from "../../public/pictures/Photovoltaikreinigungvorhernacher.webp";
 
 import Head from 'next/head'
 

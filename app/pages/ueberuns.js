@@ -6,10 +6,10 @@ import ImageContainer from "@/comp/design/imagecontainer";
 import Background from "@/comp/design/background";
 import Head from "next/head";
 
-import imgBruunett from "../public/pictures/Bruunett678.jpg";
-import imgRueckewagenfront from "../public/pictures/rueckewagenfront.jpg";
-import imgWhatsapp from "../public/pictures/WhatsApp Image 2023-04-04 at 21.43.27.jpeg";
-import imgTeam from "../public/pictures/Team.jpeg";
+import imgBruunett from "../public/pictures/Bruunett678.webp";
+import imgRueckewagenfront from "../public/pictures/rueckewagenfront.webp";
+import imgWhatsapp from "../public/pictures/WhatsApp Image 2023-04-04 at 21.43.27.webp";
+import imgTeam from "../public/pictures/Team.webp";
 
 
 const Ueberuns = () => {
