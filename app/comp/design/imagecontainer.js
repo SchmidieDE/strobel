@@ -2,6 +2,10 @@ import Image from "next/image";
 import { useMediaQuery } from "@mui/material"
 import { useState } from "react"
 
+const BLUR_DATA_URL = "data:image/svg+xml;base64," + (typeof window === "undefined"
+    ? Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="8" height="5"><rect width="8" height="5" fill="#c8c8c8"/><rect width="4" height="5" fill="#d4d4d4"/></svg>').toString("base64")
+    : btoa('<svg xmlns="http://www.w3.org/2000/svg" width="8" height="5"><rect width="8" height="5" fill="#c8c8c8"/><rect width="4" height="5" fill="#d4d4d4"/></svg>'));
+
 const ImageContainer = ({src, alt, priority = false}) => {
 
     const matches = useMediaQuery('(min-width:600px)');
@@ -33,7 +37,10 @@ const ImageContainer = ({src, alt, priority = false}) => {
                     opacity: loaded ? 1 : 0,
                 }}
                 sizes="(max-width: 600px) 90vw, (max-width: 1050px) 540px, 810px"
+                quality={80}
                 priority={priority}
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
                 onLoad={() => setLoaded(true)}
             />
         </div>
