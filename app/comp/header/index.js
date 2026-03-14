@@ -21,10 +21,12 @@ import { useRouter } from "next/router";
 const stylecss = {
     icons: {
         marginLeft: "0.4rem",
-        fontSize: "1.1rem"
+        fontSize: "1.1rem",
+        cursor: "pointer",
     },
     subicons: {
-        marginRight: "0.4rem"
+        marginRight: "0.4rem",
+        cursor: "pointer",
     }
 }
 
@@ -87,16 +89,16 @@ const Header = () => {
     const [menuActive, setMenuActive] = useState(false)
 
     const NavLinks = useMemo(() => [
-        {href: "/", name: "Home", icon: <HomeIcon style={stylecss.icons}/>},
-        {href: "/photovoltaik", name: "Photovoltaik", icon: <WindowIcon style={stylecss.icons}/>},
-        {href:"/photovoltaik/technik", name:"Technik", icon: <RadioButtonCheckedIcon style={stylecss.subicons} sx={{ fontSize: 15 }}/>},
-        {href:"/photovoltaik/leistungen", name:"Leistungen", icon: <RadioButtonCheckedIcon style={stylecss.subicons} sx={{ fontSize: 15 }}/>},
-        {href:"/photovoltaik/rechner", name:"Rechner", icon: <RadioButtonCheckedIcon style={stylecss.subicons} sx={{ fontSize: 15 }}/>},
-        {href: "/forstwirtschaft", name: "Forstwirtschaft", icon: <ForestIcon style={stylecss.icons}/>},
-        {href:"/forstwirtschaft/fuhrpark", name:"Fuhrpark", icon: <RadioButtonCheckedIcon style={stylecss.subicons} sx={{ fontSize: 15 }}/>},
-        {href:"/forstwirtschaft/leistungen", name:"Leistungen", icon: <RadioButtonCheckedIcon style={stylecss.subicons} sx={{ fontSize: 15 }}/>},
-        {href: "/kontakt", name: "Kontakt", icon: <CallIcon style={stylecss.icons}/>},
-        {href: "/ueberuns", name: "Über uns", icon: <GroupIcon style={stylecss.icons}/>}
+        {href: "/", name: "Home", icon: <HomeIcon style={stylecss.icons} sx={{cursor: "pointer"}}/>},
+        {href: "/photovoltaik", name: "Photovoltaik", icon: <WindowIcon style={stylecss.icons} sx={{cursor: "pointer"}}/>},
+        {href:"/photovoltaik/technik", name:"Technik", icon: <RadioButtonCheckedIcon style={stylecss.subicons} sx={{ fontSize: 15, cursor: "pointer" }}/>},
+        {href:"/photovoltaik/leistungen", name:"Leistungen", icon: <RadioButtonCheckedIcon style={stylecss.subicons} sx={{ fontSize: 15, cursor: "pointer" }}/>},
+        {href:"/photovoltaik/rechner", name:"Rechner", icon: <RadioButtonCheckedIcon style={stylecss.subicons} sx={{ fontSize: 15, cursor: "pointer" }}/>},
+        {href: "/forstwirtschaft", name: "Forstwirtschaft", icon: <ForestIcon style={stylecss.icons} sx={{cursor: "pointer"}}/>},
+        {href:"/forstwirtschaft/fuhrpark", name:"Fuhrpark", icon: <RadioButtonCheckedIcon style={stylecss.subicons} sx={{ fontSize: 15, cursor: "pointer" }}/>},
+        {href:"/forstwirtschaft/leistungen", name:"Leistungen", icon: <RadioButtonCheckedIcon style={stylecss.subicons} sx={{ fontSize: 15, cursor: "pointer" }}/>},
+        {href: "/kontakt", name: "Kontakt", icon: <CallIcon style={stylecss.icons} sx={{cursor: "pointer"}}/>},
+        {href: "/ueberuns", name: "Über uns", icon: <GroupIcon style={stylecss.icons} sx={{cursor: "pointer"}}/>}
     ], []);
 
     const NavLinksDesktopObjekt = useMemo(() => {

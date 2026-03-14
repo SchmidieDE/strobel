@@ -38,6 +38,7 @@ const NavItemDesktop = ({href, name, icon, linkgroup, hover, hasSublinks}) => {
                 fontWeight: linkgroup ? "700" : "600",
                 textDecoration: "none",
                 whiteSpace: "nowrap",
+                cursor: "pointer",
             }}>
                 {name}
                 {icon}
@@ -49,6 +50,7 @@ const NavItemDesktop = ({href, name, icon, linkgroup, hover, hasSublinks}) => {
                             transition: "transform 0.25s ease",
                             transform: hover ? "rotate(180deg)" : "rotate(0deg)",
                             opacity: 0.5,
+                            cursor: "pointer",
                         }}
                     />
                 )}
