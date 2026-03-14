@@ -8,7 +8,7 @@ const Background = ({children, variant}) => {
     const css={
         green: {
             backgroundColor: "#529D44",
-            background: "linear-gradient(170deg, #529D44 0%, #3d7a32 60%, #2d5e25 100%)",
+            background: "linear-gradient(180deg, #529D44 0%, #3d7a32 60%, #2d5e25 100%)",
             paddingTop: "1.5rem",
             paddingBottom: "3.5rem",
             borderRadius: "0 0 24px 24px",
@@ -16,7 +16,7 @@ const Background = ({children, variant}) => {
         },
         blue: {
             backgroundColor: "#152f6b",
-            background: "linear-gradient(170deg, #152f6b 0%, #0F265C 60%, #091a42 100%)",
+            background: "linear-gradient(180deg, #152f6b 0%, #0F265C 60%, #091a42 100%)",
             paddingTop: "1.5rem",
             paddingBottom: "3.5rem",
             borderRadius: "0 0 24px 24px",
