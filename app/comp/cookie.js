@@ -78,7 +78,7 @@ const Cookie = () => {
                     <Titel text={"Diese Seite verwendet Cookies"} variant={"bigbold"}/>
                     <div style={{display: "block", alignItems: "center", height: "90px"}}>
                         <div style={{display: "block"}}>
-                            <Image src={"/Cookiebanner.svg"} alt={"Cookiebanner"} width={1000} height={1000} style={{objectFit: "contain", height: "100px", width: "auto"}} />
+                            <Image src={"/Cookiebanner.svg"} alt={"Cookiebanner"} width={1000} height={1000} unoptimized style={{objectFit: "contain", height: "100px", width: "auto"}} />
                         </div>
                     </div>
                     <div style={{display: "flex", padding: "0rem 1.2rem", alignItems: "center" }}>

@@ -196,7 +196,7 @@ const Header = () => {
                     </IconButton>
                     }
                     <Link href={"/"} style={{display: "flex", alignItems: "center", paddingRight: (!matches) ? "3rem" : "0rem", margin: matches ? "0" : "auto"}}>
-                        <Image style={{display: "block"}} src={"/StrobelLogoEditiertGreenBlue.svg"} alt={"Strobel Logo"} width={matches ? 160 : 155} height={matches ? 50 : 48} />
+                        <Image style={{display: "block"}} src={"/StrobelLogoEditiertGreenBlue.svg"} alt={"Strobel Logo"} width={matches ? 160 : 155} height={matches ? 50 : 48} priority />
                     </Link>
                     {
                     matches &&

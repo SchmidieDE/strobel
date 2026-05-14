@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
 import { useState } from "react";
 
-const ImageContainer = ({ src, alt, priority = false }) => {
+const ImageContainer = ({ src, alt, priority = false, quality = 75 }) => {
     const matches = useMediaQuery('(min-width:600px)');
     const matchesBig = useMediaQuery('(min-width:1050px)');
     const isStaticImport = typeof src === "object";
@@ -31,7 +31,7 @@ const ImageContainer = ({ src, alt, priority = false }) => {
                 fill
                 style={{ objectFit: "cover" }}
                 sizes="(max-width: 600px) 90vw, (max-width: 1050px) 540px, 810px"
-                quality={80}
+                quality={quality}
                 priority={priority}
                 {...(isStaticImport ? { placeholder: "blur" } : {})}
                 {...(!isStaticImport ? { onLoad: () => setLoaded(true) } : {})}

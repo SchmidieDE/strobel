@@ -1,9 +1,11 @@
 import Header from "../comp/header/index"
-import Cookie from "./cookie"
-import Whatsapp from "../comp/whatsapp"
 import Footer from "../comp/footer"
 import { useMediaQuery } from "@mui/material"
 import { useRouter } from "next/router"
+import dynamic from "next/dynamic"
+
+const Cookie = dynamic(() => import("./cookie"), { ssr: false })
+const Whatsapp = dynamic(() => import("../comp/whatsapp"), { ssr: false })
 
 
 const Layout = ({children}) => {
