@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from "react";
 
 
-const NavItem = ({href, name, icon, handleMenu}) => {
+const NavItem = ({href, name, icon, handleMenu, index = 0}) => {
 
     const router = useRouter()
     const [location, setLocation] = useState()
@@ -21,7 +21,7 @@ const NavItem = ({href, name, icon, handleMenu}) => {
 
 
     return (
-        <Link href={href} onClick={() => handleMenu()} style={{
+        <Link href={href} onClick={() => handleMenu()} className="mobile-menu-item mobile-nav-item" style={{
             display: "flex",
             alignItems: "center",
             width: "100%",
@@ -32,7 +32,7 @@ const NavItem = ({href, name, icon, handleMenu}) => {
             backgroundColor: isActive ? "#f0f9f0" : "white",
             borderLeft: isActive ? "3px solid #4E9940" : "3px solid transparent",
             borderBottom: "1px solid #f0f0f0",
-            transition: "all 0.15s ease",
+            transitionDelay: `${index * 28}ms`,
         }}>
             <div style={{
                 display: "flex",

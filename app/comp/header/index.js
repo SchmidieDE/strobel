@@ -8,7 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import WindowIcon from '@mui/icons-material/Window';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { IconButton } from "@mui/material";
 import Image from "next/image";
 import Script from 'next/script'
@@ -38,6 +38,7 @@ const DesktopNavItem = ({main, sublinks}) => {
 
     const [hover, setHover] = useState(false)
     const [linkgroup, setLinkgroup] = useState(false)
+    const closeTimer = useRef(null)
 
     useEffect(() => {
         if (hrefmain !== "/" && (router.pathname.split("/")[1]).includes(hrefmain.split("/")[1])) {
@@ -45,11 +46,27 @@ const DesktopNavItem = ({main, sublinks}) => {
         } else setLinkgroup(false)
     }, [router.pathname, hrefmain])
 
+    useEffect(() => () => { if (closeTimer.current) clearTimeout(closeTimer.current) }, [])
+
+    const handleEnter = () => {
+        if (closeTimer.current) { clearTimeout(closeTimer.current); closeTimer.current = null }
+        setHover(true)
+    }
+    const handleLeave = () => {
+        if (closeTimer.current) clearTimeout(closeTimer.current)
+        closeTimer.current = setTimeout(() => setHover(false), 140)
+    }
+
     return (
         <div
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            style={{position: "relative", cursor: "pointer"}}
+            onMouseEnter={handleEnter}
+            onMouseLeave={handleLeave}
+            style={{
+                position: "relative",
+                cursor: "pointer",
+                paddingBottom: "10px",
+                marginBottom: "-10px",
+            }}
         >
             <NavItemDesktop href={hrefmain} name={namemain} icon={iconmain} linkgroup={linkgroup} hover={hover} hasSublinks={sublinks.length > 0}/>
             {sublinks.length > 0 && (
@@ -57,16 +74,16 @@ const DesktopNavItem = ({main, sublinks}) => {
                     position: "absolute",
                     top: "100%",
                     left: "50%",
-                    transform: "translateX(-50%)",
+                    transform: hover ? "translateX(-50%) translateY(0)" : "translateX(-50%) translateY(-4px)",
                     zIndex: 1001,
-                    minWidth: "200px",
+                    minWidth: "210px",
                     overflow: "hidden",
-                    maxHeight: hover ? "300px" : "0px",
+                    maxHeight: hover ? "320px" : "0px",
                     opacity: hover ? 1 : 0,
-                    transition: "max-height 0.3s ease, opacity 0.2s ease",
+                    transition: "max-height 0.28s ease, opacity 0.18s ease, transform 0.22s ease",
                     pointerEvents: hover ? "auto" : "none",
-                    borderRadius: "0 0 12px 12px",
-                    boxShadow: hover ? "0 8px 24px rgba(0,0,0,0.12)" : "none",
+                    borderRadius: "12px",
+                    boxShadow: hover ? "0 10px 28px rgba(0,0,0,0.14), 0 0 0 1px rgba(0,0,0,0.04)" : "none",
                     backgroundColor: "white",
                     cursor: "pointer",
                 }}>
@@ -191,33 +208,40 @@ const Header = () => {
 
             {
                 (!matches) && <>
-                {menuActive && (
-                    <div
-                        onClick={() => setMenuActive(false)}
-                        style={{
-                            position: "fixed",
-                            top: "4rem",
-                            left: 0,
-                            right: 0,
-                            bottom: 0,
-                            backgroundColor: "rgba(0,0,0,0.35)",
-                            zIndex: 999,
-                        }}
-                    />
-                )}
-                <div style={{
-                    zIndex: 1000,
-                    position: "relative",
-                    backgroundColor: "white",
-                    borderBottom: menuActive ? "1px solid #e8e8e8" : "none",
-                    boxShadow: menuActive ? "0 4px 20px rgba(0,0,0,0.08)" : "none",
-                }}>
+                <div
+                    onClick={() => setMenuActive(false)}
+                    aria-hidden={!menuActive}
+                    className="mobile-backdrop"
+                    style={{
+                        position: "fixed",
+                        top: "4rem",
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: "rgba(0,0,0,0.35)",
+                        zIndex: 999,
+                        opacity: menuActive ? 1 : 0,
+                        pointerEvents: menuActive ? "auto" : "none",
+                    }}
+                />
+                <div
+                    className={`mobile-menu ${menuActive ? "open" : ""}`}
+                    style={{
+                        zIndex: 1000,
+                        position: "relative",
+                        backgroundColor: "white",
+                        borderBottom: menuActive ? "1px solid #e8e8e8" : "none",
+                        boxShadow: menuActive ? "0 4px 20px rgba(0,0,0,0.08)" : "none",
+                        maxHeight: menuActive ? "80vh" : "0px",
+                        opacity: menuActive ? 1 : 0,
+                    }}
+                >
                     <nav style={{ display: "flex", width: "100%", alignItems: "center", flexDirection: "column"}}>
                     {
-                        menuActive && NavLinks.map((navLink, index) => {
+                        NavLinks.map((navLink, index) => {
                             const {href, name, icon} = navLink
                             return (
-                                <NavItem key={index} href={href} name={name} icon={icon} handleMenu={handleMenu}/>
+                                <NavItem key={index} index={index} href={href} name={name} icon={icon} handleMenu={handleMenu}/>
                             )
                         })
                     }

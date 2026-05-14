@@ -3,11 +3,10 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from "react";
 
 
-const NavItemDesktopSub = ({href, name, icon, linkgroup}) => {
+const NavItemDesktopSub = ({href, name, icon}) => {
 
     const router = useRouter()
     const [location, setLocation] = useState()
-    const [hover, setHover] = useState(false)
 
     const isActive = location === href
 
@@ -19,18 +18,16 @@ const NavItemDesktopSub = ({href, name, icon, linkgroup}) => {
     return (
         <Link
             href={href}
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
+            className="nav-sub-item"
             style={{
                 display: "flex",
                 alignItems: "center",
                 padding: "0.7rem 1.2rem",
                 cursor: "pointer",
                 textDecoration: "none",
-                color: isActive ? "#4E9940" : hover ? "#4E9940" : "#333",
-                backgroundColor: isActive ? "#f0f9f0" : hover ? "rgba(78,153,64,0.08)" : "white",
+                color: isActive ? "#4E9940" : "#333",
+                backgroundColor: isActive ? "#f0f9f0" : "white",
                 borderLeft: isActive ? "3px solid #4E9940" : "3px solid transparent",
-                transition: "all 0.15s ease",
             }}
         >
             <div style={{

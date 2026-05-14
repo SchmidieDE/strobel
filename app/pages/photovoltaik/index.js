@@ -21,7 +21,29 @@ const Photovoltaik = () => {
                 <meta property="og:url" content="https://www.photovoltaikreinigung-oberschwaben.de/photovoltaik" />
                 <meta property="og:type" content="website" />
                 <meta property="og:locale" content="de_DE" />
+                <meta name="twitter:title" content="Photovoltaikreinigung - Bis zu 30% mehr Ertrag | Strobel GbR" />
+                <meta name="twitter:description" content="Professionelle Solarreinigung mit MKG Langarmkran in Oberschwaben." />
             </Head>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Photovoltaikreinigung",
+                        "name": "Photovoltaikreinigung & Solarreinigung Oberschwaben",
+                        "description": "Professionelle Reinigung von Photovoltaikanlagen mit MKG Langarmkran und SunBrush in Oberschwaben — bis zu 30 % mehr Ertrag durch fachgerechte Modulreinigung.",
+                        "provider": { "@id": "https://www.photovoltaikreinigung-oberschwaben.de/#org" },
+                        "areaServed": [
+                            { "@type": "AdministrativeArea", "name": "Oberschwaben" },
+                            { "@type": "AdministrativeArea", "name": "Baden-Württemberg" }
+                        ],
+                        "url": "https://www.photovoltaikreinigung-oberschwaben.de/photovoltaik",
+                        "category": "Solar Panel Cleaning",
+                        "audience": { "@type": "Audience", "audienceType": "Privathaushalte, Landwirte und Gewerbe" }
+                    })
+                }}
+            />
             <Titel variant={"bigcenter"} text={"Wir bringen Ihre PV-Anlage auf Höchstleistung!"}/>
             <Subtitel  text={"Warum reinigen?"} variant={"left"} background={"whiteblue"}/>
             <Subtext variant={"white"} text={"Durch die Reinigung Ihrer Photovoltaikanlage können Sie nicht nur die Leistung um bis zu 30% erhöhen, sondern auch die Lebensdauer der Module verlängern."}/>

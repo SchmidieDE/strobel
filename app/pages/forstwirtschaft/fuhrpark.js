@@ -4,6 +4,7 @@ import Subtitel from "./../../comp/design/subtitle";
 import Background from "@/comp/design/background";
 import Stichpunkte from "@/comp/design/stichpunkte";
 import ImageContainer from "@/comp/design/imagecontainer";
+import Breadcrumbs from "@/comp/seo/Breadcrumbs";
 
 import imgRueckewagen from "../../public/pictures/rueckewagenseitlich.webp";
 import imgForwarder1110D from "../../public/pictures/JohnDeere1110D Forwarder.webp";
@@ -26,7 +27,13 @@ const Fuhrpark = () => {
             <meta property="og:url" content="https://www.photovoltaikreinigung-oberschwaben.de/forstwirtschaft/fuhrpark" />
             <meta property="og:type" content="website" />
             <meta property="og:locale" content="de_DE" />
+            <meta name="twitter:title" content="Fuhrpark - John Deere Forwarder & Bagger | Strobel GbR" />
+            <meta name="twitter:description" content="John Deere 810E & 1110D Forwarder, Hitachi ZX-55U Kompaktbagger zur Vermietung." />
         </Head>
+        <Breadcrumbs items={[
+            { name: "Forstwirtschaft", path: "/forstwirtschaft" },
+            { name: "Fuhrpark", path: "/forstwirtschaft/fuhrpark" },
+        ]}/>
         <Titel variant={"bigcenter"} text={"Fuhrpark"}/>
         <Subtitel text={"John Deere 810E Forwarder"} variant={"left"}/>
         <ImageContainer src={imgRueckewagen} alt={"John Deere 810E Rückewagen im Wald im Einsatz"} priority={true} />

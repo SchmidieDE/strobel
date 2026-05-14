@@ -7,6 +7,7 @@ export default function Document() {
       <Head>
         <link rel="preconnect" href="https://use.typekit.net" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://use.typekit.net" />
+        <link rel="stylesheet" href="https://use.typekit.net/qom0mkd.css" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </Head>

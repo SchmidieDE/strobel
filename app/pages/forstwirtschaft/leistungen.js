@@ -6,6 +6,7 @@ import Titel from "@/comp/design/title";
 import Videocontainer from "@/comp/design/videocontainer";
 import Stichpunkte from "@/comp/design/stichpunkte";
 import Link from "next/link";
+import Breadcrumbs from "@/comp/seo/Breadcrumbs";
 
 import imgRueckewagenzange from "../../public/pictures/rueckewagenzange.webp";
 
@@ -24,7 +25,13 @@ const Leistungen = () => {
             <meta property="og:url" content="https://www.photovoltaikreinigung-oberschwaben.de/forstwirtschaft/leistungen" />
             <meta property="og:type" content="website" />
             <meta property="og:locale" content="de_DE" />
+            <meta name="twitter:title" content="Leistungen Forstwirtschaft | Strobel GbR" />
+            <meta name="twitter:description" content="Holzrückung, Jungbestandspflege, Lichtraumprofilschnitt und Energieholz-Vermarktung." />
         </Head>
+        <Breadcrumbs items={[
+            { name: "Forstwirtschaft", path: "/forstwirtschaft" },
+            { name: "Leistungen", path: "/forstwirtschaft/leistungen" },
+        ]}/>
         <Titel variant={"bigcenter"} text={"Leistungen"}/>
         <Subtitel variant={"left"} text="Das bieten wir an:"/>
         <ImageContainer src={imgRueckewagenzange}  alt={"Rückewagen im Wald. Zu sehen ist die Zange des John Deere 1110 der Baumstämme hochhebt"} />

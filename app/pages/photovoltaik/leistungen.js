@@ -5,6 +5,7 @@ import Subtext from "@/comp/design/subtext";
 import Subtitel from "@/comp/design/subtitle";
 import Titel from "@/comp/design/title";
 import Videocontainer from "@/comp/design/videocontainer";
+import Breadcrumbs from "@/comp/seo/Breadcrumbs";
 
 import imgSolardach from "../../public/pictures/solardachreinigungstrobel.webp";
 
@@ -23,7 +24,13 @@ const Leistungen = () => {
                 <meta property="og:url" content="https://www.photovoltaikreinigung-oberschwaben.de/photovoltaik/leistungen" />
                 <meta property="og:type" content="website" />
                 <meta property="og:locale" content="de_DE" />
+                <meta name="twitter:title" content="Leistungen & Preise Photovoltaikreinigung | Strobel GbR" />
+                <meta name="twitter:description" content="PV-Reinigung ab 0,80€/m². Inklusive Wasseraufbereitung, Reinigungsmittel und Anfahrt." />
             </Head>
+            <Breadcrumbs items={[
+                { name: "Photovoltaikreinigung", path: "/photovoltaik" },
+                { name: "Leistungen & Preise", path: "/photovoltaik/leistungen" },
+            ]}/>
             <Titel variant={"bigcenter"} text={"Leistungen"}/>
             <Subtitel  text={"Preisatlas"} variant={"left"} background={"whiteblue"}/>
             <ImageContainer src={imgSolardach} alt={"Solardachreinigung Aufnahme mit einer Drohne während dem Prozess"} priority={true} />

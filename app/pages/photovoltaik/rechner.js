@@ -11,6 +11,7 @@ import EuroIcon from '@mui/icons-material/Euro';
 import SolarPowerIcon from '@mui/icons-material/SolarPower';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import ImageContainer from "@/comp/design/imagecontainer";
+import Breadcrumbs from "@/comp/seo/Breadcrumbs";
 
 import imgModuldreckig from "../../public/pictures/moduldreckig2.webp";
 import imgVorherNachher from "../../public/pictures/Photovoltaikreinigungvorhernacher.webp";
@@ -62,7 +63,13 @@ const Rechner = () => {
             <meta property="og:url" content="https://www.photovoltaikreinigung-oberschwaben.de/photovoltaik/rechner" />
             <meta property="og:type" content="website" />
             <meta property="og:locale" content="de_DE" />
+            <meta name="twitter:title" content="PV-Reinigung Kostenrechner | Strobel GbR" />
+            <meta name="twitter:description" content="Berechnen Sie Ihre Einspeisverluste durch verschmutzte Solarmodule." />
         </Head>
+        <Breadcrumbs items={[
+            { name: "Photovoltaikreinigung", path: "/photovoltaik" },
+            { name: "Kostenrechner", path: "/photovoltaik/rechner" },
+        ]}/>
         <Titel variant={"bigcenter"} text={"Kostenrechner"}/>
         <Subtitel  text={"Lohnt sich eine Reinigung?"} variant={"left"} background={"whiteblue"}/>
         <ImageContainer src={imgModuldreckig} alt="Verschmutztes Modul mit Moos"/>

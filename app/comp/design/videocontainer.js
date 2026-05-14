@@ -42,7 +42,7 @@ const Videocontainer = ({linkhref, color, variant}) => {
                     : <PauseIcon fontSize="large" style={{color: "white", backgroundColor: color, padding: "0.3rem", borderRadius: "8px"}}/>
                 }
             </IconButton>
-            <video ref={videoref} muted autoPlay playsInline loop={!muted} style={videoStyle}>
+            <video ref={videoref} muted autoPlay playsInline loop={!muted} preload="metadata" style={videoStyle}>
                 <source src={linkhref} type="video/mp4" />
             </video>
         </div>

@@ -5,6 +5,7 @@ import Stichpunkte from "@/comp/design/stichpunkte";
 import Subtext from "@/comp/design/subtext";
 import Subtitel from "@/comp/design/subtitle";
 import Titel from "@/comp/design/title";
+import Breadcrumbs from "@/comp/seo/Breadcrumbs";
 
 import imgPVLKW from "../../public/pictures/PhotovoltaikreinigungLKW.webp";
 
@@ -22,7 +23,13 @@ const Technik = () => {
             <meta property="og:url" content="https://www.photovoltaikreinigung-oberschwaben.de/photovoltaik/technik" />
             <meta property="og:type" content="website" />
             <meta property="og:locale" content="de_DE" />
+            <meta name="twitter:title" content="Reinigungstechnik - MKG Langarmkran & SunBrush | Strobel GbR" />
+            <meta name="twitter:description" content="MKG 401 Langarmkran mit 36,5m Ausleger und SunBrush-Bürste." />
         </Head>
+        <Breadcrumbs items={[
+            { name: "Photovoltaikreinigung", path: "/photovoltaik" },
+            { name: "Technik", path: "/photovoltaik/technik" },
+        ]}/>
         <Titel variant={"bigcenter"} text={"Technik"}/>
         <Subtitel  text={"MKG Langarmkran 401"} variant={"left"} background={"whiteblue"}/>
         <ImageContainer src={imgPVLKW} alt={"MKG 401 Langarmkran bei der Photovoltaikreinigung"} priority={true} />
