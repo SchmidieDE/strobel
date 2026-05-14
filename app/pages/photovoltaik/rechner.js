@@ -72,7 +72,7 @@ const Rechner = () => {
         ]}/>
         <Titel variant={"bigcenter"} text={"Kostenrechner"}/>
         <Subtitel  text={"Lohnt sich eine Reinigung?"} variant={"left"} background={"whiteblue"}/>
-        <ImageContainer src={imgModuldreckig} alt="Verschmutztes Modul mit Moos"/>
+        <ImageContainer src={imgModuldreckig} alt="Verschmutztes Modul mit Moos" priority={true}/>
         <Subtext variant={"white"} text={"Es gibt viele Gründe, weshalb Sie Ihre Anlage reinigen lassen sollten. Erhöhung der Lebensdauer der Module, Reduzierung von Störungen, welche oftmals durch Ablagerungen ausgelöst wird, sind einige davon, letztlich entscheidend ist allerdings der ökonomische Aspekt."}/>
         <Subtext variant={"white"} text={`Aus diesem Grund haben wir einen kleinen Rechner entwickelt mit dem Sie feststellen können, wie viel Geld Ihnen eine vermutzte Anlage über die Zeit kostet.`}/>
         <Subtitel  text={"Reinigungsrechner"} variant={"right"} background={"whiteblue"}/>
